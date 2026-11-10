@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""MarketingHub 2.0: validate a portable brand profile without needing network access.
+"""Marketing Hub: validate a portable brand profile without needing network access.
 
 Usage: python scripts/validate_brand_profile.py profile.json [profile2.json ...]
 
@@ -37,9 +37,9 @@ def _human_errors(doc):
         value = doc.get(key)
         if not isinstance(value, str) or len(value.strip()) < size:
             errors.append(f"{key} precisa ter pelo menos {size} caracteres")
-    if doc.get("brand_type") not in {"company", "personal", "nonprofit", "product", "other"}:
+    if not isinstance(doc.get("brand_type"), str) or doc.get("brand_type") not in {"company", "personal", "nonprofit", "product", "other"}:
         errors.append("brand_type nao reconhecido")
-    if doc.get("profile_status") not in {"draft", "calibrated", "operational"}:
+    if not isinstance(doc.get("profile_status"), str) or doc.get("profile_status") not in {"draft", "calibrated", "operational"}:
         errors.append("profile_status nao reconhecido")
     lang = doc.get("default_language")
     if not isinstance(lang, str) or not LANG.fullmatch(lang):
@@ -56,7 +56,7 @@ def _human_errors(doc):
             val = voice.get(name)
             if type(val) is not int or not 0 <= val <= 5:
                 errors.append(f"voice.{name} precisa ser inteiro de 0 a 5")
-        if voice.get("pronouns") not in {"first_person_singular", "first_person_plural", "brand_name", "neutral", "unspecified"}:
+        if not isinstance(voice.get("pronouns"), str) or voice.get("pronouns") not in {"first_person_singular", "first_person_plural", "brand_name", "neutral", "unspecified"}:
             errors.append("voice.pronouns invalido")
         for key in ("preferred_terms", "avoid_terms"):
             if not isinstance(voice.get(key), list):
@@ -64,7 +64,7 @@ def _human_errors(doc):
     return errors
 
 
-def validate_profile(path):
+def validate_profile(path, require_full=False):
     try:
         document = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError) as error:
@@ -77,11 +77,13 @@ def validate_profile(path):
         validator = jsonschema.Draft202012Validator(schema, format_checker=jsonschema.FormatChecker())
         for err in sorted(validator.iter_errors(document), key=lambda e: list(map(str, e.absolute_path))):
             where = ".".join(str(p) for p in err.absolute_path) or "raiz"
-            message = f"{where}: {err.message}"
+            message = f"{where}: schema rule {err.validator} failed"
             if message not in errors:
                 errors.append(message)
     except ImportError:
         warnings.append("jsonschema nao instalado: apenas verificacao essencial executada")
+        if require_full:
+            errors.append("validacao completa requerida: instale jsonschema")
     if SECRET.search(json.dumps(document, ensure_ascii=False)):
         errors.append("possivel credencial detectada: remover do perfil")
     if isinstance(document, dict) and document.get("profile_status") == "operational":
@@ -96,14 +98,19 @@ def main(argv):
         return 2
     exit_code = 0
     seen = {}
-    for filename in argv:
+    require_full = "--require-full" in argv
+    filenames = [a for a in argv if a != "--require-full"]
+    if not filenames:
+        print("Informe ao menos um arquivo de perfil")
+        return 2
+    for filename in filenames:
         path = Path(filename)
-        doc, errors, warnings = validate_profile(path)
+        doc, errors, warnings = validate_profile(path, require_full=require_full)
         if isinstance(doc, dict):
             key = doc.get("brand_id")
-            if key and key in seen:
+            if isinstance(key, str) and key and key in seen:
                 errors.append(f"brand_id repetido; ja usado em {seen[key]}")
-            if key:
+            if isinstance(key, str) and key:
                 seen[key] = path
         print(f"\n[{path}]")
         if errors:
@@ -112,7 +119,7 @@ def main(argv):
             for error in errors:
                 print("  ERRO:", error)
         else:
-            print("VALIDO")
+            print("VALIDO (schema completo)" if require_full else "VALIDO")
         for warn in warnings:
             print("  AVISO:", warn)
     return exit_code

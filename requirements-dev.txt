@@ -1,0 +1,2 @@
+# Required only for full schema checks in CI and development
+jsonschema==4.26.0

@@ -1,73 +1,29 @@
-# Redação social — posts, legendas, comentários e ganchos
+# Escrever e revisar
 
-Combina `post-writer`, `hook-generator`, `post-formatter` e `post-scorer`. A voz e o briefing prevalecem sobre qualquer fórmula.
+Usar perfil, objetivo, fatos e material visual para escolher uma ideia central. A abertura deve situar uma situação, uma observação ou uma informação útil. A pergunta é uma opção, não uma obrigação.
 
-## Preparação em 30 segundos (interna)
+## Produção
 
-- Quem fala? Quem lê? Em qual canal? Para fazer o quê?
-- Qual é a única ideia que precisa ficar?
-- Que fato, imagem, documento, situação ou exemplo sustenta a ideia?
-- O post precisa explicar, criar identificação, convidar, informar, entreter ou vender? Escolher 1 prioridade.
+1. Identificar o detalhe que o leitor precisa entender ou decidir.
+2. Formular mentalmente duas aberturas de natureza diferente e escolher a mais coerente com a marca.
+3. Construir parágrafos em que cada trecho acrescenta informação; ajustar extensão ao canal e ao briefing.
+4. Usar estruturas como problema–consequência–orientação quando ajudarem. PAS/AIDA/BAB/STAR/SLAY são opções de organização, não resultados prometidos.
+5. Encerrar com próxima ação, síntese ou observação, conforme o objetivo. Quantidade de hashtags, emojis e linhas vem da marca ou do pedido.
 
-## Construção
+## Caso trabalhado: modo revisor
 
-1. Escolher **um ângulo**, não um catálogo de argumentos.
-2. Pensar em 2–3 ganchos de famílias distintas e escolher o mais verdadeiro, claro e adequado à voz.
-3. Desenvolver em parágrafos que evoluem (contexto → detalhe → consequência ou descoberta). Se cada frase virar um parágrafo, conferir se a marca realmente escreve assim.
-4. Concluir quando a ideia estiver completa. Um CTA só entra se houver ação concreta e útil; pergunta final não é obrigatória.
-5. Ajustar estilo ao canal e pedido sem herdar hashtags, emojis ou extensão do exemplo de outro cliente.
+**Fatos fictícios autorizados:** padaria aceita encomendas de pães para retirada; pedidos pelo WhatsApp; sem informação de prazo, preço ou promoção. Voz: próxima e direta.
 
-### Seis famílias de abertura
+**Rascunho genérico fornecido no exemplo:** “Transforme sua experiência com soluções completas e qualidade incomparável. Entre em contato e surpreenda-se!”
 
-- **Observação:** "Um orçamento bem organizado evita perguntas desnecessárias." [fictício]
-- **Contraste:** "O problema nem sempre é a falta de ideias. Às vezes, é informação demais."
-- **Situação cotidiana:** "Tem dia que a gente abre cinco abas e esquece por que abriu a primeira."
-- **Pergunta genuína:** "Seu cliente sabe o que acontece depois do primeiro contato?"
-- **Teste prático:** "Mostre sua página para alguém de fora. Ela entende o serviço em cinco segundos?"
-- **Dado sustentado:** usar números somente se houver fonte comparável, período e contexto.
+**Diagnóstico:** falta o produto, o serviço e uma instrução concreta. “Incomparável” não tem comprovação.
 
-Evitar promessas implausíveis, falsos conflitos e frases "ninguém te conta isso" quando não se trata de informação exclusiva.
+**Revisão:** “Vai receber gente em casa? Você pode encomendar os pães e retirar na padaria. Chame no WhatsApp para combinar o pedido.”
 
-## Frameworks invisíveis ao leitor
+**O que melhorou no exemplo:** produto e forma de pedir ficaram claros; a revisão retirou uma afirmação sem fonte e preservou os fatos. É uma demonstração pedagógica, não teste contra outro modelo.
 
-| Método | Melhor uso | Atenção |
-|---|---|---|
-| PAS | Problema e resolução plausível | Não ampliar medo, dor ou risco só para vender |
-| AIDA | Lançamento, oferta ou convite real | Evitar urgência inventada |
-| BAB | Mudança operacional, benefício com prova | Distinguir resultado comprovado de hipótese |
-| STAR | Relato de case com fatos e autoria confirmados | Nunca inventar situação/resultado |
-| SLAY | Reflexão de perfil pessoal com história real | Não impor lição moral artificial |
-| Contexto → exemplo → consequência | Conteúdo explicativo | Não repetir fórmula em toda pauta |
+## Ajustes por pedido
 
-## Variações por canal
+“Mais curto”: selecionar uma ideia e cortar repetições. “Mais humano”: trocar abstração por uma situação concreta da marca. “Mais técnico”: acrescentar mecanismo e implicação com linguagem acessível. “Texto corrido”: organizar em parágrafos. “Só a legenda”: entregar somente a peça.
 
-- **Instagram feed:** leitura móvel, abertura compreensível, 1 mensagem principal, ritmo compacto e CTA apenas quando apropriado.
-- **LinkedIn:** argumento contextualizado, exemplos e expertise comprovável; institucional não significa burocrático. Perfil pessoal pode ser mais narrativo se a história for verdadeira.
-- **Reels/TikTok:** legenda complementa o vídeo; normalmente mais curta, gancho verbal conciso.
-- **Threads/X:** ideias menores e voz direta, respeitando limites do canal e preferência do usuário; não inventar contagem exata de caracteres sem verificar.
-- **Facebook/WhatsApp:** clareza imediata, objetivo do grupo/página e menos jargão conforme público.
-
-Não adotar de forma automática "até três hashtags" ou "um emoji" de outros projetos. Usar as regras explícitas da marca; sem perfil definido, começar de forma contida e adaptar.
-
-## Pedidos de revisão
-
-- **Mais curto:** cortar ideias secundárias e repetições; não apenas trocar palavras por sinônimos.
-- **Mais humano:** trocar abstrações por situações reconhecíveis e relações reais, sem melodrama.
-- **Mais próximo:** reduzir a distância sem inventar intimidade com o público.
-- **Mais técnico:** acrescentar critérios verificáveis e precisão, não palavras longas.
-- **Mais impactante:** aumentar nitidez do gancho e densidade, sem sensacionalismo.
-- **Sem formatação / texto corrido:** sem listas, títulos e marcações editoriais; parágrafos naturais.
-- **Estilo de uma referência:** reproduzir atributos gerais (ritmo, informalidade, nível de explicação), não copiar frases e nem se passar pelo autor.
-
-Se a revisão é de texto pronto, manter o que não foi solicitado e devolver **a peça completa**.
-
-## Comentários, respostas e reposts
-
-- Comentário: contribuir com pensamento original em 1–3 frases se o contexto pedir brevidade. Não resumir o post inteiro.
-- Resposta institucional: agradecer/esclarecer sem prometer atendimento impossível ou revelar informações privadas.
-- Repost: identificar **quem compartilha**, **quem protagoniza** e o que o compartilhamento acrescenta. Não confundir empresas parceiras e participação em eventos.
-- Depoimento/case: exigir origem e permissão apropriada.
-
-## Saída padrão
-
-Uma versão pronta, no idioma e formato pedidos. Oferecer 2–5 opções somente se a pessoa solicitar alternativas. Não exibir avaliação editorial numérica a menos que seja pedida. Quando solicitado mais estratégia, apresentar o raciocínio resumidamente e elementos acionáveis.
+Preservar variedade US/UK e expressões das amostras em conteúdo em inglês. Substituir clichês como “unlock” ou “game-changer” por um detalhe fornecido quando destoarem da voz. Isso é orientação de redação; qualidade linguística requer revisão no idioma.

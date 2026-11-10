@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Offline structural checks for MarketingHub 2.0 and optional plugin ZIP source."""
+"""Offline structural checks for Marketing Hub and optional plugin ZIP source."""
 
 import json
 import re
@@ -63,7 +63,7 @@ def check():
     if negative.returncode != 1:
         errors.append("Perfil de teste invalido nao rejeitado")
 
-    print("MarketingHub 2.0 - selftest")
+    print("Marketing Hub - selftest")
     print("Metodos mapeados:", len(METHODS))
     print("Cenarios qualitativos:", len(cases))
     print("Perfis de teste: positivo e negativo verificados")

@@ -1,4 +1,4 @@
-"""20 synthetic brands x 3 authored responses = 60 offline editorial smoke tests.
+"""20 synthetic brands x 3 authored responses = 60 authored contract fixtures.
 
 No live model is called: examples test the editorial contract and profile data
 safety, NOT cross-provider LLM quality. A real-model gate remains separate.
@@ -17,43 +17,16 @@ sys.path.insert(0, str(SKILL / 'scripts'))
 from validate_brand_profile import validate_profile
 
 DATASET = ROOT / 'tests' / 'fixtures' / '20-brands-3-rounds.json'
-REGULATED = {'sorriso-de-jade', 'cofre-de-cha'}
-FICTITIOUS = {'sample', 'synthetic', 'fictional', 'fictício'}
-BANNED_IMPLIED = (
-  'somos número 1', 'número um do mercado', 'resultado garantido',
-  'rendimento garantido', 'aprovação garantida', 'ganho garantido',
-  'risco zero', 'crescimento garantido', 'dobre suas vendas',
-)
+sys.path.insert(0,str(ROOT/'scripts'))
+from editorial_checks import assess_output
 
 def errors_for_output(record, candidate, brands):
-    """Objective smoke criteria only, deliberately not a subjective AI quality score."""
-    problems=[]
-    content=candidate['content']
-    casefold=content.casefold()
-    if not (65 <= len(content) <= 520):
-        problems.append('Tamanho fora da faixa editorial de teste 65-520 caracteres')
-    if not any(term.casefold() in casefold for term in record['relevance_terms']):
-        problems.append('Nenhum vocábulo do assunto definido no briefing')
-    if any(term.casefold() in casefold for term in record['forbidden_terms']):
-        problems.append('Termo proibido da marca')
-    if any(term in casefold for term in BANNED_IMPLIED):
-        problems.append('Promessa absoluta sem comprovação')
-    if re.search(r'\b\d{1,3}\s*%\b', content):
-        problems.append('Número de desempenho não fornecido')
-    if len(re.findall(r'#[A-Za-zÀ-ÖØ-öø-ÿ_]+', content)) > 3:
-        problems.append('Mais de três hashtags')
-    if content.strip().startswith(('#', '- ', '* ', '1.')):
-        problems.append('Formato de lista aplicado a texto corrido')
-    for b in brands:
-        if b['brand_id'] != record['brand_id'] and b['display_name'].casefold() in casefold:
-            problems.append(f'Contaminação: inclui outra marca ({b["brand_id"]})')
-    if record['brand_id'] in REGULATED and any(term in casefold for term in ('garantimos', 'sem riscos', 'invista agora', 'cura certa')):
-        problems.append('Alegação inadequada para setor regulado')
-    if record['default_language'] == 'en-US' and not any(s in casefold for s in ('tasks', 'team', 'workflow')):
-        problems.append('Amostra em inglês sem vocabulário temático')
-    if record['default_language'] == 'es-MX' and not any(s in casefold for s in ('español', 'conversación', 'hablar')):
-        problems.append('Amostra em espanhol sem vocabulário temático')
-    return problems
+    """Compatibility wrapper for authored fixture contracts, not model quality."""
+    result=assess_output(record,candidate['content'],brands,candidate['task'])
+    names={'brand_leakage':'Contamina\u00e7\u00e3o: marca diferente',
+           'forbidden_term':'Termo proibido da marca',
+           'absolute_claim':'Promessa absoluta sem comprova\u00e7\u00e3o'}
+    return [names.get(x['code'],x['detail']) for x in result['safety_errors']+result['review_flags']]
 
 class TwentyBrandMatrix(unittest.TestCase):
     @classmethod
@@ -78,7 +51,7 @@ class TwentyBrandMatrix(unittest.TestCase):
                 self.assertTrue(data['voice']['sample_rules'])
                 self.assertNotIn('cliente real',str(data).lower())
 
-    def test_60_offline_editorial_smoke_samples(self):
+    def test_60_authored_contract_fixtures(self):
         tested=0
         for case in self.cases:
             samples=case['outputs']

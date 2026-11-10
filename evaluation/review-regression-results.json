@@ -1,0 +1,30 @@
+{
+  "version": "2.3.1",
+  "date": "2026-11-10",
+  "environment": {
+    "python": "3.13.5",
+    "os": "Linux"
+  },
+  "source_reviewed_commit": "f5f82a84ab62a06bb2eb996d4d68201832c56281",
+  "local_tests": {
+    "total": 48,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "skill_zip_bytes": 26026,
+  "plugin_zip_bytes": 41671,
+  "original_skill_zip_bytes_reported_and_release_verified": 410942,
+  "runtime_files": 23,
+  "runtime_images": 0,
+  "full_schema_validation": "passed with jsonschema 4.26.0",
+  "skill_creator_validation": "passed",
+  "editorial_live_model_runs": 0,
+  "human_preference_assessments": 0,
+  "pilot_status": "planned_not_run",
+  "limitations": [
+    "No measurement of writing improvement.",
+    "No native-client end-to-end test.",
+    "New promotional artwork and any old GitHub social-preview setting need owner action."
+  ]
+}

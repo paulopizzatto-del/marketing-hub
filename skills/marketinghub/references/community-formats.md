@@ -1,29 +1,21 @@
-# Relacionamento, perfis, newsletters e comentários
+# Comunidade e perfil
 
-Reúne `profile-optimizer`, `newsletter-voice` e `pinned-comment`.
+Responder como o emissor indicado: empresa, pessoa ou equipe. Comentários devem acrescentar uma informação ou responder à dúvida; reposts precisam de um motivo concreto para compartilhar.
 
-## Perfil pessoal ou corporativo
+## Caso trabalhado: comentário negativo
 
-Diagnosticar: quem é, para quem fala, proposta de valor, prova, clareza da bio/headline, CTA real, consistência entre foto/capa/destaques e histórico de publicações. Não inventar cargo, certificado, experiência ou resultados para preencher lacunas.
+**Cenário fictício:** cliente diz “Meu pedido ainda não chegou e ninguém responde”. Canal privado oficial confirmado no briefing; situação do pedido desconhecida.
 
-Para LinkedIn, revisar título, resumo/Sobre, experiência fornecida, informações de contato autorizadas, capa e destaques. Para Instagram, bio curta, categoria quando fornecida, destaques, links e coerência da imagem do perfil. Entregar texto pronto e 3–5 recomendações por impacto, sem afirmar que editou diretamente a conta.
+**Resposta:** “Sentimos pela falta de retorno. Envie o número do pedido pelo nosso canal privado de atendimento para verificarmos o que aconteceu. Por aqui, evite publicar seus dados pessoais.”
 
-## Newsletter
+**Decisões:** reconhecer a experiência relatada; encaminhar ao canal confirmado; reservar detalhes para o privado. Horário de resposta, reembolso e novo prazo dependem da equipe, por isso ficam fora da mensagem.
 
-Determinar para quem, frequência factível, promessa editorial, extensão e estrutura recorrente. Estabelecer abertura reconhecível, 2–4 seções úteis e fechamento apropriado à voz. Referências de voz podem vir de newsletters anteriores. Respeitar autorização e regras aplicáveis de comunicação; não importar listas de contatos nem enviar sem acesso/consentimento.
+Quando o canal não estiver confirmado, preparar resposta sem inventar link e apontar essa lacuna ao solicitante antes de publicar.
 
-## Comentários de marca
+## Perfil
 
-Ser útil e responsivo; agradecer, esclarecer ou convidar para canal de atendimento real. Nunca divulgar dados de clientes, pedidos ou conflitos em comentário público. Não usar linguagem de robô: "Agradecemos imensamente pelo feedback valioso" pode virar "Obrigado por contar pra gente!" se a voz permitir.
+Apresentar o que a marca oferece, para quem e como entrar em contato quando houver destino confirmado. Revisar a bio a partir de informações reais. Para perfil pessoal, preservar experiências e cargos efetivamente relatados.
 
-## Comentário fixado
+**Exemplo de bio fictícia:** “Ajustes e consertos de roupas para o dia a dia. Conte o que precisa ajustar; combinamos a avaliação pelo WhatsApp.” Usar somente quando serviço e canal fizerem parte do briefing.
 
-Pode esclarecer algo que a legenda não comporta, organizar perguntas, corrigir atualização ou complementar com humor pertinente. Não forçar "comente uma palavra para ganhar material" sem material real e política de distribuição. Uma piada visual só deve ser criada quando realmente solicitada e ferramenta disponível.
-
-## Repost e reação
-
-Identificar autoria, objeto e relevância do repost; acrescentar perspectiva própria sem roubar protagonismo. Perfil pessoal pode falar em primeira pessoa apenas se a experiência foi fornecida. Se é uma marca republicando parceira, não alegar participação/patrocínio que não ocorreu.
-
-## Moderação e crise
-
-Para reclamações, reconhecer preocupação sem admitir fatos não verificados, solicitar canal privado adequado para dados sensíveis, não prometer prazo fora do controle. Em assuntos graves, legal/regulados, sugerir validação interna. Evitar conflito e sarcasmo dirigido a pessoas.
+Newsletters e textos longos exigem promessa editorial clara, conteúdo desenvolvido e fontes. Não extrapolar experiência comprovada em legendas para desempenho em newsletter.

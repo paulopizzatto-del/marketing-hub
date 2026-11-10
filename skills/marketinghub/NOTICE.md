@@ -1,7 +1,7 @@
-# Créditos e proveniência
+# Créditos e escopo
 
-MarketingHub 2.0 é uma arquitetura editorial generalista desenvolvida a partir da revisão do pacote "Social Media Skills for AI Agents" (Charlie Hills, 2026), com 17 métodos. O projeto de origem está disponibilizado sob a licença MIT; a íntegra da licença aplicável acompanha este pacote em `LICENSE`. O catálogo em `references/methods-catalog.md` descreve os princípios reaproveitados e como foram adaptados.
+O Marketing Hub reorganiza princípios do pacote "Social Media Skills for AI Agents", de Charlie Hills (2026), sob MIT. A licença e a atribuição permanecem em `LICENSE` e `references/methods-catalog.md`. O projeto não é afiliado nem endossado pelo autor ou pelos provedores citados.
 
-O MarketingHub não distribui os 17 projetos originais como skills independentes, não requer Gemini, Apify, React, Claude, Codex, arquivo `about-me.md`, chaves de API ou contas conectadas para funcionar. Seus roteiros foram reescritos como processos gerais e autocontidos.
+A versão da distribuição é definida pelo arquivo VERSION na raiz do projeto e copiada ao pacote instalável durante o build. O schema do perfil mantém versionamento separado.
 
-Nomes de empresas, textos de usuários, credenciais, métricas e materiais de marcas previamente atendidas foram intencionalmente excluídos do pacote redistribuível. Os exemplos neste pacote são ilustrativos e não correspondem a clientes reais.
+Exemplos de voz são didáticos e fictícios. Não representam resultados comparativos de modelos. Este runtime contém instruções e modelos, sem imagens promocionais ou perfis de clientes reais.

@@ -1,23 +1,11 @@
-# Testar o Marketing Hub em modelos reais
+# Resultados reais: registro e limites
 
-O repositório contém 20 marcas inteiramente fictícias e 60 amostras editoriais escritas para auditoria offline. **Essas amostras não são saídas obtidas do ChatGPT, Claude ou Gemini por execução da skill.**
+O script `evaluate_model_outputs.py` verifica registros dos casos legados em `tests/fixtures/20-brands-model-prompts.jsonl`. **Não atribui nota de qualidade nem detecta idioma por palavra-chave.** O novo piloto comparativo tem protocolo separado em [evaluation/pilot-144/PLAN.md](../evaluation/pilot-144/PLAN.md).
 
-## Ensaio real reproduzível
+Cada linha JSONL dos casos legados deve ter `case_id`, `output` e `human_approved`. Registre provedor e versão com `--provider` e `--model-version`. Use `--report caminho.json` para salvar um relatório sem os textos completos.
 
-1. Instale a skill em cada cliente compatível, ou forneça o prompt universal como instruções e o JSON de perfil completo como contexto. Identifique nome e versão do modelo.
-2. Leia os 60 pedidos em `tests/fixtures/20-brands-model-prompts.jsonl`. Execute cada caso em contexto isolado para evitar que a saída de outra marca influencie o resultado.
-3. Grave um JSONL para cada modelo, com um objeto por `case_id`: `{"case_id": "briarfina-de-papel/instagram", "output": "resposta real do modelo", "human_approved": true}`. Não marque `human_approved: true` antes de revisão humana de voz, factualidade e intenção.
-4. Execute `python scripts/evaluate_model_outputs.py --results results-gpt.jsonl --provider ChatGPT --model-version <versão>`, e repita para Claude, Gemini e demais provedores realmente utilizados.
-5. Revise manualmente alegações, língua, naturalidade, clareza, privacidade e uniformidade de tom. O verificador só consegue identificar problemas observáveis por regras; qualidade e intenção dependem da leitura humana.
+Três saídas do verificador: `safety_errors` (dados ausentes, credenciais e violações explícitas), `review_flags` (alegações que exigem revisão) e `format_warnings` (sugestões editáveis por tarefa, não limites oficiais das redes). Um LinkedIn longo ou uma legenda em inglês sem palavras da fixture não falha por esse motivo.
 
-Um arquivo com qualquer uma das 60 saídas ausente ou sem revisão **falhará** por padrão; o teste não inventará um resultado.
+Percentuais são sinais para checar contexto, não prova de falsidade. Para resolver um sinal, registrar em `reviewed_flags` seu `id` exato, `decision: accepted`, `reason` e `evidence`. Isso registra a decisão humana; o código não confirma que a fonte é verdadeira. Declarações incompletas, casos ausentes ou credenciais permanecem bloqueados.
 
-## Critérios para declarar compatibilidade testada
-
-- Todos os 20 perfis têm schema válido e os 60 casos offline passam nos verificadores objetivos.
-- Todas as versões de modelos anunciadas como 'testadas' devem ter 60 respostas reais e avaliadas, sem casos em aberto.
-- Devem estar claros o provedor, versão, data, condições de execução e limitações. **Não extrapolar 100% nesta amostra para 100% de qualidade futura.**
-- Checar licença de software, atribuição do material de terceiros e autorização de divulgação das artes originais da marca.
-- Para criar o repositório remoto, a ferramenta conectada precisa suportar a criação de repositórios, ou o proprietário deve criá-lo manualmente antes de permitir commits por API.
-
-A **versão oficial** significa que o pacote e a documentação podem ser distribuídos. Não significa que todas as IAs foram certificadas. Antes de anunciar compatibilidade testada para um provedor, execute o protocolo completo para aquela versão. Não anuncie memória persistente automática nem confiabilidade de 100%; registre provedor, versão e data.
+Voz, clareza, idioma, originalidade e adequação precisam de avaliadores independentes. Registre entradas, amostras, parâmetros, saídas reais, modelo, versão e data. Não preencha resultados com fixtures nem anuncie superioridade a partir de testes de código.

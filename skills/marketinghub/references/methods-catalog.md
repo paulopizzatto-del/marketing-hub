@@ -1,4 +1,4 @@
-# MarketingHub — cobertura verificável dos 17 métodos de origem
+# Mapa de atribuição dos métodos de origem
 
 **Proveniência:** *Social Media Skills for AI Agents*, Charlie Hills (2026), MIT. Fonte recebida do usuário. Os métodos foram reescritos e reorganizados para uso **genérico por qualquer marca**, sem a dependência original de LinkedIn, British English, Claude, Codex, Gemini, Apify, templates de um criador ou chaves de API específicas. Licença preservada em `LICENSE` e atribuição em `NOTICE.md`.
 
@@ -22,7 +22,7 @@
 | 16 | `quote-post` | Frases curtas originais e atribuições verificáveis | `visual-production.md` |
 | 17 | `analytics-dashboard` | Auditoria de exportações, métricas consistentes e testes editoriais | `analytics-experiments.md` |
 
-## Seleção dos métodos por intenção
+## Seleção de referências por intenção
 
 1. **Legenda simples:** 4 + 10 + 11 + 6 (sem expor nomes dos métodos ao usuário).
 2. **Configurar marca:** 1 + 4 + 6, aprofundar perfis pessoais ou newsletters se necessário.
@@ -44,3 +44,7 @@
 ## Critério de qualidade da integração
 
 Uma skill é considerada "implementada" somente quando existe **uma instrução operacional aplicável** e uma saída correspondente, não apenas uma menção ao nome. Este catálogo mapeia cada método aos workflows que efetivamente o incorporam. O pacote é uma única skill, não 17 `SKILL.md` concorrentes.
+
+## Capacidades do produto
+
+A vitrine apresenta sete capacidades: voz de marca; escrita/revisão; pautas; vídeos curtos; briefing visual; comunidade/perfil; métricas. Os 17 nomes acima registram a origem intelectual, não 17 produtos independentes ou evidência de desempenho.
