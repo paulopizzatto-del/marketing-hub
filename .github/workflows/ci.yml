@@ -24,6 +24,12 @@ jobs:
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
           python-version: ${{ matrix.python-version }}
+      - name: Essential validator without third-party packages
+        run: python -S skills/marketinghub/scripts/validate_brand_profile.py examples/brand-profile-ficticio.json
+      - name: Install pinned full-schema validator
+        run: python -m pip install -r requirements-dev.txt
+      - name: Full schema validation (required, no fallback)
+        run: python skills/marketinghub/scripts/validate_brand_profile.py --require-full examples/brand-profile-ficticio.json
       - name: Structural validation and provenance
         run: python scripts/check_repo.py
       - name: Automated tests
