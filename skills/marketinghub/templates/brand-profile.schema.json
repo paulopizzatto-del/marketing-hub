@@ -1,46 +1,285 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "MarketingHub 2.0 Brand Profile",
+  "title": "Marketing Hub Brand Profile",
   "description": "Ficha editorial portável de marca, sem dados pessoais ou senhas.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "brand_id", "display_name", "brand_type", "description", "primary_audience", "default_language", "profile_status", "voice"],
+  "required": [
+    "schema_version",
+    "brand_id",
+    "display_name",
+    "brand_type",
+    "description",
+    "primary_audience",
+    "default_language",
+    "profile_status",
+    "voice"
+  ],
   "properties": {
-    "schema_version": {"const": "2.0"},
-    "brand_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "minLength": 2, "maxLength": 64},
-    "display_name": {"type": "string", "minLength": 2, "maxLength": 120},
-    "brand_type": {"enum": ["company", "personal", "nonprofit", "product", "other"]},
-    "description": {"type": "string", "minLength": 8},
-    "primary_audience": {"type": "string", "minLength": 4},
-    "default_language": {"type": "string", "pattern": "^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"},
-    "region": {"type": "string"},
-    "profile_status": {"enum": ["draft", "calibrated", "operational"]},
+    "schema_version": {
+      "const": "2.0"
+    },
+    "brand_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "minLength": 2,
+      "maxLength": 64
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 120
+    },
+    "brand_type": {
+      "enum": [
+        "company",
+        "personal",
+        "nonprofit",
+        "product",
+        "other"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "minLength": 8
+    },
+    "primary_audience": {
+      "type": "string",
+      "minLength": 4
+    },
+    "default_language": {
+      "type": "string",
+      "pattern": "^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
+    },
+    "region": {
+      "type": "string"
+    },
+    "profile_status": {
+      "enum": [
+        "draft",
+        "calibrated",
+        "operational"
+      ]
+    },
     "voice": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["attributes", "sample_rules", "pronouns", "formality", "energy", "humor", "technicality", "preferred_terms", "avoid_terms"],
+      "required": [
+        "attributes",
+        "sample_rules",
+        "pronouns",
+        "formality",
+        "energy",
+        "humor",
+        "technicality",
+        "preferred_terms",
+        "avoid_terms"
+      ],
       "properties": {
-        "attributes": {"type": "array", "minItems": 1, "maxItems": 5, "uniqueItems": true, "items": {"type": "string", "minLength": 2}},
-        "sample_rules": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 3}},
-        "pronouns": {"enum": ["first_person_singular", "first_person_plural", "brand_name", "neutral", "unspecified"]},
-        "formality": {"type": "integer", "minimum": 0, "maximum": 5},
-        "energy": {"type": "integer", "minimum": 0, "maximum": 5},
-        "humor": {"type": "integer", "minimum": 0, "maximum": 5},
-        "technicality": {"type": "integer", "minimum": 0, "maximum": 5},
-        "preferred_terms": {"type": "array", "items": {"type": "string"}},
-        "avoid_terms": {"type": "array", "items": {"type": "string"}},
-        "emoji_policy": {"type": "string"},
-        "hashtag_policy": {"type": "string"},
-        "approved_examples": {"type": "array", "items": {"type": "string"}},
-        "disapproved_examples": {"type": "array", "items": {"type": "string"}}
+        "attributes": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2
+          }
+        },
+        "sample_rules": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 3
+          }
+        },
+        "pronouns": {
+          "enum": [
+            "first_person_singular",
+            "first_person_plural",
+            "brand_name",
+            "neutral",
+            "unspecified"
+          ]
+        },
+        "formality": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "energy": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "humor": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "technicality": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "preferred_terms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "avoid_terms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "emoji_policy": {
+          "type": "string"
+        },
+        "hashtag_policy": {
+          "type": "string"
+        },
+        "approved_examples": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "disapproved_examples": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
     },
-    "channels": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
-    "goals": {"type": "array", "items": {"type": "string"}},
-    "offers": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["name", "description", "claim_status"], "properties": {"name": {"type": "string"}, "description": {"type": "string"}, "claim_status": {"enum": ["confirmed", "inferred", "unknown"]}, "evidence": {"type": "string"}}}},
-    "visual_identity": {"type": "object", "additionalProperties": false, "properties": {"colors": {"type": "array", "items": {"type": "string", "pattern": "^#[0-9A-Fa-f]{6}$"}}, "fonts": {"type": "array", "items": {"type": "string"}}, "assets": {"type": "array", "items": {"type": "string"}}, "notes": {"type": "string"}}},
-    "editorial_limits": {"type": "array", "items": {"type": "string"}},
-    "source_notes": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["subject", "source", "confidence"], "properties": {"subject": {"type": "string"}, "source": {"type": "string"}, "confidence": {"enum": ["confirmed", "inferred", "unknown"]}, "checked_at": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]}}}},
-    "updated_at": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]}
+    "channels": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "goals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "offers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "description",
+          "claim_status"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "claim_status": {
+            "enum": [
+              "confirmed",
+              "inferred",
+              "unknown"
+            ]
+          },
+          "evidence": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "visual_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "colors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^#[0-9A-Fa-f]{6}$"
+          }
+        },
+        "fonts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "assets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "editorial_limits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "subject",
+          "source",
+          "confidence"
+        ],
+        "properties": {
+          "subject": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "confidence": {
+            "enum": [
+              "confirmed",
+              "inferred",
+              "unknown"
+            ]
+          },
+          "checked_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "updated_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
   }
 }

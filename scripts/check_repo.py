@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Offline sanity check for Marketing Hub before sharing the repository."""
+"""Structural checks. No claim of editorial superiority or AI-free artwork."""
 from __future__ import annotations
 import hashlib
 import json
@@ -7,86 +7,69 @@ import re
 import subprocess
 import sys
 from pathlib import Path
-
-ROOT = Path(__file__).resolve().parents[1]
-EXPECTED_ICON_SHA256 = 'e28a3b8b9db85c893476a6f02726a4e317eb7ed7450c757bd54b12c85efa23b5'
-MUST_EXIST = (
-    'README.md', 'README.en.md', 'LICENSE', 'NOTICE.md', 'BRAND-ASSETS-LICENSE.md',
-    'AGENTS.md', 'CLAUDE.md', 'GEMINI.md', 'prompts/marketinghub-universal.md',
-    'skills/marketinghub/SKILL.md', 'plugin.json', '.codex-plugin/plugin.json',
-    '.github/workflows/ci.yml', '.github/workflows/release.yml',
-    'scripts/install.py', 'scripts/build_release.py', 'docs/instalacao.md',
-    'docs/compatibilidade.md', 'docs/perfil-de-marca.md', 'docs/publicacao-no-github.md',
-    'assets/marketinghub-icon.png', 'assets/banner.png', 'assets/social-preview-1280x640.png', 'assets/ASSET-PROVENANCE.json', 'docs/identidade-visual.md', 'skills/marketinghub/LICENSE',
-)
-
+from project_version import ROOT, read_version
+from distribution import runtime_payload
+REQUIRED=('VERSION','README.md','README.en.md','LICENSE','NOTICE.md','BRAND-ASSETS-LICENSE.md',
+ 'skills/marketinghub/SKILL.md','skills/marketinghub/agents/openai.yaml',
+ 'prompts/marketinghub-universal.md','scripts/editorial_checks.py',
+ 'scripts/install.py','scripts/build_release.py','scripts/evaluate_model_outputs.py',
+ '.github/workflows/ci.yml','.github/workflows/release.yml',
+ 'docs/instalacao.md','docs/compatibilidade.md','docs/revisao-2.3.1.md',
+ 'assets/ASSET-PROVENANCE.json','evaluation/pilot-144/PLAN.md')
 
 def check():
-    errors = []
-    for file in MUST_EXIST:
-        if not (ROOT / file).is_file(): errors.append(f'Arquivo ausente: {file}')
+    errors=[]
+    for name in REQUIRED:
+        if not (ROOT/name).is_file(): errors.append('Missing: '+name)
     if errors: return errors
-    for manifest in ('plugin.json', '.codex-plugin/plugin.json'):
-        data = json.loads((ROOT/manifest).read_text(encoding='utf-8'))
-        if data.get('name') != 'marketinghub' or data.get('version') != '2.3.0':
-            errors.append(f'Manifesto invalido: {manifest}')
-    # One canonical SKILL.md, not 17 different entrypoints.
-    skill_paths = [p.relative_to(ROOT) for p in ROOT.rglob('SKILL.md') if 'dist' not in p.parts and not any(hidden in p.relative_to(ROOT).parts for hidden in ('.agents','.claude','.gemini','.copilot')) and p.relative_to(ROOT).parts[:3] != ('.github','skills','marketinghub')]
-    if skill_paths != [Path('skills/marketinghub/SKILL.md')]:
-        errors.append(f'Skill duplicada ou faltante: {skill_paths}')
-    icon = ROOT/'assets/marketinghub-icon.png'
-    if hashlib.sha256(icon.read_bytes()).hexdigest() != EXPECTED_ICON_SHA256:
-        errors.append('O icone principal difere do PNG oficial fornecido')
-    if icon.read_bytes() != (ROOT/'skills/marketinghub/assets/marketinghub-icon.png').read_bytes():
-        errors.append('Icones do plugin e da skill divergem')
-    # Ensure relative README links are valid (skip URLs and in-page anchors).
-    for readme in ('README.md', 'README.en.md'):
-        text = (ROOT/readme).read_text(encoding='utf-8')
-        links = re.findall(r'\]\(([^)]+)\)|(?:src|href)="([^"]+)"', text)
-        for link, attr in links:
-            value = link or attr
-            if value.startswith(('http:', 'https:', 'mailto:', '#')): continue
-            target = value.split('#')[0]
-            if not (ROOT/target).exists(): errors.append(f'Link quebrado em {readme}: {value}')
-    # Only owner-provided original art is allowed. Manifest records must match all image assets.
-    provenance = json.loads((ROOT/'assets/ASSET-PROVENANCE.json').read_text(encoding='utf-8'))
-    visual_extensions = {'.png', '.jpg', '.jpeg', '.svg', '.webp'}
-    actual = {p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*') if p.is_file() and p.suffix.lower() in visual_extensions and 'dist' not in p.relative_to(ROOT).parts}
-    listed = {item['file'] for item in provenance['assets']}
-    if listed != actual:
-        errors.append(f'Imagens ausentes do registro ou arquivos extras: {sorted(actual ^ listed)}')
-    for item in provenance['assets']:
-        f = ROOT / item['file']
-        if f.exists() and hashlib.sha256(f.read_bytes()).hexdigest() != item['sha256']:
-            errors.append(f'Imagem modificada ou não autorizada: {item["file"]}')
-    # Detect broken local image links on GitHub Pages and forbid README placeholders.
-    for html_file in (ROOT / 'docs').rglob('*.html'):
-        text_html = html_file.read_text(encoding='utf-8')
-        for src in re.findall(r'<img[^>]+src="([^"]+)"', text_html):
-            if not src.startswith(('http:', 'https:')) and not (html_file.parent/src).is_file():
-                errors.append(f'Imagem ausente no site: {html_file.name}: {src}')
-    for filename in ('README.md', 'README.en.md'):
-        content = (ROOT/filename).read_text(encoding='utf-8')
-        if '[AJUSTAR' in content or 'URL_DO_REPOSITORIO' in content:
-            errors.append(f'Placeholder não resolvido em {filename}')
-    notice = (ROOT/'NOTICE.md').read_text(encoding='utf-8')
-    license_txt = (ROOT/'skills/marketinghub/LICENSE').read_text(encoding='utf-8')
-    if 'Charlie Hills' not in notice or 'Charlie Hills' not in license_txt:
-        errors.append('Atribuicao MIT original nao preservada')
-    if len((ROOT/'prompts/marketinghub-universal.md').read_text(encoding='utf-8')) < 3500:
-        errors.append('Prompt portatil muito curto para ser autocontido')
-    skilltest = subprocess.run([sys.executable, str(ROOT/'skills/marketinghub/scripts/selftest.py')], capture_output=True, text=True)
-    if skilltest.returncode:
-        errors.append('Selftest da skill falhou: ' + skilltest.stdout[-1000:])
-    validator = ROOT/'skills/marketinghub/scripts/validate_brand_profile.py'
-    valid = subprocess.run([sys.executable, str(validator), str(ROOT/'examples/brand-profile-ficticio.json')], capture_output=True, text=True)
-    if valid.returncode: errors.append('Exemplo ficticio de marca nao validou')
+    version=read_version()
+    for name in ('plugin.json','.codex-plugin/plugin.json'):
+        data=json.loads((ROOT/name).read_text(encoding='utf-8'))
+        if data.get('name')!='marketinghub' or data.get('version')!=version:
+            errors.append('Manifest mismatch: '+name)
+    skillpaths=[p.relative_to(ROOT).as_posix() for p in ROOT.rglob('SKILL.md')
+        if not any(x in {'dist','.git','.agents','.claude','.gemini','.copilot','.maintenance'} for x in p.relative_to(ROOT).parts)
+        and p.relative_to(ROOT).parts[:3]!=('.github','skills','marketinghub')]
+    if skillpaths!=['skills/marketinghub/SKILL.md']: errors.append('Canonical skill paths: '+str(skillpaths))
+    manifest=json.loads((ROOT/'assets/ASSET-PROVENANCE.json').read_text(encoding='utf-8'))
+    listed={a['file'] for a in manifest['assets']}
+    actual={p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*') if p.is_file()
+        and p.suffix.lower() in {'.png','.svg','.jpg','.jpeg','.webp','.gif'}
+        and not any(x in {'dist','.git','.agents','.claude','.gemini','.copilot'} for x in p.relative_to(ROOT).parts)}
+    if listed!=actual: errors.append('Asset inventory mismatch: '+str(sorted(listed ^ actual)))
+    for a in manifest['assets']:
+        p=ROOT/a['file']
+        if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest()!=a['sha256']:
+            errors.append('Asset integrity mismatch: '+a['file'])
+    for rel in ('README.md','README.en.md','docs/index.html'):
+        p=ROOT/rel;text=p.read_text(encoding='utf-8')
+        for link,attr in re.findall(r'\]\(([^)]+)\)|(?:src|href)="([^"]+)"',text):
+            value=link or attr
+            if value.startswith(('http:','https:','mailto:','#')): continue
+            target=value.split('#')[0]
+            if not (p.parent/target).exists(): errors.append('Broken local link: '+rel+': '+value)
+        for source in re.findall(r'<img[^>]+src="([^"]+)"',text):
+            if 'banner.png' in source or 'social-preview' in source or '/archive/' in source:
+                errors.append('Retired promotional graphic displayed: '+rel)
+        if '[AJUSTAR' in text: errors.append('Placeholder: '+rel)
+    if len((ROOT/'prompts/marketinghub-universal.md').read_text(encoding='utf-8'))<3500:
+        errors.append('Portable prompt is incomplete')
+    payload=runtime_payload()
+    if any(n.endswith(('.png','.svg','.jpg','.webp')) or n.startswith('tests/') for n in payload):
+        errors.append('Runtime contains imagery or tests')
+    if payload['VERSION'].decode().strip()!=version: errors.append('Runtime version mismatch')
+    if 'Charlie Hills' not in (ROOT/'skills/marketinghub/LICENSE').read_text(): errors.append('Upstream attribution missing')
+    for path in (ROOT/'.github/workflows').glob('*.yml'):
+        if path.name not in {'ci.yml','release.yml'}: continue
+        for use in re.findall(r'uses:\s*([^\s]+)',path.read_text()):
+            if use.startswith('actions/') and not re.fullmatch(r'actions/[\w-]+@[0-9a-f]{40}',use):
+                errors.append('Action not pinned: '+path.name)
+    command=[sys.executable,str(ROOT/'skills/marketinghub/scripts/selftest.py')]
+    result=subprocess.run(command,capture_output=True,text=True)
+    if result.returncode: errors.append('Skill structural selftest failed: '+result.stdout[-500:])
     return errors
-
-if __name__ == '__main__':
-    mistakes = check()
-    if mistakes:
-        print('FALHA:')
-        for message in mistakes: print(' -', message)
-        raise SystemExit(1)
-    print('OK: icones oficiais, hashes de artes, versoes, links, metodos, skill e atribuicao')
+if __name__=='__main__':
+    errors=check()
+    for e in errors: print('ERROR:',e)
+    if errors: raise SystemExit(1)
+    print('PASS: structural checks, versions, runtime allowlist and supplied asset byte integrity')

@@ -1,7 +1,7 @@
 {
   "name": "marketinghub",
-  "version": "2.3.0",
-  "description": "Seu marketing, num lugar só: ideias, escrita, planejamento e revisão no tom da sua marca.",
+  "version": "2.3.1",
+  "description": "Conteúdo e social media com a voz da sua marca: amostras, cartão de voz e revisão.",
   "author": {
     "name": "MarketingHub"
   },
@@ -21,17 +21,17 @@
   "interface": {
     "displayName": "Marketing Hub",
     "developerName": "MarketingHub",
-    "shortDescription": "Ideias, textos e estratégia de marketing num lugar só, sem complicação.",
-    "longDescription": "O Marketing Hub junta num só lugar o que você precisa para cuidar do marketing do seu negócio. Peça ideias de posts, legendas, campanhas e um plano para a semana, e receba sugestões práticas, adaptadas ao tom da sua marca. Sem jargão e sem fórmula mágica: orientação para o próximo passo, com revisão editorial. Para publicar ou agendar, é preciso ter uma ferramenta conectada e autorização.",
+    "shortDescription": "Voz de marca, conteúdo e revisão para redes sociais.",
+    "longDescription": "Cole textos aprovados da sua marca e organize um cartão de voz. Use-o para criar ou revisar legendas, posts, roteiros e pautas. A skill e o prompt portátil orientam o assistente que você utiliza; a execução depende do cliente. Resultados editoriais comparativos ainda não foram medidos. Publicar e agendar exige ferramentas externas autorizadas.",
     "category": "Creativity",
     "brandColor": "#FF4F8B",
     "capabilities": [
       "Interactive"
     ],
     "defaultPrompt": [
-      "Me dá 5 ideias de post para essa semana.",
-      "Escreve uma legenda para esta foto do meu produto.",
-      "Monta um plano simples de conteúdo para o mês."
+      "Vou colar três posts aprovados. Monte meu cartão de voz.",
+      "Revise este texto e preserve os fatos e o jeito da minha marca.",
+      "Transforme este assunto em pautas diferentes para a semana."
     ],
     "logo": "./assets/marketinghub-icon.png",
     "composerIcon": "./assets/marketinghub-icon.png"

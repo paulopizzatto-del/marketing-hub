@@ -1,7 +1,7 @@
 # Publicação e configuração do Marketing Hub no GitHub
 
 Repositório oficial: https://github.com/paulopizzatto-del/marketing-hub  
-Edição: 2.3.0 (versão oficial)
+Edição: versão definida em `VERSION`
 
 ## Verificações antes de abrir ao público
 
@@ -16,15 +16,15 @@ No repositório, abra **Settings → General → Danger Zone → Change reposito
 
 ## Configurar a apresentação
 
-- **Description:** Seu marketing, num lugar só. Skill e prompt portátil que se adaptam à identidade da sua marca.
+- **Description:** Conteúdo e social media com cartão de voz, escrita e revisão.
 - **Topics:** `marketing`, `agent-skills`, `prompt-engineering`, `branding`, `social-media`, `ai`, `content-creation`, `pt-br`.
-- **Social preview:** Settings → General → Social preview; faça upload de `assets/social-preview-1280x640.png` (arquivo original, 1280 × 640).
+- **Social preview:** Settings → General → Social preview; remova a arte antiga, se configurada. O arquivo em `assets/archive/` está retirado de uso; aguarde uma nova arte aprovada.
 - **Site GitHub Pages (opcional):** Settings → Pages → Deploy from a branch → `main` → `/docs`. Após ativado, o endereço esperado é https://paulopizzatto-del.github.io/marketing-hub/. Verifique a publicação antes de divulgá-lo.
 - **Issues e segurança:** habilite relato privado de vulnerabilidades quando disponível, e mantenha o CI em pull requests.
 - **Branch protection:** quando disponível, exija o CI verde e revisão das alterações antes de mesclar.
 
 ## Download e distribuição
 
-A versão oficial está em [Releases](https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0), com `skill.zip`, `marketing-hub-plugin.zip`, `marketing-hub-repository.zip` e `SHA256SUMS.txt`. Verifique as somas de arquivos depois do download.
+A versão oficial está em [Releases](https://github.com/paulopizzatto-del/marketing-hub/releases/latest), com `skill.zip`, `marketing-hub-plugin.zip`, `marketing-hub-repository.zip` e `SHA256SUMS.txt`. Verifique as somas de arquivos depois do download.
 
 Não confundir GitHub público com aprovação na loja de plugins, integração de APIs ou compatibilidade de recursos nativos de todas as IAs.

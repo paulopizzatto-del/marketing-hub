@@ -1,179 +1,134 @@
 {
-  "policy": "Somente imagens originais enviadas pelo usuário. Sem imagens geradas neste trabalho.",
+  "policy": "Artes fornecidas pelo responsável, criadas com apoio de IA sob sua direção, preservadas sem modificação de bytes nesta distribuição.",
   "assets": [
     {
-      "file": "assets/banner.png",
+      "file": "assets/archive/v2.3.0/banner.png",
       "sha256": "2232eaf6dc013f9f1ef268baaa89e216ffbb0d7b78d1af47516876a1f9f844aa",
       "source_archive": "MARKETING-HUB-GITHUB-KIT.zip",
-      "source_file": "banner.png"
+      "source_file": "banner.png",
+      "status": "retired",
+      "retirement_reason": "Promotional claims exceed tested compatibility; retained only as historical material."
     },
     {
       "file": "assets/brand/marketinghub-horizontal-fundo-escuro.png",
       "sha256": "ec3694465f3ee0ba4872373037901a8a33ce8168842034549fa71deb374d2bcf",
       "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "marca/marketinghub-horizontal-fundo-escuro.png"
+      "source_file": "marca/marketinghub-horizontal-fundo-escuro.png",
+      "status": "active"
     },
     {
       "file": "assets/brand/marketinghub-horizontal-fundo-escuro.svg",
       "sha256": "481e5eeb9d4e633d418f6694e943d4b5a7e6bf16c6f12965b3c2cb61f97f0b24",
       "source_archive": "MARKETING-HUB-GITHUB-KIT.zip",
-      "source_file": "marca-horizontal-escuro.svg"
+      "source_file": "marca-horizontal-escuro.svg",
+      "status": "active"
     },
     {
       "file": "assets/brand/marketinghub-horizontal-fundo-rosa.png",
       "sha256": "3456e1def328d0cc6b28c46d0e744cf2f6ed6e16050111a8f93208cf9b6e5591",
       "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "marca/marketinghub-horizontal-fundo-rosa.png"
+      "source_file": "marca/marketinghub-horizontal-fundo-rosa.png",
+      "status": "active"
     },
     {
       "file": "assets/brand/marketinghub-horizontal-fundo-rosa.svg",
       "sha256": "a2e634304fd78156bfacb2c8620e562f7aebc687ea73a1f50d253eea3a427211",
       "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "marca/marketinghub-horizontal-fundo-rosa.svg"
+      "source_file": "marca/marketinghub-horizontal-fundo-rosa.svg",
+      "status": "active"
     },
     {
       "file": "assets/brand/marketinghub-horizontal.png",
       "sha256": "2b2956cac8d0705797e0f3c18c75bae8dc1634d767b0518d63285b3dbeead32d",
       "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "marca/marketinghub-horizontal.png"
+      "source_file": "marca/marketinghub-horizontal.png",
+      "status": "active"
     },
     {
       "file": "assets/brand/marketinghub-horizontal.svg",
       "sha256": "81cf964e772eb14982b131ee784dfe0d82f9458eab392c2473261b4e1b56a53d",
       "source_archive": "MARKETING-HUB-GITHUB-KIT.zip",
-      "source_file": "marca-horizontal.svg"
+      "source_file": "marca-horizontal.svg",
+      "status": "active"
     },
     {
       "file": "assets/brand/marketinghub-vertical.png",
       "sha256": "c3a239f3baa0f21368e1b0628693e2152618172cf08dd34aca527dc9389f9ffa",
       "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "marca/marketinghub-vertical.png"
+      "source_file": "marca/marketinghub-vertical.png",
+      "status": "active"
     },
     {
       "file": "assets/brand/marketinghub-vertical.svg",
       "sha256": "ed32042e21fabbe071a84efacd30fca80a0954b1f8db7c38fe8171d8963e5aec",
       "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "marca/marketinghub-vertical.svg"
+      "source_file": "marca/marketinghub-vertical.svg",
+      "status": "active"
     },
     {
       "file": "assets/brand/previa-marca.png",
       "sha256": "bbca33889555124ae3de33420ff5f3a058877ebfd97754194f3b192411067c82",
       "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "marca/previa-marca.png"
+      "source_file": "marca/previa-marca.png",
+      "status": "active"
     },
     {
       "file": "assets/icone.png",
       "sha256": "f331457e33108f178590433028733e30e53ee3a0a00af0e0ba20ce833cd480de",
       "source_archive": "MARKETING-HUB-GITHUB-KIT.zip",
-      "source_file": "icone.png"
+      "source_file": "icone.png",
+      "status": "active"
     },
     {
       "file": "assets/icone.svg",
       "sha256": "39e3c3cdd7c395996ba7844b23b57130aeee80068527752f87d79bb99cee1eda",
       "source_archive": "MARKETING-HUB-GITHUB-KIT.zip",
-      "source_file": "icone.svg"
+      "source_file": "icone.svg",
+      "status": "active"
     },
     {
       "file": "assets/marca-horizontal-escuro.svg",
       "sha256": "481e5eeb9d4e633d418f6694e943d4b5a7e6bf16c6f12965b3c2cb61f97f0b24",
       "source_archive": "MARKETING-HUB-GITHUB-KIT.zip",
-      "source_file": "marca-horizontal-escuro.svg"
+      "source_file": "marca-horizontal-escuro.svg",
+      "status": "active"
     },
     {
       "file": "assets/marca-horizontal.svg",
       "sha256": "81cf964e772eb14982b131ee784dfe0d82f9458eab392c2473261b4e1b56a53d",
       "source_archive": "MARKETING-HUB-GITHUB-KIT.zip",
-      "source_file": "marca-horizontal.svg"
+      "source_file": "marca-horizontal.svg",
+      "status": "active"
     },
     {
       "file": "assets/marketinghub-icon.png",
       "sha256": "e28a3b8b9db85c893476a6f02726a4e317eb7ed7450c757bd54b12c85efa23b5",
       "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "png/marketinghub-icone-quadrado_1024.png"
+      "source_file": "png/marketinghub-icone-quadrado_1024.png",
+      "status": "active"
     },
     {
-      "file": "assets/social-preview-1280x640.png",
+      "file": "assets/archive/v2.3.0/social-preview-1280x640.png",
       "sha256": "987e2e803a50d13760c893cef432fed97d22cbeeac978452f00beaec923c7584",
       "source_archive": "MARKETING-HUB-GITHUB-KIT.zip",
-      "source_file": "social-preview-1280x640.png"
-    },
-    {
-      "file": "docs/assets/banner.png",
-      "sha256": "2232eaf6dc013f9f1ef268baaa89e216ffbb0d7b78d1af47516876a1f9f844aa",
-      "source_archive": "MARKETING-HUB-GITHUB-KIT.zip",
-      "source_file": "banner.png"
+      "source_file": "social-preview-1280x640.png",
+      "status": "retired",
+      "retirement_reason": "Promotional claims exceed tested compatibility; retained only as historical material."
     },
     {
       "file": "docs/assets/icon.png",
       "sha256": "e28a3b8b9db85c893476a6f02726a4e317eb7ed7450c757bd54b12c85efa23b5",
       "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "png/marketinghub-icone-quadrado_1024.png"
+      "source_file": "png/marketinghub-icone-quadrado_1024.png",
+      "status": "active"
     },
     {
       "file": "docs/assets/logo.png",
       "sha256": "2b2956cac8d0705797e0f3c18c75bae8dc1634d767b0518d63285b3dbeead32d",
       "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "marca/marketinghub-horizontal.png"
-    },
-    {
-      "file": "skills/marketinghub/assets/brand/marketinghub-horizontal-fundo-escuro.png",
-      "sha256": "ec3694465f3ee0ba4872373037901a8a33ce8168842034549fa71deb374d2bcf",
-      "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "marca/marketinghub-horizontal-fundo-escuro.png"
-    },
-    {
-      "file": "skills/marketinghub/assets/brand/marketinghub-horizontal-fundo-escuro.svg",
-      "sha256": "481e5eeb9d4e633d418f6694e943d4b5a7e6bf16c6f12965b3c2cb61f97f0b24",
-      "source_archive": "MARKETING-HUB-GITHUB-KIT.zip",
-      "source_file": "marca-horizontal-escuro.svg"
-    },
-    {
-      "file": "skills/marketinghub/assets/brand/marketinghub-horizontal-fundo-rosa.png",
-      "sha256": "3456e1def328d0cc6b28c46d0e744cf2f6ed6e16050111a8f93208cf9b6e5591",
-      "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "marca/marketinghub-horizontal-fundo-rosa.png"
-    },
-    {
-      "file": "skills/marketinghub/assets/brand/marketinghub-horizontal-fundo-rosa.svg",
-      "sha256": "a2e634304fd78156bfacb2c8620e562f7aebc687ea73a1f50d253eea3a427211",
-      "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "marca/marketinghub-horizontal-fundo-rosa.svg"
-    },
-    {
-      "file": "skills/marketinghub/assets/brand/marketinghub-horizontal.png",
-      "sha256": "2b2956cac8d0705797e0f3c18c75bae8dc1634d767b0518d63285b3dbeead32d",
-      "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "marca/marketinghub-horizontal.png"
-    },
-    {
-      "file": "skills/marketinghub/assets/brand/marketinghub-horizontal.svg",
-      "sha256": "81cf964e772eb14982b131ee784dfe0d82f9458eab392c2473261b4e1b56a53d",
-      "source_archive": "MARKETING-HUB-GITHUB-KIT.zip",
-      "source_file": "marca-horizontal.svg"
-    },
-    {
-      "file": "skills/marketinghub/assets/brand/marketinghub-vertical.png",
-      "sha256": "c3a239f3baa0f21368e1b0628693e2152618172cf08dd34aca527dc9389f9ffa",
-      "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "marca/marketinghub-vertical.png"
-    },
-    {
-      "file": "skills/marketinghub/assets/brand/marketinghub-vertical.svg",
-      "sha256": "ed32042e21fabbe071a84efacd30fca80a0954b1f8db7c38fe8171d8963e5aec",
-      "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "marca/marketinghub-vertical.svg"
-    },
-    {
-      "file": "skills/marketinghub/assets/brand/previa-marca.png",
-      "sha256": "bbca33889555124ae3de33420ff5f3a058877ebfd97754194f3b192411067c82",
-      "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "marca/previa-marca.png"
-    },
-    {
-      "file": "skills/marketinghub/assets/marketinghub-icon.png",
-      "sha256": "e28a3b8b9db85c893476a6f02726a4e317eb7ed7450c757bd54b12c85efa23b5",
-      "source_archive": "MARKETING-HUB-LOGO_1.zip",
-      "source_file": "png/marketinghub-icone-quadrado_1024.png"
+      "source_file": "marca/marketinghub-horizontal.png",
+      "status": "active"
     }
-  ]
+  ],
+  "origin_statement": "Origem declarada no parecer do Claude entregue pelo mantenedor em 2026-11-10; hashes verificam integridade, não autoria jurídica."
 }

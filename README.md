@@ -1,152 +1,75 @@
-<p align="center">
-  <img src="assets/banner.png" alt="Marketing Hub: identidade adaptável, criação de conteúdo, planejamento e estrutura portátil para diferentes assistentes de IA" width="100%">
-</p>
+<p align="center"><img src="assets/brand/marketinghub-horizontal.png" width="380" alt="Marketing Hub"></p>
 
-<p align="center">
-  <strong>Seu marketing, num lugar só.</strong><br>
-  Conteúdo e estratégia com a personalidade da sua marca, sem complicação.
-</p>
+# Conteúdo e social media com a voz da sua marca
 
-<p align="center">
-  <a href="#como-começar">Como começar</a> ·
-  <a href="#o-que-tem-aqui">Arquivos do projeto</a> ·
-  <a href="#compatibilidade">Compatibilidade</a> ·
-  <a href="README.en.md">English</a> ·
-  <a href="docs/index.html">Vitrine</a> ·
-  <a href="https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0">Baixar versão oficial</a> ·
-  <a href="docs/demonstracao.md">Demonstração</a> ·
-  <a href="docs/faq.md">FAQ</a>
-</p>
+Cole textos que sua marca aprova, organize um cartão de voz e use-o para escrever ou revisar posts, legendas, roteiros e respostas. O **Marketing Hub** orienta o assistente de IA que você já utiliza.
 
-<p align="center"><strong>Marketing Hub 2.3.0 · publicação oficial</strong><br>
-Uma ferramenta editorial aberta para aprender a voz da sua marca. Sem promessas de viralização ou de compatibilidade idêntica entre IAs.</p>
+**[Abrir o prompt para copiar](prompts/marketinghub-universal.md)** · [Como usar](#comece-sem-instalar) · [Versão oficial](https://github.com/paulopizzatto-del/marketing-hub/releases/latest) · [English](README.en.md)
 
----
+## Comece sem instalar
 
-## O que é
+1. Abra o [prompt portátil](prompts/marketinghub-universal.md), copie todo o texto e cole no seu assistente.
+2. Descreva o negócio, o público e a tarefa. Para calibrar a voz, cole três textos que você aprova.
+3. Peça seu cartão de voz ou sua primeira peça. Guarde o cartão para os próximos pedidos.
 
-O **Marketing Hub** reúne uma skill editorial e um prompt portátil para ajudar a planejar, criar e revisar conteúdos com o jeito de falar de **cada marca**. Você pode pedir ideias, legendas, roteiros de Reels, campanhas, calendários e análise de materiais já existentes.
+> “Tenho uma oficina de bicicletas. Vou colar três posts aprovados. Identifique nosso jeito de escrever e revise a legenda que envio depois, sem acrescentar serviços ou promessas.”
 
-Você fornece o contexto: o que seu negócio faz, seu público, seu tom e exemplos de comunicação. O Marketing Hub usa isso como referência. **Não impõe a mesma voz a todas as marcas e não armazena automaticamente um perfil entre conversas.**
+Para uma legenda pontual, você pode começar direto pelo briefing, sem cadastro.
 
-Os recursos editoriais foram organizados a partir de **17 métodos de social media**, em uma única skill generalista. O resultado depende do modelo utilizado, do briefing e das ferramentas disponíveis.
+## Veja a abordagem
 
-## Por que usar
+**Exemplo fictício de revisão, não comparação medida entre modelos.**
 
-- **Identidade adaptável:** respeita o posicionamento, o vocabulário e as preferências da marca.
-- **Produção prática:** sugere posts, legendas, roteiros, comentários, campanhas e revisões.
-- **Planejamento com critério:** estrutura pautas e calendários sem inventar resultados ou tendências.
-- **Dois modos de uso:** skill nativa em ambientes compatíveis ou prompt em assistentes de IA que aceitam texto.
-- **Distribuição aberta do projeto:** documentação, modelos, testes e versões organizados no GitHub.
+Fatos fornecidos: padaria aceita encomendas para retirada; pedidos pelo WhatsApp. Voz: próxima e direta.
 
-**Para quem:** agências, equipes de marketing, freelancers, pequenos negócios e criadores independentes.
+**Rascunho genérico:** “Soluções completas para transformar sua experiência.”
 
-## Como começar
+**Revisão orientada pelo briefing:** “Vai receber gente em casa? Você pode encomendar os pães e retirar na padaria. Chame no WhatsApp para combinar o pedido.”
 
-**[Baixar os pacotes oficiais](https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0)** — skill, plugin e código-fonte. Você também pode usar o prompt portátil sem instalar nada.
+O exemplo mostra a troca de uma abstração por produto e ação concretos. Veja [amostras → cartão → texto](skills/marketinghub/references/voice-lab.md).
 
+## O que você pode fazer
 
-### Opção A — Sem instalar nada
+| Capacidade | Entrega |
+|---|---|
+| Voz de marca | Cartão em Markdown extraído de amostras |
+| Escrita e revisão | Posts e legendas com fatos e preferências do briefing |
+| Pautas | Temas e reaproveitamento por objetivo |
+| Vídeos curtos | Roteiros, cenas e legendas |
+| Briefing visual | Hierarquia, sequência e orientação de produção |
+| Comunidade e perfil | Respostas, bio e clareza de apresentação |
+| Métricas | Leitura dos dados fornecidos, com denominadores definidos |
 
-1. Abra [`prompts/marketinghub-universal.md`](prompts/marketinghub-universal.md) e copie todo o conteúdo.
-2. Cole as instruções no assistente de IA que você já usa.
-3. Apresente a sua marca e peça uma tarefa. Por exemplo:
+## Para equipes e clientes de agentes
 
-> Tenho uma cafeteria de bairro. Meu público é a vizinhança e gosto de um tom acolhedor, direto e sem frases prontas. Me dá cinco ideias de post para esta semana.
-
-Esse caminho é **portátil**, não uma integração nativa com todas as IAs. Se abrir outra conversa ou usar outro modelo, talvez seja necessário informar o contexto novamente.
-
-### Opção B — Instalar como skill
-
-Na página do repositório, clique em **Code → Download ZIP**, extraia o projeto e abra um terminal dentro da pasta `marketing-hub`. Com Python 3:
+A skill é única e seleciona os guias necessários. O pacote instalado contém apenas instruções, modelos, metadados e validador, sem imagens promocionais ou testes internos.
 
 ```bash
 python scripts/install.py --platform codex --scope user
 ```
 
-Troque `codex` por `claude`, `gemini` ou `copilot`, conforme o **cliente local compatível** que utiliza. O instalador copia os arquivos da skill; ele não instala o aplicativo de IA. Consulte o [passo a passo](docs/instalacao.md).
+O instalador aceita destinos de clientes compatíveis; leia [instalação](docs/instalacao.md) e [compatibilidade](docs/compatibilidade.md). A cópia de arquivos foi testada; a descoberta e a qualidade em cada cliente ainda precisam de verificação. Perfis reais ficam no seu ambiente privado.
 
-### Personalize a voz da sua marca
+## Escopo e evidência
 
-Para uso recorrente, comece pelo [`modelo de perfil de marca`](skills/marketinghub/templates/brand-profile.template.json) ou pelos [exemplos de configuração](docs/perfil-de-marca.md). Você também pode fornecer um briefing simples, sem precisar de JSON.
+A documentação editorial é prioritariamente pt-BR. A instrução de idioma segue o pedido, mas isso não equivale a validação linguística em outros idiomas. Este é um kit de conteúdo/social media, não uma plataforma completa de marketing.
 
-> **Privacidade:** nunca publique no repositório perfis reais de clientes, senhas, tokens ou dados confidenciais. A ficha de exemplo é fictícia.
+**Ainda não medimos se o Hub escreve melhor do que uma IA competente com o mesmo briefing.** [O piloto planejado](evaluation/pilot-144/PLAN.md) separa essa pergunta dos testes de software. Não há publicação automática, memória permanente garantida nem integração nativa universal. Pesquisa e ações externas dependem das ferramentas e permissões do assistente.
 
-## O que tem aqui
+## Contribuir e verificar
 
-```text
-marketing-hub/
-├── assets/                         artes e logos originais fornecidos pelo criador
-│   ├── banner.png
-│   ├── icone.png
-│   └── social-preview-1280x640.png
-├── skills/marketinghub/             skill canônica, referências e modelos
-├── prompts/marketinghub-universal.md
-├── docs/                           instalação, compatibilidade e vitrine
-├── examples/                       exemplos fictícios, sem dados de clientes
-├── scripts/                        instalador, verificações e releases
-├── tests/                          testes automatizados
-├── .github/                        CI, modelos de issues e PRs
-└── plugin.json                     manifesto para importação compatível
-```
-
-## Compatibilidade
-
-| Ambiente | Como utilizar | Situação |
-|---|---|---|
-| Codex | Skill em `.agents/skills/` | Estrutura e instalador testados localmente; cliente não testado de ponta a ponta |
-| Claude Code | Skill em `.claude/skills/` | Estrutura e instalador testados localmente; cliente não testado de ponta a ponta |
-| Gemini CLI | Skill em `.gemini/skills/` | Estrutura e instalador testados localmente; cliente não testado de ponta a ponta |
-| GitHub Copilot compatível | Skill em `.github/skills/` | Estrutura e instalador testados localmente; depende do cliente |
-| ChatGPT, Claude e Gemini na web | Prompt de texto | Caminho portátil; integração nativa não garantida |
-| Outros assistentes de texto | Prompt de texto | Depende do modelo e dos limites de contexto |
-
-Veja a [matriz de compatibilidade](docs/compatibilidade.md). **O Marketing Hub não publica nem agenda posts automaticamente, não acessa contas e não promete viralização.** Isso exige integrações externas autorizadas.
-
-## Exemplo de uso
-
-O projeto traz um [briefing de uma cafeteria fictícia](examples/brief-instagram.md), com entrada e texto de demonstração. É **um exemplo ilustrativo, não um case real nem prova de desempenho**.
-
-Para avaliar a qualidade em situações reais, experimente diferentes marcas e compare o resultado com textos aprovados por cada negócio. Veja o [plano de testes](docs/plano-de-testes.md).
-
-## Demonstração: uma ferramenta, diferentes vozes
-
-O Marketing Hub adapta **estilo, argumento e fechamento** à identidade de quem publica. Veja [três exemplos fictícios usando o mesmo pedido editorial](docs/demonstracao.md). Não são resultados gerados automaticamente em outros provedores de IA.
-
-## Como contribuir
-
-Correções, melhorias em linguagem, testes de compatibilidade e novos modelos são bem-vindos. Leia [`CONTRIBUTING.md`](CONTRIBUTING.md) e [`SECURITY.md`](SECURITY.md) antes de abrir um pull request ou relatar vulnerabilidades.
-
-Confira a [auditoria de 20 marcas fictícias](docs/qa-20-marcas.md), com 60 amostras editoriais e limitações explicitadas. Para validar saídas reais, use o [protocolo multimodelo](docs/testes-reais-com-modelos.md). **Os testes offline não comprovam desempenho em todos os modelos.** A versão 2.3.0 é a primeira distribuição oficial. Ainda falta avaliar respostas reais de cada provedor para declarar compatibilidade testada. Veja [limites e próximos passos](docs/lancamento-publico.md).
-
-Rode as verificações locais:
+Os testes de contrato usam **20 perfis fictícios e 60 textos autorados** para checar dados e sinais mecânicos, não voz de marca ou superioridade de modelos. Ficam em `tests/`; veja [o contrato e suas limitações](tests/contracts/README.md).
 
 ```bash
 python scripts/check_repo.py
 python -m unittest discover -s tests -v
+python scripts/build_release.py
 ```
 
-## Identidade visual
+Veja [CONTRIBUTING](CONTRIBUTING.md), [SECURITY](SECURITY.md), [SUPPORT](SUPPORT.md) e [o mapa de correções da revisão](docs/revisao-2.3.1.md).
 
-<p align="center">
-  <img src="assets/brand/marketinghub-horizontal.png" alt="Assinatura horizontal original do Marketing Hub" width="360">
-</p>
+## Identidade e licenças
 
-Todas as imagens publicadas neste repositório são **arquivos fornecidos pelo responsável pelo projeto**, preservados sem geração, alteração ou substituição. O banner, o ícone e a imagem de compartilhamento vêm do kit oficial enviado para o GitHub. Consulte o [guia de aplicação](docs/identidade-visual.md) e o [registro de procedência dos arquivos](assets/ASSET-PROVENANCE.md).
+Artes fornecidas pelo responsável, criadas com apoio de IA sob sua direção e preservadas sem alteração de bytes. A vitrine usa a logo aprovada; o banner anterior foi [retirado de divulgação](assets/archive/v2.3.0/README.md). Consulte [procedência](assets/ASSET-PROVENANCE.md) e [termos da marca](BRAND-ASSETS-LICENSE.md).
 
-O social preview é configurado manualmente nas definições do GitHub usando [`assets/social-preview-1280x640.png`](assets/social-preview-1280x640.png); incluí-lo no repositório não o ativa automaticamente.
-
-## Ajuda e evolução
-
-Veja as [perguntas frequentes](docs/faq.md), o [roteiro de evolução](docs/roadmap.md) e o [suporte](SUPPORT.md). Para colaboração, use issues e pull requests sem enviar informações confidenciais.
-
-## Licença e créditos
-
-O código e a documentação estão sob a licença [MIT](LICENSE). O logotipo e as artes da marca têm termos separados em [`BRAND-ASSETS-LICENSE.md`](BRAND-ASSETS-LICENSE.md). A adaptação editorial atribui os métodos originais de *Social Media Skills for AI Agents*, de Charlie Hills, em [`NOTICE.md`](NOTICE.md).
-
----
-
-<p align="center">
-  <img src="assets/icone.png" width="44" alt="Ícone original do Marketing Hub"><br>
-  <sub>Feito para criar comunicação com clareza, personalidade e método.</sub>
-</p>
+Código e documentação: [MIT](LICENSE). Atribuição dos métodos de origem: [NOTICE](NOTICE.md). A licença de software não cobre as artes.

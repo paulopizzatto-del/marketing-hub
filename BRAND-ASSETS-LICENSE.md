@@ -1,9 +1,9 @@
-# Termos de uso dos ativos da marca
+# Termos dos ativos da marca
 
-A licença de software MIT presente em `LICENSE` **não se estende** aos logotipos, ícones, banners, composições, arquivos SVG ou PNG de identidade visual do Marketing Hub em `assets/`, `docs/assets/` e `skills/marketinghub/assets/brand/`.
+A licença MIT do software e da documentação não se estende à identidade visual do Marketing Hub.
 
-Os arquivos visuais deste repositório são **cópias exatas de materiais enviados pelo responsável pelo projeto**. Foram preservados sem geração de novas imagens ou modificações de pixels. O registro de procedência está em `assets/ASSET-PROVENANCE.md` e `assets/ASSET-PROVENANCE.json`.
+As artes foram fornecidas pelo responsável pelo projeto, criadas com apoio de IA sob sua direção e preservadas sem alteração de bytes neste empacotamento. Essa origem foi informada pelo mantenedor no parecer independente do Claude (10/11/2026). Hashes de integridade não demonstram titularidade jurídica.
 
-Os ativos são disponibilizados para identificar e apresentar este projeto. Não há autorização geral para reutilizar seus símbolos e logotipos como identidade de outro produto, vender pacotes derivados ou distribuir versões alteradas.
+Os ativos ativos identificam e apresentam este projeto. A disponibilização não autoriza utilizar a marca como identidade de outro produto, vender pacotes de artes derivados ou atribuir endosso inexistente. Solicite autorização do responsável para outros usos.
 
-As artes fazem parte da apresentação deste projeto. A disponibilização dos arquivos permite visualizar e identificar o Marketing Hub, **mas não concede licença de uso da marca em outros produtos**, nem transfere titularidade. Solicite autorização do responsável antes de reutilizar, adaptar ou comercializar os ativos.
+As imagens em `assets/archive/` são material histórico retirado de divulgação, não exemplos aprovados para uso promocional. O manifesto de procedência do repositório distingue ativos ativos e retirados. O pacote de plugin inclui somente o ícone necessário; a skill instalável não inclui imagens.

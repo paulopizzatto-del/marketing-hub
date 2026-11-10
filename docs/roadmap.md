@@ -1,24 +1,13 @@
-# Roadmap do Marketing Hub
+# Evolução orientada por evidência
 
-Este arquivo apresenta prioridades, não promessas de lançamento nem compromissos de prazo.
+## Correção atual
 
-## Já disponível
-- Skill editorial generalista com 17 métodos integrados.
-- Perfil de marca portátil e isolação entre marcas.
-- Prompt autocontido para outros assistentes de texto.
-- Instalador local para clientes de agentes compatíveis.
-- Testes estruturais, validação de perfis e empacotamento em ZIP.
-- Identidade visual original, README bilíngue e site estático em `docs/`.
+Ajustar posicionamento, procedência, pacote instalado, avaliador, idioma e exemplos. Registrar aceitação por teste em [revisao-2.3.1.md](revisao-2.3.1.md), sem transformar o aceite de código em evidência de ganho editorial.
 
-## Próximas validações
-- Executar os 60 briefings em modelos identificados, preservar resultados e aplicar revisão humana.
-- Documentar diferenças reais entre ChatGPT, Claude, Gemini, Codex e Copilot conforme a plataforma.
-- Ampliar testes de legibilidade, acessibilidade e riscos por setor.
-- Receber contribuições sobre casos difíceis de identidade de marca e linguagem.
+## Próxima validação
 
-## Possíveis evoluções
-- Exportação de fichas por interface, quando houver suporte nativo.
-- Integrações opcionais de agendamento e analytics com autorização expressa.
-- Exemplos adicionais e ferramentas de migração entre ambientes.
+Preparar amostras de marca revisadas por pessoas, executar o [piloto](../evaluation/pilot-144/PLAN.md), preservar saídas reais e avaliar às cegas. Publicar resultados favoráveis, negativos ou inconclusivos. Observar também erros e trabalho de edição.
 
-**Não implementado:** banco de dados de perfis, painel conectado, publicação automática ou API própria. Sugira melhorias pelas [issues](https://github.com/paulopizzatto-del/marketing-hub/issues).
+## Decisões posteriores
+
+Usar os resultados para escolher entre fortalecer o cartão de voz, o fluxo de revisão e os métodos. Experimentos com novos idiomas exigem revisores adequados. CRM, SEO, CRO, GEO e integrações ficam fora deste incremento. Não há compromisso de data ou de ganho.

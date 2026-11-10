@@ -1,0 +1,117 @@
+{
+  "status": "requires_human_inputs",
+  "brands": [
+    {
+      "brand_id": "pilot-01",
+      "sector": "cafeteria",
+      "brand_brief": "",
+      "approved_samples": [],
+      "held_out_references": [],
+      "approved_by": null,
+      "approved_at": null,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "comment": ""
+      }
+    },
+    {
+      "brand_id": "pilot-02",
+      "sector": "consultoria operacional",
+      "brand_brief": "",
+      "approved_samples": [],
+      "held_out_references": [],
+      "approved_by": null,
+      "approved_at": null,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "comment": ""
+      }
+    },
+    {
+      "brand_id": "pilot-03",
+      "sector": "atelie de ceramica",
+      "brand_brief": "",
+      "approved_samples": [],
+      "held_out_references": [],
+      "approved_by": null,
+      "approved_at": null,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "comment": ""
+      }
+    },
+    {
+      "brand_id": "pilot-04",
+      "sector": "oficina de bicicletas",
+      "brand_brief": "",
+      "approved_samples": [],
+      "held_out_references": [],
+      "approved_by": null,
+      "approved_at": null,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "comment": ""
+      }
+    },
+    {
+      "brand_id": "pilot-05",
+      "sector": "livraria",
+      "brand_brief": "",
+      "approved_samples": [],
+      "held_out_references": [],
+      "approved_by": null,
+      "approved_at": null,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "comment": ""
+      }
+    },
+    {
+      "brand_id": "pilot-06",
+      "sector": "costura",
+      "brand_brief": "",
+      "approved_samples": [],
+      "held_out_references": [],
+      "approved_by": null,
+      "approved_at": null,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "comment": ""
+      }
+    },
+    {
+      "brand_id": "pilot-07",
+      "sector": "paisagismo",
+      "brand_brief": "",
+      "approved_samples": [],
+      "held_out_references": [],
+      "approved_by": null,
+      "approved_at": null,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "comment": ""
+      }
+    },
+    {
+      "brand_id": "pilot-08",
+      "sector": "educacao de idiomas",
+      "brand_brief": "",
+      "approved_samples": [],
+      "held_out_references": [],
+      "approved_by": null,
+      "approved_at": null,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "comment": ""
+      }
+    }
+  ]
+}

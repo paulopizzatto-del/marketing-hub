@@ -25,7 +25,7 @@ Troque `codex` por `claude`, `gemini` ou `copilot`. Para instalar somente no pro
 python scripts/install.py --platform gemini --scope project --project .
 ```
 
-O instalador **não** modifica a skill canônica, não pede credenciais e não substitui uma instalação existente sem `--force`.
+O instalador copia somente os arquivos de runtime e metadados. `--force` prepara uma nova cópia e preserva a instalação anterior em uma pasta de backup. Não pede credenciais nem executa modelo de IA.
 
 ### Caminhos usados
 
@@ -51,3 +51,11 @@ python scripts/build_release.py
 ```
 
 Antes de instalar, leia as instruções de skills e não execute scripts de repositórios desconhecidos sem revisão. Perfis de marcas reais devem permanecer em arquivos privados.
+
+## Schema completo (desenvolvimento)
+
+`python -m pip install -r requirements-dev.txt`
+
+`python skills/marketinghub/scripts/validate_brand_profile.py --require-full examples/brand-profile-ficticio.json`
+
+O modo essencial continua funcionando sem essa dependência.

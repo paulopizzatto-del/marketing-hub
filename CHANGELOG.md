@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.3.1] - 2026-11-10 - correções da revisão independente
+
+- Escopo de conteúdo/social media, primeiro uso por amostras e cartão de voz.
+- Avaliador desacoplado dos testes; tamanho como aviso e alegações percentuais revisáveis.
+- Runtime sem imagens/testes, mesmo filtro no instalador, backup de substituição e VERSION canônico.
+- Banner e social preview anteriores retirados de uso; procedência corrigida sem editar imagens.
+- Casos trabalhados, CI de schema completo e protocolo de piloto sem resultados fabricados.
+- Sem reivindicação de melhora editorial medida ou certificação multimodelo.
+
 ## [2.3.0] - 2026-11-10 - publicação oficial
 
 - README bilíngue com links da versão oficial e limitações técnicas claras.

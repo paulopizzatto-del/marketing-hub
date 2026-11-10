@@ -1,25 +1,25 @@
 # Perguntas frequentes
 
-## Preciso instalar algum aplicativo?
-Não para o modo portátil. Basta copiar [o prompt universal](../prompts/marketinghub-universal.md) em um assistente de texto. Para uso como skill, o cliente precisa aceitar o formato de Agent Skills; há um [instalador local](instalacao.md).
+## Preciso instalar?
+Para o modo textual, basta copiar o [prompt](../prompts/marketinghub-universal.md). O instalador é opcional para clientes de agentes compatíveis.
 
-## Posso usar com ChatGPT, Claude, Gemini ou Copilot?
-O prompt é utilizável em chats que aceitam instruções em texto. Isso não significa suporte nativo idêntico, acesso às mesmas ferramentas ou validação completa de qualidade em todos os modelos. Veja [compatibilidade](compatibilidade.md).
+## Como começo com minha voz?
+Cole três posts que você aprova, informe público, oferta e tarefa e peça um cartão de voz em Markdown. Para uma legenda pontual, um briefing pode bastar.
 
-## A IA passa a conhecer minha marca automaticamente?
-Não. Forneça um briefing, exemplos ou o [perfil de marca](perfil-de-marca.md). A persistência depende da ferramenta; guarde sua ficha separadamente.
+## Ele já escreve melhor do que uma IA sem o Hub?
+Isso ainda não foi medido. O [piloto planejado](../evaluation/pilot-144/PLAN.md) compara condições controladas. Testes internos de software não respondem a essa pergunta.
 
-## Posso cadastrar várias marcas?
-Sim: mantenha perfis separados e declare a marca emissora em cada pedido. Não inclua dados de clientes no repositório público.
+## Funciona em qualquer IA e idioma?
+Existe um prompt portátil e arquivos para clientes compatíveis; resultados variam. A biblioteca principal é pt-BR. Veja [o estado da compatibilidade](compatibilidade.md).
 
-## Ele publica, agenda ou acessa minhas redes sociais?
-Não por conta própria. Essas operações exigem ferramenta conectada, permissões e autorização explícita.
+## Meu perfil fica salvo automaticamente?
+O usuário guarda o cartão; a persistência depende do ambiente. Nunca publique fichas reais no GitHub.
 
-## O que significam os testes com 20 marcas?
-São **20 perfis fictícios**, com **60 amostras editoriais escritas** e testes de estrutura/isolamento. Não equivalem a 60 gerações reais em cada IA nem a prova de qualidade garantida. Veja [auditoria](qa-20-marcas.md).
+## Publica e agenda?
+Apenas com ferramentas externas e autorização. Produzir uma legenda não executa sua publicação.
 
-## Posso usar comercialmente?
-O código e a documentação estão sob MIT. O uso da identidade visual do Marketing Hub é restrito; leia [os termos dos ativos](../BRAND-ASSETS-LICENSE.md). Os resultados produzidos com IA exigem revisão e verificação própria.
+## O que houve com o banner?
+Foi retirado da vitrine por apresentar promessas mais amplas do que os testes. As imagens foram preservadas em arquivo; a logo permanece. Uma nova arte depende do responsável.
 
-## Qual o próximo passo?
-Comece pelo [prompt universal](../prompts/marketinghub-universal.md) e envie um briefing real da sua marca, sem informações sigilosas.
+## Posso reutilizar?
+Código e documentação: [MIT](../LICENSE). Identidade visual: [termos separados](../BRAND-ASSETS-LICENSE.md).

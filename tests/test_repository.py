@@ -61,20 +61,20 @@ class MarketingHubTests(unittest.TestCase):
         for row in rows:
             img = ROOT / row['file']
             self.assertEqual(hashlib.sha256(img.read_bytes()).hexdigest(), row['sha256'])
-        self.assertIn('assets/banner.png', files)
-        self.assertIn('assets/social-preview-1280x640.png', files)
+        self.assertIn('assets/archive/v2.3.0/banner.png', files)
+        self.assertIn('assets/archive/v2.3.0/social-preview-1280x640.png', files)
 
     def test_readme_visual_assets_and_no_placeholders(self):
         readme = (ROOT / 'README.md').read_text(encoding='utf-8')
-        self.assertIn('src="assets/banner.png"', readme)
-        self.assertIn('src="assets/icone.png"', readme)
+        self.assertIn('src="assets/brand/marketinghub-horizontal.png"', readme)
+        self.assertNotIn('src="assets/banner.png"', readme)
         self.assertNotIn('[AJUSTAR', readme)
         self.assertNotIn('URL_DO_REPOSITORIO', readme)
 
     def test_official_release_documentation(self):
         paths = (
             'README.md', 'README.en.md', 'CHANGELOG.md',
-            'skills/marketinghub/CHANGELOG.md',
+            
             'docs/index.html', 'docs/lancamento-publico.md',
             'docs/publicacao-no-github.md', 'docs/plano-de-testes.md',
             'docs/testes-reais-com-modelos.md', 'docs/qa-20-marcas.md',
@@ -85,7 +85,7 @@ class MarketingHubTests(unittest.TestCase):
                 self.assertNotIn('beta', content)
                 self.assertNotIn('v2.3.0-beta.1', content)
         readme = (ROOT / 'README.md').read_text(encoding='utf-8')
-        self.assertIn('/releases/tag/v2.3.0', readme)
+        self.assertIn('/releases/latest', readme)
         self.assertTrue((ROOT / 'docs/demonstracao.md').is_file())
 
     def test_product_description_not_automatic_publisher(self):

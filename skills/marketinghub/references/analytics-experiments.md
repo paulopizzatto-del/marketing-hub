@@ -38,7 +38,7 @@ Descrever para cada teste:
 
 Testes pequenos não garantem significância estatística. Evitar alegar melhoria causal sem desenho apropriado. Escolher mudanças controladas quando possível: abertura, nível de tecnicidade, foto real vs card, formato de CTA ou tema.
 
-## Dashboards
+## Apresentação dos dados
 
 Painel útil pode incluir alcance/impressões, taxa de interação com denominador, evolução temporal, temas e formatos, tabela de posts e limitações dos dados. Construir somente com ferramenta de arquivo/gráfico disponível; explicar quando houver apenas análise textual. Não prometer "dashboard interativo" sem gerar arquivo funcional.
 
@@ -49,3 +49,7 @@ Painel útil pode incluir alcance/impressões, taxa de interação com denominad
 - Padrões e riscos (sem causalidade inventada).
 - 3 prioridades de conteúdo e 2–4 testes rastreáveis.
 - Lacunas para melhorar a medição.
+
+## Exemplo calculado (dados fictícios)
+
+Dois posts têm 100 interações / 2.000 impressões e 160 / 8.000. As taxas individuais são 5% e 2%. O agregado ponderado é (100 + 160) / (2.000 + 8.000) = **2,6%**, e não a média simples de 3,5%. Declarar quais interações entraram na conta. Este cálculo ensina o denominador; não demonstra resultado do Hub.

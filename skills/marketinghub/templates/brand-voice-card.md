@@ -1,21 +1,37 @@
-# Cartão de voz — [Marca]
+# Cartão de voz: [nome da marca]
 
-**Para quem falamos:** [Público]
+**Estado:** provisório / revisado pelo responsável
+**Atualizado em:** [data]
+**Emissor:** [quem publica]
+**Público e oferta:** [contexto]
+**Idioma/variedade:** [pt-BR, en-US ou escolha da marca]
 
-**Como queremos soar:** [3–5 características]
+## Evidência da voz
 
-**Como escrevemos:** [Pronomes, frases, ritmo, tecnicidade, emoção e humor]
+Cole três amostras aprovadas ou registre suas referências privadas. Para cada escolha abaixo, diga qual amostra a sustenta.
 
-**Preferimos:** [Palavras e recursos de voz]
+| Escolha de escrita | Como aplicar | Amostra de apoio |
+|---|---|---|
+| Pronomes e tratamento | | |
+| Ritmo e extensão | | |
+| Vocabulário e detalhes | | |
+| Humor/energia | | |
+| Fechamento/CTA | | |
 
-**Evitamos:** [Expressões, promessas, construções, temas]
+## Fatos que podemos usar
 
-**Canais:** [Adaptação de Instagram, LinkedIn, Reels etc.]
+[Oferta, canal de contato e condições confirmadas, com fonte ou referência.]
 
-**Exemplo aprovado:** [Texto fornecido ou validado]
+## Inferências a validar e informações ausentes
 
-**Exemplo rejeitado:** [Texto fornecido ou feedback específico]
+[Manter separado de fato confirmado.]
 
-**Conferência:** [Fatos e ofertas que exigem aprovação ou fonte]
+## Preferências de formato
 
-Não usar este modelo como regra de linguagem antes de preenchê-lo. Evitar copiar literalmente referências externas.
+[Parágrafos, emojis, hashtags, restrições específicas e acessibilidade.]
+
+## Prova de voz
+
+[Texto curto a revisar com o responsável.]
+
+Guarde este cartão em local privado. Em outra conversa, reapresente-o quando necessário; o arquivo não instala memória permanente.
