@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.3.0 — 2026-11-10 (prévia pública)
+## 2.3.0 — 2026-11-10 (publicação oficial)
 
 - Atualizadas a apresentação e a distribuição multiplataforma do pacote, sem mudar o núcleo de criação ou os 17 métodos.
 - Mantidos modelos fictícios, proteção entre marcas e limites de evidência; validação em modelos externos ainda pendente.

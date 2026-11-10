@@ -13,11 +13,12 @@
   <a href="#compatibilidade">Compatibilidade</a> ·
   <a href="README.en.md">English</a> ·
   <a href="docs/index.html">Vitrine</a> ·
-  <a href="https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0-beta.1">Baixar beta</a> ·
+  <a href="https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0">Baixar versão oficial</a> ·
+  <a href="docs/demonstracao.md">Demonstração</a> ·
   <a href="docs/faq.md">FAQ</a>
 </p>
 
-<p align="center"><strong>Marketing Hub 2.3.0 · prévia pública (beta)</strong><br>
+<p align="center"><strong>Marketing Hub 2.3.0 · publicação oficial</strong><br>
 Uma ferramenta editorial aberta para aprender a voz da sua marca. Sem promessas de viralização ou de compatibilidade idêntica entre IAs.</p>
 
 ---
@@ -42,7 +43,7 @@ Os recursos editoriais foram organizados a partir de **17 métodos de social med
 
 ## Como começar
 
-**[Acessar os pacotes do beta](https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0-beta.1)** — skill, plugin e código-fonte. Você também pode usar o prompt portátil sem instalar nada.
+**[Baixar os pacotes oficiais](https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0)** — skill, plugin e código-fonte. Você também pode usar o prompt portátil sem instalar nada.
 
 
 ### Opção A — Sem instalar nada
@@ -108,11 +109,15 @@ O projeto traz um [briefing de uma cafeteria fictícia](examples/brief-instagram
 
 Para avaliar a qualidade em situações reais, experimente diferentes marcas e compare o resultado com textos aprovados por cada negócio. Veja o [plano de testes](docs/plano-de-testes.md).
 
+## Demonstração: uma ferramenta, diferentes vozes
+
+O Marketing Hub adapta **estilo, argumento e fechamento** à identidade de quem publica. Veja [três exemplos fictícios usando o mesmo pedido editorial](docs/demonstracao.md). Não são resultados gerados automaticamente em outros provedores de IA.
+
 ## Como contribuir
 
 Correções, melhorias em linguagem, testes de compatibilidade e novos modelos são bem-vindos. Leia [`CONTRIBUTING.md`](CONTRIBUTING.md) e [`SECURITY.md`](SECURITY.md) antes de abrir um pull request ou relatar vulnerabilidades.
 
-Confira a [auditoria de 20 marcas fictícias](docs/qa-20-marcas.md), com 60 amostras editoriais e limitações explicitadas. Para validar saídas reais, use o [protocolo multimodelo](docs/testes-reais-com-modelos.md). **Os testes offline não comprovam desempenho em todos os modelos.** A edição 2.3.0 é uma prévia pública: ainda falta a avaliação controlada das respostas reais de cada provedor. Veja [limites e próximos passos](docs/lancamento-publico.md).
+Confira a [auditoria de 20 marcas fictícias](docs/qa-20-marcas.md), com 60 amostras editoriais e limitações explicitadas. Para validar saídas reais, use o [protocolo multimodelo](docs/testes-reais-com-modelos.md). **Os testes offline não comprovam desempenho em todos os modelos.** A versão 2.3.0 é a primeira distribuição oficial. Ainda falta avaliar respostas reais de cada provedor para declarar compatibilidade testada. Veja [limites e próximos passos](docs/lancamento-publico.md).
 
 Rode as verificações locais:
 
@@ -137,7 +142,7 @@ Veja as [perguntas frequentes](docs/faq.md), o [roteiro de evolução](docs/road
 
 ## Licença e créditos
 
-O projeto inclui uma licença [MIT](LICENSE) para código e documentação, **para código e documentação; as artes ficam sob termos separados**. O logotipo e as artes da marca têm termos separados em [`BRAND-ASSETS-LICENSE.md`](BRAND-ASSETS-LICENSE.md). A adaptação editorial atribui os métodos originais de *Social Media Skills for AI Agents*, de Charlie Hills, em [`NOTICE.md`](NOTICE.md).
+O código e a documentação estão sob a licença [MIT](LICENSE). O logotipo e as artes da marca têm termos separados em [`BRAND-ASSETS-LICENSE.md`](BRAND-ASSETS-LICENSE.md). A adaptação editorial atribui os métodos originais de *Social Media Skills for AI Agents*, de Charlie Hills, em [`NOTICE.md`](NOTICE.md).
 
 ---
 
