@@ -1,4 +1,4 @@
-# Beta: validacoes antes de anunciar compatibilidade total
+# Testes de qualidade e compatibilidade por modelo
 
 Os testes automaticos verificam estrutura, ZIP, exemplo de marca e instalador. Eles **não** avaliam qualidade editorial nem provam suporte real de todas as IAs.
 
@@ -21,6 +21,6 @@ Os testes automaticos verificam estrutura, ZIP, exemplo de marca e instalador. E
 15. Ambiente sem arquivos: usar prompt universal com contexto colado.
 16. Repetir caso em duas IAs distintas e verificar se as instruções centrais se mantem.
 
-**Status em 2026-11-10:** além destes cenários qualitativos, criamos uma matriz offline com 20 marcas fictícias e três amostras por marca (60/60 passaram após duas correções). Os exemplos foram autorados para testar um contrato editorial; **não foram executados em modelos de IA externos**. Consulte [`qa-20-marcas.md`](qa-20-marcas.md). Registrar resultados reais por IA, versão, briefing, saída, acertos e falhas antes do lançamento público.
+**Status em 2026-11-10:** além destes cenários qualitativos, criamos uma matriz offline com 20 marcas fictícias e três amostras por marca (60/60 passaram após duas correções). Os exemplos foram autorados para testar um contrato editorial; **não foram executados em modelos de IA externos**. Consulte [`qa-20-marcas.md`](qa-20-marcas.md). Registrar resultados reais por IA, versão, briefing, saída, acertos e falhas antes de declarar compatibilidade verificada em um provedor.
 
 Veja também [`testes-reais-com-modelos.md`](testes-reais-com-modelos.md) para executar os 60 briefings e avaliar saídas de cada IA.

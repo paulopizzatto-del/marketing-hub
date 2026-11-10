@@ -46,7 +46,7 @@
 
 **Não declarar compatibilidade ou qualidade editorial de 100% em diferentes IAs com base nesta auditoria.** As 60 amostras foram escritas como fixtures de avaliação; o repositório é uma skill/prompt e não contém motor de inferência próprio. Não houve chamadas reais ao Claude, Gemini, Copilot ou ChatGPT por instalação da skill. Uma validação funcional exigiria executar os 60 briefings em versões identificadas dos modelos, guardar saídas e fazer revisão editorial independente.
 
-**Situação:** o projeto é distribuído como prévia pública (beta), com escopo e limitações transparentes. Os testes offline validam estrutura e amostras autoradas; **não** comprovam desempenho na execução em GPT, Claude, Gemini ou Copilot. Não declarar nenhum modelo como validado até completar o protocolo de 60 respostas reais com revisão humana.
+**Situação:** a edição 2.3.0 é a versão oficial do pacote, com escopo e limitações transparentes. Os testes offline validam estrutura e amostras autoradas; **não** comprovam desempenho na execução em GPT, Claude, Gemini ou Copilot. Não declarar nenhum modelo como validado até completar o protocolo de 60 respostas reais com revisão humana.
 
 ## Reproduzir
 

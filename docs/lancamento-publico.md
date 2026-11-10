@@ -1,32 +1,36 @@
-# Marketing Hub 2.3.0 — prévia pública (beta)
+# Marketing Hub 2.3.0 — lançamento oficial
 
 **Data:** 10 de novembro de 2026  
 **Repositório:** https://github.com/paulopizzatto-del/marketing-hub  
-**Pacotes:** https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0-beta.1
+**Download:** https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0
 
-## O que já está pronto
+## O que está disponível
 
-- Skill universal e prompt portátil para trabalhar com o tom de diferentes marcas.
-- 17 métodos editoriais integrados; o sistema escolhe os relevantes para cada tarefa.
-- Perfil JSON opcional, sem cadastro obrigatório para uma legenda simples.
-- Instalador e arquivos de importação, além de documentação e exemplos fictícios.
-- Identidade visual fornecida pelo criador, com registro de integridade e condições específicas.
-- Testes automatizados de arquivo, instalação, perfis e 60 amostras autoradas.
+- Uma skill editorial universal e um prompt portátil, sem exigência de cadastro para criar um conteúdo pontual.
+- 17 métodos de marketing adaptados ao contexto da marca, com revisão de clareza, tom e factualidade.
+- Perfis opcionais e isolados para várias marcas; templates, instalador e documentação de uso.
+- Exemplos fictícios, casos de teste, protocolos de avaliação e 20 perfis de marca com 60 amostras editoriais.
+- Banner, ícone e imagens da identidade visual fornecidos pelo responsável pelo projeto, sem imagens geradas nesta distribuição.
+- GitHub Actions, arquivos de integridade SHA-256 e pacotes oficiais para distribuição.
 
-## Limites declarados
+## Como experimentar
 
-Este é um **beta editorial**, não um app conectado e não uma promessa de desempenho. A validação 20 × 3 é offline, sem chamadas reais a modelos externos. A execução em clientes específicos ainda necessita testes controlados; não existe garantia de memória persistente, postagem automática, segurança absoluta ou viralização.
+1. **Sem instalar:** copie o [prompt portátil](../prompts/marketinghub-universal.md), descreva o negócio, público e voz, e peça seu primeiro conteúdo.
+2. **Com agentes compatíveis:** baixe os arquivos na [release oficial](https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0) e consulte [instalação](instalacao.md).
+3. **Para demonstrar:** veja [um mesmo pedido escrito para três marcas fictícias](demonstracao.md).
 
-## Começar
+## Alcance real da validação
 
-1. Sem instalar: use [o prompt universal](../prompts/marketinghub-universal.md).
-2. Com cliente de Agent Skills: use [o instalador](instalacao.md).
-3. Ao testar: mantenha seu perfil privado, revise alegações antes de publicar e [relate diferenças observadas](../SUPPORT.md).
+O projeto foi publicado como **versão oficial do pacote**, não como certificação de funcionamento idêntico em todos os assistentes. Os 20 perfis e 60 amostras fazem parte de uma auditoria **offline**; não são 60 respostas geradas automaticamente pelo ChatGPT, Claude, Gemini ou Copilot. Testes reais de cada modelo permanecem na lista de melhorias.
 
-## Critério para sair do beta
+Não há garantia de resultados comerciais, memória automática entre conversas, publicação/agendamento sem ferramentas autorizadas ou acesso a contas. Qualquer texto final precisa ser revisado quanto a fatos, adequação ao setor e privacidade.
 
-Publicar resultados reproduzíveis e revisão humana dos 60 briefings nas versões de modelos anunciadas como testadas; corrigir falhas relevantes, verificar licenças, acessibilidade, segurança e compatibilidade. Não transformar resultados de amostras em garantia de 100%.
+## Direitos e contribuições
 
-## Para contribuir
+Código e documentação: licença [MIT](../LICENSE), com atribuições em [NOTICE](../NOTICE.md). Artes: [termos específicos da marca](../BRAND-ASSETS-LICENSE.md).
 
-Abra uma issue com um exemplo fictício reproduzível ou uma proposta de melhoria. Veja [CONTRIBUTING.md](../CONTRIBUTING.md).
+Para sugerir recursos, relatar problemas e contribuir, consulte [SUPPORT](../SUPPORT.md) e [CONTRIBUTING](../CONTRIBUTING.md).
+
+## Próximas verificações
+
+Executar o [protocolo de testes reais](testes-reais-com-modelos.md) por provedor/versão, documentar resultados e corrigir diferenças, sem declarar validade universal.

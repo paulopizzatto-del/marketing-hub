@@ -1,14 +1,14 @@
 # Publicação e configuração do Marketing Hub no GitHub
 
 Repositório oficial: https://github.com/paulopizzatto-del/marketing-hub  
-Edição: 2.3.0 (prévia pública, beta)
+Edição: 2.3.0 (versão oficial)
 
 ## Verificações antes de abrir ao público
 
 1. Confirme que arquivos pessoais, tokens, perfis de clientes e dados confidenciais não estão no código **nem no histórico do Git e dos Actions**.
 2. Execute `python scripts/check_repo.py`, `python -m unittest discover -s tests -v` e `python scripts/build_release.py`. Verifique que o CI está verde.
 3. Consulte [LICENSE](../LICENSE), [NOTICE](../NOTICE.md) e [termos da marca](../BRAND-ASSETS-LICENSE.md). As imagens originais do Marketing Hub não são software MIT.
-4. Não apresente o beta como validado em todos os modelos. Os ensaios reais ficam documentados em [testes-reais-com-modelos.md](testes-reais-com-modelos.md).
+4. Não apresente a versão oficial como certificação de qualidade em todos os modelos. Os ensaios reais ficam documentados em [testes-reais-com-modelos.md](testes-reais-com-modelos.md).
 
 ## Tornar público
 
@@ -25,6 +25,6 @@ No repositório, abra **Settings → General → Danger Zone → Change reposito
 
 ## Download e distribuição
 
-A versão beta fica em [Releases](https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0-beta.1), com `skill.zip`, `marketing-hub-plugin.zip`, `marketing-hub-repository.zip` e `SHA256SUMS.txt`. Verifique as somas de arquivos depois do download.
+A versão oficial está em [Releases](https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0), com `skill.zip`, `marketing-hub-plugin.zip`, `marketing-hub-repository.zip` e `SHA256SUMS.txt`. Verifique as somas de arquivos depois do download.
 
 Não confundir GitHub público com aprovação na loja de plugins, integração de APIs ou compatibilidade de recursos nativos de todas as IAs.
