@@ -1,0 +1,73 @@
+name: Revalidate 2.3.1 publication (temporary)
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/revalidate-231-once.yml']
+permissions:
+  contents: write
+jobs:
+  verify-publication:
+    if: github.repository == 'paulopizzatto-del/marketing-hub' && github.actor == github.repository_owner
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: acb9e0d98c8c61b02e1de8adc95a67c295774253
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.11'
+      - name: Recheck exact published source
+        run: |
+          set -euo pipefail
+          python -m pip install -r requirements-dev.txt
+          python scripts/sync_version.py --check
+          python scripts/check_repo.py
+          python skills/marketinghub/scripts/validate_brand_profile.py --require-full examples/brand-profile-ficticio.json
+          python -m unittest discover -s tests -v
+          python scripts/build_release.py
+      - name: Verify published bytes before touching release notes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release download v2.3.1 --repo "$GITHUB_REPOSITORY" --dir "$RUNNER_TEMP/published" --pattern skill.zip --pattern marketing-hub-plugin.zip --pattern marketing-hub-repository.zip --pattern SHA256SUMS.txt
+          for name in skill.zip marketing-hub-plugin.zip marketing-hub-repository.zip SHA256SUMS.txt; do
+            cmp "dist/$name" "$RUNNER_TEMP/published/$name"
+          done
+          (cd "$RUNNER_TEMP/published" && sha256sum -c SHA256SUMS.txt)
+          gh api "repos/$GITHUB_REPOSITORY/releases/tags/v2.3.1" --jq '.target_commitish' | grep -Fx acb9e0d98c8c61b02e1de8adc95a67c295774253
+      - name: Confirm official publication and repair absolute links
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          cat > "$RUNNER_TEMP/release-notes.md" <<'EOF'
+          # Marketing Hub 2.3.1 — Distribuição corretiva
+
+          **Conteúdo e social media com a voz da sua marca.**
+
+          Esta distribuição corrige apresentação, empacotamento e avaliação após revisão independente. Inclui exemplos trabalhados de voz, runtime sem imagens/testes internos e avaliação que separa segurança, sinais para revisão e avisos de formato.
+
+          O banner com promessas não demonstradas foi retirado da apresentação. A procedência informa apoio de IA sob direção do responsável; os arquivos históricos foram preservados.
+
+          ## Autoavaliação e integridade
+          A fonte exata publicada foi reavaliada: 48 testes de software aprovados; schema completo e consistência de versão conferidos. Os quatro arquivos baixados da release foram comparados byte a byte com uma nova reconstrução antes desta atualização de notas. ZIPs e tag não foram substituídos.
+
+          [Leia a autoavaliação completa, seu escopo e suas ressalvas](https://github.com/paulopizzatto-del/marketing-hub/blob/main/docs/autoavaliacao-2.3.1.md).
+
+          **Não há resultado comparativo de qualidade nesta release.** O piloto continua sem saídas reais de modelos e sem julgamentos cegos de humanos. Oficial identifica a distribuição; não certifica vantagem sobre outro modelo, validação multimodelo ou suporte linguístico universal.
+
+          ## Documentação da versão publicada
+          - [Versão canônica](https://github.com/paulopizzatto-del/marketing-hub/blob/v2.3.1/VERSION)
+          - [Correções e pendências](https://github.com/paulopizzatto-del/marketing-hub/blob/v2.3.1/docs/revisao-2.3.1.md)
+          - [Instalação](https://github.com/paulopizzatto-del/marketing-hub/blob/v2.3.1/docs/instalacao.md)
+          - [Compatibilidade](https://github.com/paulopizzatto-del/marketing-hub/blob/v2.3.1/docs/compatibilidade.md)
+          - [Protocolo do piloto](https://github.com/paulopizzatto-del/marketing-hub/blob/v2.3.1/evaluation/pilot-144/PLAN.md)
+          - [Licença e atribuição](https://github.com/paulopizzatto-del/marketing-hub/blob/v2.3.1/NOTICE.md)
+
+          Os arquivos abaixo são os pacotes oficiais. Verifique os downloads com SHA256SUMS.txt. Não há publicação automática de posts nem alteração de contas pelo kit.
+          EOF
+          gh release edit v2.3.1 --repo "$GITHUB_REPOSITORY" --draft=false --prerelease=false --latest --notes-file "$RUNNER_TEMP/release-notes.md"
+          gh release view v2.3.1 --repo "$GITHUB_REPOSITORY" --json tagName,isDraft,isPrerelease,url
