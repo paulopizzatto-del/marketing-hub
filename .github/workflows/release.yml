@@ -1,0 +1,36 @@
+name: Package release
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test
+        run: |
+          python scripts/check_repo.py
+          python -m unittest discover -s tests -v
+      - name: Package
+        run: python scripts/build_release.py
+      - name: Upload release assets (tags only)
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/skill.zip dist/marketing-hub-plugin.zip dist/marketing-hub-repository.zip dist/SHA256SUMS.txt --generate-notes
+      - uses: actions/upload-artifact@v4
+        with:
+          name: marketing-hub-zips
+          path: |
+            dist/skill.zip
+            dist/marketing-hub-plugin.zip
+            dist/marketing-hub-repository.zip
+            dist/SHA256SUMS.txt
