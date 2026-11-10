@@ -1,13 +1,13 @@
 name: Importar Marketing Hub (temporario)
 on:
   issues:
-    types: [opened]
+    types: [opened, edited]
 permissions:
   contents: write
   issues: write
 jobs:
   import-source:
-    if: github.event.issue.title == 'marketinghub: import audited source'
+    if: "github.event.issue.title == 'marketinghub: import audited source'"
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
