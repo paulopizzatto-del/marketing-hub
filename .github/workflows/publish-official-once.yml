@@ -1,0 +1,39 @@
+name: Publicar Marketing Hub v2.3.0 (temporario)
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+jobs:
+  publish-official:
+    if: "${{ github.event.issue.title == 'marketinghub: official v2.3.0 release' && github.event.issue.user.login == github.repository_owner }}"
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout audited official source
+        uses: actions/checkout@v7
+        with:
+          ref: '88cf5f289e0431a6d6bdf02be69285aec5f670ef'
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Validate before release
+        run: |
+          python scripts/check_repo.py
+          python -m unittest discover -s tests -v
+      - name: Build official distribution packages
+        run: python scripts/build_release.py
+      - name: Publish official release and archive prior preview
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release create 'v2.3.0' \
+            dist/skill.zip \
+            dist/marketing-hub-plugin.zip \
+            dist/marketing-hub-repository.zip \
+            dist/SHA256SUMS.txt \
+            --target '88cf5f289e0431a6d6bdf02be69285aec5f670ef' \
+            --title 'Marketing Hub 2.3.0 — Versão Oficial' \
+            --notes-file docs/lancamento-publico.md
+          gh release edit 'v2.3.0-beta.1' --draft
