@@ -1,6 +1,5 @@
 name: Teste de compatibilidade com IA
 description: Compartilhe um teste verificável, sem dados de clientes
-labels: [compatibility]
 body:
   - type: markdown
     attributes:
