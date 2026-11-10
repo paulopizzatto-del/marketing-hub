@@ -1,0 +1,75 @@
+{
+  "schema_version": "2.0",
+  "brand_id": "aula-de-brumas",
+  "display_name": "Aula de Brumas",
+  "brand_type": "company",
+  "description": "Marca fictícia de aulas de idiomas; oferece aulas de conversação em espanhol.",
+  "primary_audience": "estudiantes que quieren practicar conversación",
+  "default_language": "es-MX",
+  "region": "Ambiente de avaliação sem endereço real",
+  "profile_status": "operational",
+  "voice": {
+    "attributes": [
+      "animada",
+      "clara",
+      "acolhedora"
+    ],
+    "sample_rules": [
+      "Usar comunicação apropriada a estudiantes que quieren practicar conversación.",
+      "Evitar promessas sem provas e relatos inventados."
+    ],
+    "pronouns": "first_person_plural",
+    "formality": 1,
+    "energy": 4,
+    "humor": 2,
+    "technicality": 1,
+    "preferred_terms": [
+      "español",
+      "conversación",
+      "hablar"
+    ],
+    "avoid_terms": [
+      "fluidez garantizada",
+      "resultados instantáneos"
+    ],
+    "emoji_policy": "Não exigir emojis",
+    "hashtag_policy": "Sem hashtags obrigatórias",
+    "approved_examples": [],
+    "disapproved_examples": []
+  },
+  "channels": [
+    "instagram",
+    "linkedin"
+  ],
+  "goals": [
+    "comunicar com clareza",
+    "informar público"
+  ],
+  "offers": [
+    {
+      "name": "aulas de conversação em espanhol",
+      "description": "aulas de conversação em espanhol",
+      "claim_status": "confirmed",
+      "evidence": "Oferta inventada no briefing sintético de teste"
+    }
+  ],
+  "source_notes": [
+    {
+      "subject": "Oferta sintética",
+      "source": "Briefing fictício fornecido ao teste; não é alegação de empresa real",
+      "confidence": "confirmed",
+      "checked_at": null
+    }
+  ],
+  "editorial_limits": [
+    "Não inventar depoimentos, cifras, clientes ou resultados",
+    "Não presumir publicação nem acesso a contas"
+  ],
+  "visual_identity": {
+    "colors": [],
+    "fonts": [],
+    "assets": [],
+    "notes": "Sem artes geradas ou autorizadas para a marca fictícia"
+  },
+  "updated_at": "2026-11-10"
+}

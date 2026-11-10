@@ -1,0 +1,75 @@
+{
+  "schema_version": "2.0",
+  "brand_id": "roda-de-mirtilo",
+  "display_name": "Roda de Mirtilo",
+  "brand_type": "company",
+  "description": "Marca fictícia de oficina de bicicletas; oferece revisão e manutenção de bicicletas.",
+  "primary_audience": "pessoas que usam bicicleta no dia a dia",
+  "default_language": "pt-BR",
+  "region": "Ambiente de avaliação sem endereço real",
+  "profile_status": "operational",
+  "voice": {
+    "attributes": [
+      "direta",
+      "descontraída",
+      "prática"
+    ],
+    "sample_rules": [
+      "Usar comunicação apropriada a pessoas que usam bicicleta no dia a dia.",
+      "Evitar promessas sem provas e relatos inventados."
+    ],
+    "pronouns": "first_person_plural",
+    "formality": 1,
+    "energy": 4,
+    "humor": 2,
+    "technicality": 2,
+    "preferred_terms": [
+      "bicicleta",
+      "freios",
+      "revisão"
+    ],
+    "avoid_terms": [
+      "milagre",
+      "risco zero"
+    ],
+    "emoji_policy": "Não exigir emojis",
+    "hashtag_policy": "Sem hashtags obrigatórias",
+    "approved_examples": [],
+    "disapproved_examples": []
+  },
+  "channels": [
+    "instagram",
+    "linkedin"
+  ],
+  "goals": [
+    "comunicar com clareza",
+    "informar público"
+  ],
+  "offers": [
+    {
+      "name": "revisão e manutenção de bicicletas",
+      "description": "revisão e manutenção de bicicletas",
+      "claim_status": "confirmed",
+      "evidence": "Oferta inventada no briefing sintético de teste"
+    }
+  ],
+  "source_notes": [
+    {
+      "subject": "Oferta sintética",
+      "source": "Briefing fictício fornecido ao teste; não é alegação de empresa real",
+      "confidence": "confirmed",
+      "checked_at": null
+    }
+  ],
+  "editorial_limits": [
+    "Não inventar depoimentos, cifras, clientes ou resultados",
+    "Não presumir publicação nem acesso a contas"
+  ],
+  "visual_identity": {
+    "colors": [],
+    "fonts": [],
+    "assets": [],
+    "notes": "Sem artes geradas ou autorizadas para a marca fictícia"
+  },
+  "updated_at": "2026-11-10"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "marketinghub",
+  "version": "2.2.1",
+  "description": "Seu marketing, num lugar só: ideias, escrita, planejamento e revisão no tom da sua marca.",
+  "author": {
+    "name": "MarketingHub"
+  },
+  "keywords": [
+    "marketing",
+    "social-media",
+    "marca",
+    "branding",
+    "copywriting",
+    "conteudo",
+    "instagram",
+    "linkedin",
+    "campanhas",
+    "analytics"
+  ],
+  "skills": "./skills",
+  "interface": {
+    "displayName": "Marketing Hub",
+    "developerName": "MarketingHub",
+    "shortDescription": "Ideias, textos e estratégia de marketing num lugar só, sem complicação.",
+    "longDescription": "O Marketing Hub junta num só lugar o que você precisa para cuidar do marketing do seu negócio. Peça ideias de posts, legendas, campanhas e um plano para a semana, e receba sugestões práticas, adaptadas ao tom da sua marca. Sem jargão e sem fórmula mágica: orientação para o próximo passo, com revisão editorial. Para publicar ou agendar, é preciso ter uma ferramenta conectada e autorização.",
+    "category": "Creativity",
+    "brandColor": "#FF4F8B",
+    "capabilities": [
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "Me dá 5 ideias de post para essa semana.",
+      "Escreve uma legenda para esta foto do meu produto.",
+      "Monta um plano simples de conteúdo para o mês."
+    ],
+    "logo": "./assets/marketinghub-icon.png",
+    "composerIcon": "./assets/marketinghub-icon.png"
+  }
+}

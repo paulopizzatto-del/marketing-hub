@@ -1,0 +1,21 @@
+name: Sugerir melhoria
+description: Proponha um recurso ou ajuste editorial
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Qual problema voce quer resolver?
+      description: Diga o caso de uso antes de sugerir a solucao.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Qual seria uma boa solucao?
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Revisao
+      options:
+        - label: A proposta nao depende de dados privados de clientes.

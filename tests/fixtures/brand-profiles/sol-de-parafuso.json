@@ -1,0 +1,75 @@
+{
+  "schema_version": "2.0",
+  "brand_id": "sol-de-parafuso",
+  "display_name": "Sol de Parafuso",
+  "brand_type": "company",
+  "description": "Marca fictícia de ferramentas para reparo; oferece ferramentas para pequenos reparos domésticos.",
+  "primary_audience": "pessoas interessadas em manutenção da casa",
+  "default_language": "pt-BR",
+  "region": "Ambiente de avaliação sem endereço real",
+  "profile_status": "operational",
+  "voice": {
+    "attributes": [
+      "prática",
+      "clara",
+      "responsável"
+    ],
+    "sample_rules": [
+      "Usar comunicação apropriada a pessoas interessadas em manutenção da casa.",
+      "Evitar promessas sem provas e relatos inventados."
+    ],
+    "pronouns": "first_person_plural",
+    "formality": 3,
+    "energy": 3,
+    "humor": 0,
+    "technicality": 3,
+    "preferred_terms": [
+      "ferramenta",
+      "reparo",
+      "parafuso"
+    ],
+    "avoid_terms": [
+      "à prova de acidentes",
+      "serve para tudo"
+    ],
+    "emoji_policy": "Não exigir emojis",
+    "hashtag_policy": "Sem hashtags obrigatórias",
+    "approved_examples": [],
+    "disapproved_examples": []
+  },
+  "channels": [
+    "instagram",
+    "linkedin"
+  ],
+  "goals": [
+    "comunicar com clareza",
+    "informar público"
+  ],
+  "offers": [
+    {
+      "name": "ferramentas para pequenos reparos domésticos",
+      "description": "ferramentas para pequenos reparos domésticos",
+      "claim_status": "confirmed",
+      "evidence": "Oferta inventada no briefing sintético de teste"
+    }
+  ],
+  "source_notes": [
+    {
+      "subject": "Oferta sintética",
+      "source": "Briefing fictício fornecido ao teste; não é alegação de empresa real",
+      "confidence": "confirmed",
+      "checked_at": null
+    }
+  ],
+  "editorial_limits": [
+    "Não inventar depoimentos, cifras, clientes ou resultados",
+    "Não presumir publicação nem acesso a contas"
+  ],
+  "visual_identity": {
+    "colors": [],
+    "fonts": [],
+    "assets": [],
+    "notes": "Sem artes geradas ou autorizadas para a marca fictícia"
+  },
+  "updated_at": "2026-11-10"
+}

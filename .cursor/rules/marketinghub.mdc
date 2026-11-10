@@ -1,0 +1,6 @@
+---
+description: Optional Marketing Hub behavior for explicit brand marketing, planning or editorial requests.
+alwaysApply: false
+---
+
+For explicit marketing tasks read `skills/marketinghub/SKILL.md` and relevant references. If skill files are not accessible, use `prompts/marketinghub-universal.md`. Do not modify programming behavior for unrelated tasks.

@@ -1,0 +1,38 @@
+{
+  "schema_version": "2.0",
+  "brand_id": "",
+  "display_name": "",
+  "brand_type": "",
+  "description": "",
+  "primary_audience": "",
+  "default_language": "",
+  "region": "",
+  "profile_status": "draft",
+  "voice": {
+    "attributes": [],
+    "sample_rules": [],
+    "pronouns": "unspecified",
+    "formality": null,
+    "energy": null,
+    "humor": null,
+    "technicality": null,
+    "preferred_terms": [],
+    "avoid_terms": [],
+    "emoji_policy": "",
+    "hashtag_policy": "",
+    "approved_examples": [],
+    "disapproved_examples": []
+  },
+  "channels": [],
+  "goals": [],
+  "offers": [],
+  "visual_identity": {
+    "colors": [],
+    "fonts": [],
+    "assets": [],
+    "notes": ""
+  },
+  "editorial_limits": [],
+  "source_notes": [],
+  "updated_at": null
+}

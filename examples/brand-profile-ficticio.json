@@ -1,0 +1,33 @@
+{
+  "schema_version": "2.0",
+  "brand_id": "cafe-aurora-ficticio",
+  "display_name": "Cafe Aurora (marca ficticia)",
+  "brand_type": "company",
+  "description": "Uma cafeteria de bairro ficticia que serve bebidas e alimentos simples.",
+  "primary_audience": "Moradores do bairro que gostam de um ambiente acolhedor.",
+  "default_language": "pt-BR",
+  "region": "Brasil",
+  "profile_status": "calibrated",
+  "voice": {
+    "attributes": ["acolhedora", "clara", "conversacional"],
+    "sample_rules": ["Preferir frases curtas e especificas", "Nao inventar precos ou horarios"],
+    "pronouns": "first_person_plural",
+    "formality": 1,
+    "energy": 3,
+    "humor": 1,
+    "technicality": 0,
+    "preferred_terms": ["bairro", "cafe"],
+    "avoid_terms": ["solucoes completas", "imperdivel"],
+    "emoji_policy": "Opcional e discreto",
+    "hashtag_policy": "Somente se fizer sentido",
+    "approved_examples": ["Cafe passado e conversa boa combinam com a nossa manha."],
+    "disapproved_examples": ["A melhor cafeteria do universo, garantido!"]
+  },
+  "channels": ["Instagram"],
+  "goals": ["Apresentar a marca com naturalidade"],
+  "offers": [],
+  "visual_identity": {"colors": [], "fonts": [], "assets": [], "notes": "Identidade visual a definir"},
+  "editorial_limits": ["Nao inventar horarios, precos, premios nem depoimentos"],
+  "source_notes": [],
+  "updated_at": null
+}

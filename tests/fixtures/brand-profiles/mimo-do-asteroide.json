@@ -1,0 +1,75 @@
+{
+  "schema_version": "2.0",
+  "brand_id": "mimo-do-asteroide",
+  "display_name": "Mimo do Asteroide",
+  "brand_type": "company",
+  "description": "Marca fictícia de pet shop; oferece acessórios para cães e gatos.",
+  "primary_audience": "tutores de cães e gatos",
+  "default_language": "pt-BR",
+  "region": "Ambiente de avaliação sem endereço real",
+  "profile_status": "operational",
+  "voice": {
+    "attributes": [
+      "divertida",
+      "cuidadosa",
+      "carinhosa"
+    ],
+    "sample_rules": [
+      "Usar comunicação apropriada a tutores de cães e gatos.",
+      "Evitar promessas sem provas e relatos inventados."
+    ],
+    "pronouns": "first_person_plural",
+    "formality": 1,
+    "energy": 5,
+    "humor": 3,
+    "technicality": 1,
+    "preferred_terms": [
+      "pet",
+      "cão",
+      "gato"
+    ],
+    "avoid_terms": [
+      "cura",
+      "garantia de felicidade"
+    ],
+    "emoji_policy": "Não exigir emojis",
+    "hashtag_policy": "Sem hashtags obrigatórias",
+    "approved_examples": [],
+    "disapproved_examples": []
+  },
+  "channels": [
+    "instagram",
+    "linkedin"
+  ],
+  "goals": [
+    "comunicar com clareza",
+    "informar público"
+  ],
+  "offers": [
+    {
+      "name": "acessórios para cães e gatos",
+      "description": "acessórios para cães e gatos",
+      "claim_status": "confirmed",
+      "evidence": "Oferta inventada no briefing sintético de teste"
+    }
+  ],
+  "source_notes": [
+    {
+      "subject": "Oferta sintética",
+      "source": "Briefing fictício fornecido ao teste; não é alegação de empresa real",
+      "confidence": "confirmed",
+      "checked_at": null
+    }
+  ],
+  "editorial_limits": [
+    "Não inventar depoimentos, cifras, clientes ou resultados",
+    "Não presumir publicação nem acesso a contas"
+  ],
+  "visual_identity": {
+    "colors": [],
+    "fonts": [],
+    "assets": [],
+    "notes": "Sem artes geradas ou autorizadas para a marca fictícia"
+  },
+  "updated_at": "2026-11-10"
+}

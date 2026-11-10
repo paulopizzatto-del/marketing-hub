@@ -1,0 +1,627 @@
+{
+  "title": "Marketing Hub: 20 marcas fictícias x 3 rodadas",
+  "fixture_type": "authored-editorial-smoke-test",
+  "disclosure": "Os 60 exemplos são textos autorados para checagem editorial offline; não são resultados de chamada a ChatGPT, Claude ou Gemini. Os testes não demonstram comportamento de modelos externos.",
+  "cases": [
+    {
+      "brand_id": "briarfina-de-papel",
+      "display_name": "Briarfina de Papel",
+      "sector": "floricultura",
+      "primary_audience": "pessoas que gostam de presentear com flores",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "flores",
+        "arranjo",
+        "presente"
+      ],
+      "forbidden_terms": [
+        "imperdível",
+        "número 1"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Nem sempre é preciso esperar uma data especial para levar flores para alguém. Um pequeno arranjo também pode dizer: lembrei de você."
+        },
+        {
+          "task": "linkedin",
+          "content": "Um arranjo floral começa pela intenção de quem presenteia. Por isso, ouvir a ocasião e as preferências faz parte do processo criativo."
+        },
+        {
+          "task": "comment",
+          "content": "Que bonito saber que as flores chegaram em um momento importante. Obrigado por dividir isso com a gente!"
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/briarfina-de-papel.json"
+    },
+    {
+      "brand_id": "grao-de-orbita",
+      "display_name": "Grão de Órbita",
+      "sector": "cafeteria",
+      "primary_audience": "pessoas em busca de uma pausa para café",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "café",
+        "bolo",
+        "xícara"
+      ],
+      "forbidden_terms": [
+        "premium",
+        "alta performance"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "O dia pode estar corrido, mas o café não precisa ter pressa. Um filtrado e uma fatia de bolo já mudam o clima da pausa."
+        },
+        {
+          "task": "linkedin",
+          "content": "Uma cafeteria também é feita de pequenos rituais: preparar o café, escolher o bolo e abrir espaço para uma conversa sem pressa."
+        },
+        {
+          "task": "comment",
+          "content": "A gente também vota pelo combo café e bolo. É uma eleição em que ninguém sai perdendo."
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/grao-de-orbita.json"
+    },
+    {
+      "brand_id": "no-de-argila",
+      "display_name": "Nó de Argila",
+      "sector": "cerâmica artesanal",
+      "primary_audience": "pessoas que valorizam objetos feitos à mão",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "argila",
+        "cerâmica",
+        "peça"
+      ],
+      "forbidden_terms": [
+        "baratinho",
+        "exclusividade garantida"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Cada peça de cerâmica carrega pequenas marcas do gesto de quem a criou. É isso que torna tão especial escolher algo feito à mão."
+        },
+        {
+          "task": "linkedin",
+          "content": "O trabalho com argila envolve forma, tempo e atenção aos detalhes. Nem toda etapa aparece na peça pronta, mas cada uma participa do resultado."
+        },
+        {
+          "task": "comment",
+          "content": "Obrigado por reparar na textura. É um detalhe da peça de que gostamos muito."
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/no-de-argila.json"
+    },
+    {
+      "brand_id": "aula-de-brumas",
+      "display_name": "Aula de Brumas",
+      "sector": "aulas de idiomas",
+      "primary_audience": "estudiantes que quieren practicar conversación",
+      "default_language": "es-MX",
+      "relevance_terms": [
+        "español",
+        "conversación",
+        "hablar"
+      ],
+      "forbidden_terms": [
+        "fluidez garantizada",
+        "resultados instantáneos"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Aprender español también es animarse a hablar, aunque la frase no salga perfecta. Cada conversación es una oportunidad para practicar."
+        },
+        {
+          "task": "linkedin",
+          "content": "Las clases de conversación permiten usar el idioma en situaciones cotidianas y perder, poco a poco, el miedo a participar."
+        },
+        {
+          "task": "comment",
+          "content": "¡Gracias por compartir tu experiencia! Qué bueno que la conversación te haya resultado útil."
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/aula-de-brumas.json"
+    },
+    {
+      "brand_id": "roda-de-mirtilo",
+      "display_name": "Roda de Mirtilo",
+      "sector": "oficina de bicicletas",
+      "primary_audience": "pessoas que usam bicicleta no dia a dia",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "bicicleta",
+        "freios",
+        "revisão"
+      ],
+      "forbidden_terms": [
+        "milagre",
+        "risco zero"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Sua bicicleta anda fazendo barulho diferente? Pode ser hora de olhar a manutenção com atenção, antes que o passeio vire preocupação."
+        },
+        {
+          "task": "linkedin",
+          "content": "Uma boa revisão de bicicleta passa por observar freios, transmissão e pneus. Identificar desgastes cedo ajuda a planejar os cuidados necessários."
+        },
+        {
+          "task": "comment",
+          "content": "Valeu por contar! Se o barulho continuar, o ideal é fazer uma avaliação da bicicleta antes de voltar a pedalar."
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/roda-de-mirtilo.json"
+    },
+    {
+      "brand_id": "nimbo-e-linha",
+      "display_name": "Nimbo e Linha",
+      "sector": "ajustes de roupas",
+      "primary_audience": "pessoas que querem conservar suas roupas",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "roupa",
+        "ajuste",
+        "costura"
+      ],
+      "forbidden_terms": [
+        "roupa descartável",
+        "tendência obrigatória"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Aquela roupa que você adora talvez só precise de um ajuste. Às vezes, cuidar do que já temos é a melhor novidade do armário."
+        },
+        {
+          "task": "linkedin",
+          "content": "Um ajuste de costura bem planejado pode prolongar o uso de uma peça. O primeiro passo é avaliar tecido, caimento e possibilidades reais."
+        },
+        {
+          "task": "comment",
+          "content": "Que bom que você decidiu cuidar dessa roupa! Adoramos quando uma peça ganha mais tempo de uso."
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/nimbo-e-linha.json"
+    },
+    {
+      "brand_id": "trem-de-biscoito",
+      "display_name": "Trem de Biscoito",
+      "sector": "padaria",
+      "primary_audience": "pessoas que apreciam panificação artesanal",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "pão",
+        "massa",
+        "fermentação"
+      ],
+      "forbidden_terms": [
+        "o melhor do mundo",
+        "sem igual"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Pão saindo do forno tem um talento especial: transformar qualquer manhã em convite para sentar à mesa."
+        },
+        {
+          "task": "linkedin",
+          "content": "A fermentação natural pede observação e paciência. A massa responde ao tempo e às condições do preparo, e cada fornada ensina alguma coisa."
+        },
+        {
+          "task": "comment",
+          "content": "A casquinha crocante do pão tem fãs por aqui também. Obrigado por passar para contar!"
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/trem-de-biscoito.json"
+    },
+    {
+      "brand_id": "cores-de-fosforo",
+      "display_name": "Cores de Fósforo",
+      "sector": "design gráfico",
+      "primary_audience": "pessoas que gerenciam pequenos negócios",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "marca",
+        "design",
+        "visual"
+      ],
+      "forbidden_terms": [
+        "branding 360",
+        "solução disruptiva"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Seu negócio tem personalidade. O design precisa ajudar as pessoas a percebê-la, não vestir sua marca com a roupa de outra empresa."
+        },
+        {
+          "task": "linkedin",
+          "content": "Uma identidade visual consistente facilita o reconhecimento da marca em posts, embalagens e materiais de atendimento. A clareza vem antes dos enfeites."
+        },
+        {
+          "task": "comment",
+          "content": "Obrigado! A ideia é exatamente essa: fazer o visual trabalhar a favor da mensagem."
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/cores-de-fosforo.json"
+    },
+    {
+      "brand_id": "compasso-das-folhas",
+      "display_name": "Compasso das Folhas",
+      "sector": "paisagismo",
+      "primary_audience": "moradores que querem cuidar de jardins",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "jardim",
+        "planta",
+        "solo"
+      ],
+      "forbidden_terms": [
+        "crescimento garantido",
+        "planta indestrutível"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Um jardim bonito começa muito antes da primeira muda. Observar a luz e o espaço já ajuda a escolher melhor as plantas."
+        },
+        {
+          "task": "linkedin",
+          "content": "Planejar um jardim envolve considerar luminosidade, solo, circulação e manutenção. Esse cuidado facilita decisões adequadas ao ambiente."
+        },
+        {
+          "task": "comment",
+          "content": "Boa pergunta! A escolha da planta depende da luz e das condições do seu jardim."
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/compasso-das-folhas.json"
+    },
+    {
+      "brand_id": "estrela-de-tinta",
+      "display_name": "Estrela de Tinta",
+      "sector": "editora independente",
+      "primary_audience": "famílias interessadas em leitura infantil",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "livro",
+        "história",
+        "leitura"
+      ],
+      "forbidden_terms": [
+        "gênio",
+        "criança perfeita"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Toda leitura começa com um convite: abrir um livro e descobrir quem mora do outro lado da página."
+        },
+        {
+          "task": "linkedin",
+          "content": "Nos livros ilustrados, texto e imagem contam a história juntos. A leitura compartilhada abre espaço para perguntas e interpretações diferentes."
+        },
+        {
+          "task": "comment",
+          "content": "Que alegria saber que a história virou assunto depois da leitura! Obrigado por contar."
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/estrela-de-tinta.json"
+    },
+    {
+      "brand_id": "mimo-do-asteroide",
+      "display_name": "Mimo do Asteroide",
+      "sector": "pet shop",
+      "primary_audience": "tutores de cães e gatos",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "pet",
+        "cão",
+        "gato"
+      ],
+      "forbidden_terms": [
+        "cura",
+        "garantia de felicidade"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Tem pet que ama brinquedo novo. Tem gato que prefere a caixa. A gente respeita os dois estilos de diversão."
+        },
+        {
+          "task": "linkedin",
+          "content": "Ao escolher acessórios para cães e gatos, vale observar tamanho, material e o jeito de brincar de cada animal."
+        },
+        {
+          "task": "comment",
+          "content": "A caixa ganhou de novo? Clássico comportamento de gato. Obrigado por compartilhar!"
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/mimo-do-asteroide.json"
+    },
+    {
+      "brand_id": "vento-de-teclas",
+      "display_name": "Vento de Teclas",
+      "sector": "software de organização",
+      "primary_audience": "small remote teams",
+      "default_language": "en-US",
+      "relevance_terms": [
+        "tasks",
+        "team",
+        "workflow"
+      ],
+      "forbidden_terms": [
+        "guaranteed productivity",
+        "AI magic"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "A calmer workday starts with a clearer view of your tasks. Keep the next step visible and the whole team aligned."
+        },
+        {
+          "task": "linkedin",
+          "content": "A shared task workflow helps teams see priorities, owners, and what still needs attention. Clarity is more useful than another complicated dashboard."
+        },
+        {
+          "task": "comment",
+          "content": "Thanks for sharing this. A simple team task list can make handoffs much easier to follow."
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/vento-de-teclas.json"
+    },
+    {
+      "brand_id": "casa-da-alga",
+      "display_name": "Casa da Alga",
+      "sector": "ONG ambiental",
+      "primary_audience": "moradores interessados em educação ambiental",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "rio",
+        "água",
+        "oficina"
+      ],
+      "forbidden_terms": [
+        "salvação garantida",
+        "culpa dos moradores"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Cuidar de um rio começa também por conhecer o lugar onde a gente vive. Nossa oficina convida a comunidade a observar e conversar sobre a água."
+        },
+        {
+          "task": "linkedin",
+          "content": "A educação ambiental se fortalece quando diferentes moradores compartilham experiências. Falar do rio é também falar do cotidiano da comunidade."
+        },
+        {
+          "task": "comment",
+          "content": "Obrigado por trazer essa preocupação. A conversa sobre o rio precisa mesmo ouvir quem mora perto dele."
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/casa-da-alga.json"
+    },
+    {
+      "brand_id": "pontes-claras",
+      "display_name": "Pontes Claras",
+      "sector": "consultoria operacional",
+      "primary_audience": "gestores de pequenas operações",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "processo",
+        "equipe",
+        "etapa"
+      ],
+      "forbidden_terms": [
+        "eficiência garantida",
+        "transformação sem esforço"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Quando ninguém sabe em qual etapa uma tarefa está, o retrabalho aparece. Mapear o processo ajuda a tornar o caminho visível para a equipe."
+        },
+        {
+          "task": "linkedin",
+          "content": "Um mapa de processos descreve responsabilidades, decisões e pontos de espera. Com essa visão, a equipe pode discutir melhorias com mais critério."
+        },
+        {
+          "task": "comment",
+          "content": "Boa observação. Sem clareza sobre as etapas, fica difícil entender onde a operação precisa de atenção."
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/pontes-claras.json"
+    },
+    {
+      "brand_id": "sorriso-de-jade",
+      "display_name": "Sorriso de Jade",
+      "sector": "consultório odontológico",
+      "primary_audience": "adultos buscando orientação odontológica",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "saúde bucal",
+        "avaliação",
+        "dentista"
+      ],
+      "forbidden_terms": [
+        "tratamento sem risco",
+        "resultado garantido"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Cuidar da saúde bucal também envolve tirar dúvidas. Uma avaliação com dentista ajuda a entender necessidades e possibilidades de cuidado."
+        },
+        {
+          "task": "linkedin",
+          "content": "A avaliação odontológica considera histórico, sinais e condições individuais. As orientações dependem do que for identificado durante o atendimento."
+        },
+        {
+          "task": "comment",
+          "content": "Obrigado pela pergunta. Para orientar sobre esse sintoma, é importante uma avaliação individual com um profissional habilitado."
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/sorriso-de-jade.json"
+    },
+    {
+      "brand_id": "cofre-de-cha",
+      "display_name": "Cofre de Chá",
+      "sector": "educação financeira",
+      "primary_audience": "jovens iniciando controle do próprio orçamento",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "orçamento",
+        "gasto",
+        "dinheiro"
+      ],
+      "forbidden_terms": [
+        "lucro certo",
+        "rendimento garantido"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Anotar para onde vai o dinheiro não resolve tudo, mas ajuda a enxergar o orçamento com mais clareza."
+        },
+        {
+          "task": "linkedin",
+          "content": "Educação financeira começa por reconhecer receitas, gastos e prioridades. Um registro simples permite revisar escolhas sem depender de promessas de ganho rápido."
+        },
+        {
+          "task": "comment",
+          "content": "Boa pergunta. O primeiro passo é olhar os gastos reais do mês e identificar quais você consegue ajustar."
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/cofre-de-cha.json"
+    },
+    {
+      "brand_id": "tecido-em-marte",
+      "display_name": "Tecido em Marte",
+      "sector": "brechó",
+      "primary_audience": "pessoas que gostam de garimpar roupas",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "peça",
+        "roupa",
+        "brechó"
+      ],
+      "forbidden_terms": [
+        "tendência obrigatória",
+        "compra sem pensar"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Roupa boa merece mais de uma história. Por aqui, cada peça de segunda mão pode encontrar um novo jeito de fazer parte do dia."
+        },
+        {
+          "task": "linkedin",
+          "content": "O garimpo em brechó incentiva olhar qualidade, caimento e possibilidades de uso antes de escolher uma peça."
+        },
+        {
+          "task": "comment",
+          "content": "A gente também acha ótimo quando uma roupa encontra alguém que combina com ela. Obrigado por contar!"
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/tecido-em-marte.json"
+    },
+    {
+      "brand_id": "pomar-em-pixel",
+      "display_name": "Pomar em Pixel",
+      "sector": "jogos narrativos",
+      "primary_audience": "jogadores de histórias interativas",
+      "default_language": "pt-PT",
+      "relevance_terms": [
+        "jogo",
+        "história",
+        "escolha"
+      ],
+      "forbidden_terms": [
+        "jogo perfeito",
+        "diversão garantida"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Há jogos em que a escolha mais pequena muda a história toda. E tu, segues o mapa ou vais explorar o caminho menos óbvio?"
+        },
+        {
+          "task": "linkedin",
+          "content": "Num jogo narrativo, as escolhas ajudam a construir a relação entre jogador e história. O interessante está também nas consequências que não se antecipam."
+        },
+        {
+          "task": "comment",
+          "content": "Boa escolha! Às vezes, o melhor momento do jogo acontece quando decides explorar só mais um bocadinho."
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/pomar-em-pixel.json"
+    },
+    {
+      "brand_id": "sol-de-parafuso",
+      "display_name": "Sol de Parafuso",
+      "sector": "ferramentas para reparo",
+      "primary_audience": "pessoas interessadas em manutenção da casa",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "ferramenta",
+        "reparo",
+        "parafuso"
+      ],
+      "forbidden_terms": [
+        "à prova de acidentes",
+        "serve para tudo"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Antes de começar um reparo, vale conferir se você tem a ferramenta certa e conhece as medidas de segurança para a tarefa."
+        },
+        {
+          "task": "linkedin",
+          "content": "Escolher ferramentas para reparos domésticos envolve material, encaixe e uso previsto. Improvisar pode prejudicar o resultado e aumentar o risco."
+        },
+        {
+          "task": "comment",
+          "content": "Boa dúvida! O tipo de parafuso e o material da superfície ajudam a definir a ferramenta adequada."
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/sol-de-parafuso.json"
+    },
+    {
+      "brand_id": "norte-de-caderno",
+      "display_name": "Norte de Caderno",
+      "sector": "mentoria de estudo",
+      "primary_audience": "estudantes preparando rotinas de estudo",
+      "default_language": "pt-BR",
+      "relevance_terms": [
+        "estudo",
+        "rotina",
+        "revisão"
+      ],
+      "forbidden_terms": [
+        "aprovação garantida",
+        "método infalível"
+      ],
+      "outputs": [
+        {
+          "task": "instagram",
+          "content": "Se a sua rotina de estudo vive mudando, começar por um plano pequeno pode ser mais útil do que montar um cronograma impossível."
+        },
+        {
+          "task": "linkedin",
+          "content": "Na organização dos estudos, considero importante reservar espaço para revisão e descanso. Um plano só funciona se fizer sentido no dia a dia."
+        },
+        {
+          "task": "comment",
+          "content": "Obrigado por contar! Ajustar a rotina aos poucos costuma ser mais viável do que tentar mudar tudo de uma vez."
+        }
+      ],
+      "profile_file": "tests/fixtures/brand-profiles/norte-de-caderno.json"
+    }
+  ]
+}

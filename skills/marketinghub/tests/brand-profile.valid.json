@@ -1,0 +1,33 @@
+{
+  "schema_version": "2.0",
+  "brand_id": "brisa-rosa",
+  "display_name": "Brisa Rosa",
+  "brand_type": "company",
+  "description": "Floricultura ficticia com flores para presentear e decorar.",
+  "primary_audience": "Pessoas buscando presentes florais para ocasioes cotidianas.",
+  "default_language": "pt-BR",
+  "region": "",
+  "profile_status": "draft",
+  "voice": {
+    "attributes": ["acolhedora", "direta", "delicada"],
+    "sample_rules": ["Explicar de forma simples sem frases prontas.", "Usar convites naturais sem insistencia."],
+    "pronouns": "first_person_plural",
+    "formality": 2,
+    "energy": 3,
+    "humor": 1,
+    "technicality": 1,
+    "preferred_terms": [],
+    "avoid_terms": ["imperdivel"],
+    "emoji_policy": "Usar somente quando necessario",
+    "hashtag_policy": "Nenhuma por padrao",
+    "approved_examples": [],
+    "disapproved_examples": []
+  },
+  "channels": ["instagram"],
+  "goals": ["Reconhecimento de marca"],
+  "offers": [],
+  "visual_identity": {"colors": [], "fonts": [], "assets": [], "notes": ""},
+  "editorial_limits": ["Nao prometer entrega em prazo especifico sem confirmacao"],
+  "source_notes": [{"subject": "Tipo de negocio", "source": "Exemplo ficticio do pacote", "confidence": "confirmed", "checked_at": null}],
+  "updated_at": "2026-11-10"
+}

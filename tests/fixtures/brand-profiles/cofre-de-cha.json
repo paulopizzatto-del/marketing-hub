@@ -1,0 +1,75 @@
+{
+  "schema_version": "2.0",
+  "brand_id": "cofre-de-cha",
+  "display_name": "Cofre de Chá",
+  "brand_type": "company",
+  "description": "Marca fictícia de educação financeira; oferece aulas de organização financeira para jovens.",
+  "primary_audience": "jovens iniciando controle do próprio orçamento",
+  "default_language": "pt-BR",
+  "region": "Ambiente de avaliação sem endereço real",
+  "profile_status": "operational",
+  "voice": {
+    "attributes": [
+      "didática",
+      "serena",
+      "responsável"
+    ],
+    "sample_rules": [
+      "Usar comunicação apropriada a jovens iniciando controle do próprio orçamento.",
+      "Evitar promessas sem provas e relatos inventados."
+    ],
+    "pronouns": "first_person_plural",
+    "formality": 3,
+    "energy": 2,
+    "humor": 0,
+    "technicality": 3,
+    "preferred_terms": [
+      "orçamento",
+      "gasto",
+      "dinheiro"
+    ],
+    "avoid_terms": [
+      "lucro certo",
+      "rendimento garantido"
+    ],
+    "emoji_policy": "Não exigir emojis",
+    "hashtag_policy": "Sem hashtags obrigatórias",
+    "approved_examples": [],
+    "disapproved_examples": []
+  },
+  "channels": [
+    "instagram",
+    "linkedin"
+  ],
+  "goals": [
+    "comunicar com clareza",
+    "informar público"
+  ],
+  "offers": [
+    {
+      "name": "aulas de organização financeira para jovens",
+      "description": "aulas de organização financeira para jovens",
+      "claim_status": "confirmed",
+      "evidence": "Oferta inventada no briefing sintético de teste"
+    }
+  ],
+  "source_notes": [
+    {
+      "subject": "Oferta sintética",
+      "source": "Briefing fictício fornecido ao teste; não é alegação de empresa real",
+      "confidence": "confirmed",
+      "checked_at": null
+    }
+  ],
+  "editorial_limits": [
+    "Não inventar depoimentos, cifras, clientes ou resultados",
+    "Não presumir publicação nem acesso a contas"
+  ],
+  "visual_identity": {
+    "colors": [],
+    "fonts": [],
+    "assets": [],
+    "notes": "Sem artes geradas ou autorizadas para a marca fictícia"
+  },
+  "updated_at": "2026-11-10"
+}

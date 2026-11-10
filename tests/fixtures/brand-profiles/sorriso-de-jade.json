@@ -1,0 +1,75 @@
+{
+  "schema_version": "2.0",
+  "brand_id": "sorriso-de-jade",
+  "display_name": "Sorriso de Jade",
+  "brand_type": "company",
+  "description": "Marca fictícia de consultório odontológico; oferece avaliação odontológica presencial.",
+  "primary_audience": "adultos buscando orientação odontológica",
+  "default_language": "pt-BR",
+  "region": "Ambiente de avaliação sem endereço real",
+  "profile_status": "operational",
+  "voice": {
+    "attributes": [
+      "profissional",
+      "acolhedora",
+      "prudente"
+    ],
+    "sample_rules": [
+      "Usar comunicação apropriada a adultos buscando orientação odontológica.",
+      "Evitar promessas sem provas e relatos inventados."
+    ],
+    "pronouns": "first_person_plural",
+    "formality": 4,
+    "energy": 2,
+    "humor": 0,
+    "technicality": 4,
+    "preferred_terms": [
+      "saúde bucal",
+      "avaliação",
+      "dentista"
+    ],
+    "avoid_terms": [
+      "tratamento sem risco",
+      "resultado garantido"
+    ],
+    "emoji_policy": "Não exigir emojis",
+    "hashtag_policy": "Sem hashtags obrigatórias",
+    "approved_examples": [],
+    "disapproved_examples": []
+  },
+  "channels": [
+    "instagram",
+    "linkedin"
+  ],
+  "goals": [
+    "comunicar com clareza",
+    "informar público"
+  ],
+  "offers": [
+    {
+      "name": "avaliação odontológica presencial",
+      "description": "avaliação odontológica presencial",
+      "claim_status": "confirmed",
+      "evidence": "Oferta inventada no briefing sintético de teste"
+    }
+  ],
+  "source_notes": [
+    {
+      "subject": "Oferta sintética",
+      "source": "Briefing fictício fornecido ao teste; não é alegação de empresa real",
+      "confidence": "confirmed",
+      "checked_at": null
+    }
+  ],
+  "editorial_limits": [
+    "Não inventar depoimentos, cifras, clientes ou resultados",
+    "Não presumir publicação nem acesso a contas"
+  ],
+  "visual_identity": {
+    "colors": [],
+    "fonts": [],
+    "assets": [],
+    "notes": "Sem artes geradas ou autorizadas para a marca fictícia"
+  },
+  "updated_at": "2026-11-10"
+}

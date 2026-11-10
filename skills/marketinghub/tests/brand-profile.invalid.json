@@ -1,0 +1,11 @@
+{
+  "schema_version": "2.0",
+  "brand_id": "Marketing Hub!",
+  "display_name": "A",
+  "brand_type": "company",
+  "description": "x",
+  "primary_audience": "",
+  "default_language": "pt BR",
+  "profile_status": "draft",
+  "voice": {"attributes": [], "sample_rules": [], "pronouns": "unspecified", "formality": 7, "energy": 3, "humor": -1, "technicality": 2, "preferred_terms": [], "avoid_terms": []}
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "2.0",
+  "brand_id": "casa-da-alga",
+  "display_name": "Casa da Alga",
+  "brand_type": "nonprofit",
+  "description": "Marca fictícia de ONG ambiental; oferece oficinas comunitárias sobre cuidados com rios.",
+  "primary_audience": "moradores interessados em educação ambiental",
+  "default_language": "pt-BR",
+  "region": "Ambiente de avaliação sem endereço real",
+  "profile_status": "operational",
+  "voice": {
+    "attributes": [
+      "comunitária",
+      "respeitosa",
+      "informativa"
+    ],
+    "sample_rules": [
+      "Usar comunicação apropriada a moradores interessados em educação ambiental.",
+      "Evitar promessas sem provas e relatos inventados."
+    ],
+    "pronouns": "first_person_plural",
+    "formality": 2,
+    "energy": 3,
+    "humor": 0,
+    "technicality": 2,
+    "preferred_terms": [
+      "rio",
+      "água",
+      "oficina"
+    ],
+    "avoid_terms": [
+      "salvação garantida",
+      "culpa dos moradores"
+    ],
+    "emoji_policy": "Não exigir emojis",
+    "hashtag_policy": "Sem hashtags obrigatórias",
+    "approved_examples": [],
+    "disapproved_examples": []
+  },
+  "channels": [
+    "instagram",
+    "linkedin"
+  ],
+  "goals": [
+    "comunicar com clareza",
+    "informar público"
+  ],
+  "offers": [
+    {
+      "name": "oficinas comunitárias sobre cuidados com rios",
+      "description": "oficinas comunitárias sobre cuidados com rios",
+      "claim_status": "confirmed",
+      "evidence": "Oferta inventada no briefing sintético de teste"
+    }
+  ],
+  "source_notes": [
+    {
+      "subject": "Oferta sintética",
+      "source": "Briefing fictício fornecido ao teste; não é alegação de empresa real",
+      "confidence": "confirmed",
+      "checked_at": null
+    }
+  ],
+  "editorial_limits": [
+    "Não inventar depoimentos, cifras, clientes ou resultados",
+    "Não presumir publicação nem acesso a contas"
+  ],
+  "visual_identity": {
+    "colors": [],
+    "fonts": [],
+    "assets": [],
+    "notes": "Sem artes geradas ou autorizadas para a marca fictícia"
+  },
+  "updated_at": "2026-11-10"
+}

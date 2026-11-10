@@ -1,0 +1,34 @@
+name: Relatar um problema
+description: Informe erros com passos reproduziveis e sem dados pessoais
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Obrigado por ajudar! Remova dados privados antes de enviar."
+  - type: input
+    id: platform
+    attributes:
+      label: IA e ambiente
+      description: Exemplo - Claude Code, Gemini CLI, prompt em chat
+      placeholder: Plataforma, versao se disponivel
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Passos para reproduzir
+      description: Use exemplos ficticios e sem dados de clientes.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: O que aconteceu
+    validations:
+      required: true
