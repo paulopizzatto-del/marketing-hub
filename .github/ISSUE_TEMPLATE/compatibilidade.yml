@@ -1,0 +1,45 @@
+name: Teste de compatibilidade com IA
+description: Compartilhe um teste verificável, sem dados de clientes
+labels: [compatibility]
+body:
+  - type: markdown
+    attributes:
+      value: "Obrigado por testar! Informe apenas dados fictícios ou autorizados. Não inclua chaves de API, mensagens privadas ou documentos de clientes."
+  - type: input
+    id: client
+    attributes:
+      label: Plataforma e cliente
+      placeholder: Ex. Claude Code, Codex, Gemini CLI, prompt no navegador
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versão do modelo e data do teste
+      placeholder: Ex. modelo XYZ / 2026-11-10
+    validations:
+      required: true
+  - type: dropdown
+    id: integration
+    attributes:
+      label: Forma de utilização
+      options:
+        - Skill nativa
+        - Prompt portátil
+        - Outra
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Passos e resultado observado
+      description: Use somente perfis e briefings fictícios ou autorizados.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Revisão de privacidade
+      options:
+        - label: Não incluí informações confidenciais ou chaves de API.
+          required: true

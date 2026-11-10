@@ -28,7 +28,7 @@ def check():
     if errors: return errors
     for manifest in ('plugin.json', '.codex-plugin/plugin.json'):
         data = json.loads((ROOT/manifest).read_text(encoding='utf-8'))
-        if data.get('name') != 'marketinghub' or data.get('version') != '2.2.1':
+        if data.get('name') != 'marketinghub' or data.get('version') != '2.3.0':
             errors.append(f'Manifesto invalido: {manifest}')
     # One canonical SKILL.md, not 17 different entrypoints.
     skill_paths = [p.relative_to(ROOT) for p in ROOT.rglob('SKILL.md') if 'dist' not in p.parts and not any(hidden in p.relative_to(ROOT).parts for hidden in ('.agents','.claude','.gemini','.copilot')) and p.relative_to(ROOT).parts[:3] != ('.github','skills','marketinghub')]

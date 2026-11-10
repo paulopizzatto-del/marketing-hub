@@ -12,8 +12,13 @@
   <a href="#o-que-tem-aqui">Arquivos do projeto</a> ·
   <a href="#compatibilidade">Compatibilidade</a> ·
   <a href="README.en.md">English</a> ·
-  <a href="docs/index.html">Vitrine</a>
+  <a href="docs/index.html">Vitrine</a> ·
+  <a href="https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0-beta.1">Baixar beta</a> ·
+  <a href="docs/faq.md">FAQ</a>
 </p>
+
+<p align="center"><strong>Marketing Hub 2.3.0 · prévia pública (beta)</strong><br>
+Uma ferramenta editorial aberta para aprender a voz da sua marca. Sem promessas de viralização ou de compatibilidade idêntica entre IAs.</p>
 
 ---
 
@@ -36,6 +41,9 @@ Os recursos editoriais foram organizados a partir de **17 métodos de social med
 **Para quem:** agências, equipes de marketing, freelancers, pequenos negócios e criadores independentes.
 
 ## Como começar
+
+**[Acessar os pacotes do beta](https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0-beta.1)** — skill, plugin e código-fonte. Você também pode usar o prompt portátil sem instalar nada.
+
 
 ### Opção A — Sem instalar nada
 
@@ -104,7 +112,7 @@ Para avaliar a qualidade em situações reais, experimente diferentes marcas e c
 
 Correções, melhorias em linguagem, testes de compatibilidade e novos modelos são bem-vindos. Leia [`CONTRIBUTING.md`](CONTRIBUTING.md) e [`SECURITY.md`](SECURITY.md) antes de abrir um pull request ou relatar vulnerabilidades.
 
-Confira a [auditoria de 20 marcas fictícias](docs/qa-20-marcas.md), com 60 amostras editoriais e limitações explicitadas. Para validar saídas reais, use o [protocolo multimodelo](docs/testes-reais-com-modelos.md). **Os testes offline não comprovam desempenho em todos os modelos.**
+Confira a [auditoria de 20 marcas fictícias](docs/qa-20-marcas.md), com 60 amostras editoriais e limitações explicitadas. Para validar saídas reais, use o [protocolo multimodelo](docs/testes-reais-com-modelos.md). **Os testes offline não comprovam desempenho em todos os modelos.** A edição 2.3.0 é uma prévia pública: ainda falta a avaliação controlada das respostas reais de cada provedor. Veja [limites e próximos passos](docs/lancamento-publico.md).
 
 Rode as verificações locais:
 
@@ -123,9 +131,13 @@ Todas as imagens publicadas neste repositório são **arquivos fornecidos pelo r
 
 O social preview é configurado manualmente nas definições do GitHub usando [`assets/social-preview-1280x640.png`](assets/social-preview-1280x640.png); incluí-lo no repositório não o ativa automaticamente.
 
+## Ajuda e evolução
+
+Veja as [perguntas frequentes](docs/faq.md), o [roteiro de evolução](docs/roadmap.md) e o [suporte](SUPPORT.md). Para colaboração, use issues e pull requests sem enviar informações confidenciais.
+
 ## Licença e créditos
 
-O projeto inclui uma licença [MIT](LICENSE) para código e documentação, **com a decisão de publicação e licenciamento sujeita à confirmação do titular**. O logotipo e as artes da marca têm termos separados em [`BRAND-ASSETS-LICENSE.md`](BRAND-ASSETS-LICENSE.md). A adaptação editorial atribui os métodos originais de *Social Media Skills for AI Agents*, de Charlie Hills, em [`NOTICE.md`](NOTICE.md).
+O projeto inclui uma licença [MIT](LICENSE) para código e documentação, **para código e documentação; as artes ficam sob termos separados**. O logotipo e as artes da marca têm termos separados em [`BRAND-ASSETS-LICENSE.md`](BRAND-ASSETS-LICENSE.md). A adaptação editorial atribui os métodos originais de *Social Media Skills for AI Agents*, de Charlie Hills, em [`NOTICE.md`](NOTICE.md).
 
 ---
 

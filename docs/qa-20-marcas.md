@@ -46,7 +46,7 @@
 
 **Não declarar compatibilidade ou qualidade editorial de 100% em diferentes IAs com base nesta auditoria.** As 60 amostras foram escritas como fixtures de avaliação; o repositório é uma skill/prompt e não contém motor de inferência próprio. Não houve chamadas reais ao Claude, Gemini, Copilot ou ChatGPT por instalação da skill. Uma validação funcional exigiria executar os 60 briefings em versões identificadas dos modelos, guardar saídas e fazer revisão editorial independente.
 
-**Gate de lançamento público: pendente.** Uma taxa de 100% dos critérios automáticos offline não é 100% de confiabilidade do comportamento gerativo. O repositório pode ser preparado como privado para testes adicionais; abrir ao público só após verificação de direitos sobre as artes e validação prática com modelos-alvo.
+**Situação:** o projeto é distribuído como prévia pública (beta), com escopo e limitações transparentes. Os testes offline validam estrutura e amostras autoradas; **não** comprovam desempenho na execução em GPT, Claude, Gemini ou Copilot. Não declarar nenhum modelo como validado até completar o protocolo de 60 respostas reais com revisão humana.
 
 ## Reproduzir
 

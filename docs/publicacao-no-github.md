@@ -1,53 +1,30 @@
-# Publicar o repositório no GitHub
+# Publicação e configuração do Marketing Hub no GitHub
 
-## Revisão final antes de tornar público
+Repositório oficial: https://github.com/paulopizzatto-del/marketing-hub  
+Edição: 2.3.0 (prévia pública, beta)
 
-- Confirme que é o titular ou tem autorização para publicar os logotipos e arquivos de marca.
-- Revise a proposta de MIT para o código e a documentação; os ativos de marca estão excluidos da licença aberta.
-- Preserve a licença MIT e a atribuição a Charlie Hills pelas 17 métodos originais.
-- Garanta que nenhum perfil real, token, imagem privada, email pessoal desnecessario ou contrato foi incluído.
-- Rode CI localmente: `python scripts/check_repo.py` e `python -m unittest discover -s tests -v`.
-- Teste ao menos um ambiente de skill nativa e um chat com o prompt universal antes de dizer que o produto foi testado com outras IAs.
+## Verificações antes de abrir ao público
 
-## Subir o código com Git
+1. Confirme que arquivos pessoais, tokens, perfis de clientes e dados confidenciais não estão no código **nem no histórico do Git e dos Actions**.
+2. Execute `python scripts/check_repo.py`, `python -m unittest discover -s tests -v` e `python scripts/build_release.py`. Verifique que o CI está verde.
+3. Consulte [LICENSE](../LICENSE), [NOTICE](../NOTICE.md) e [termos da marca](../BRAND-ASSETS-LICENSE.md). As imagens originais do Marketing Hub não são software MIT.
+4. Não apresente o beta como validado em todos os modelos. Os ensaios reais ficam documentados em [testes-reais-com-modelos.md](testes-reais-com-modelos.md).
 
-1. Crie no GitHub um repositório vazio chamado `marketing-hub` (sem README ou .gitignore gerados pela interface, pois eles já existem neste pacote).
-2. Extraia **o conteúdo** do ZIP deste projeto em uma pasta chamada `marketing-hub`.
-3. Na pasta extraída, execute:
+## Tornar público
 
-```bash
-git init
-git add .
-git commit -m "feat: launch Marketing Hub portable editorial toolkit"
-git branch -M main
-git remote add origin URL_DO_GITHUB.git
-git push -u origin main
-```
+No repositório, abra **Settings → General → Danger Zone → Change repository visibility → Public** e confirme. A conta proprietária deve executar essa ação no GitHub. Isso expõe também o histórico do Git e os logs de Actions. A alteração é separada da publicação do plugin no Diretório do ChatGPT.
 
-Substitua `URL_DO_GITHUB.git` pelo endereço indicado na sua conta. Não coloque token em comando, arquivo ou captura de tela. Para repositórios públicos, revise o log de arquivos antes do push: `git status` e `git diff --cached --stat`.
+## Configurar a apresentação
 
-**Alternativa pelo navegador:** abra um novo repositório no GitHub e use **Add file > Upload files** depois de **extrair o ZIP**. O GitHub não descompacta automaticamente um ZIP enviado como um arquivo comum.
-
-## Configurar a vitrine
-
-O banner do README utiliza `assets/banner.png`, sem alterações. **Não trocar pelas imagens geradas em conversas de IA**: o padrão aprovado usa somente os arquivos originais enviados pelo proprietário. A imagem social é selecionada manualmente em **Settings > General > Social preview**, de acordo com as opções disponíveis no GitHub.
-
-- **Description:** `Seu marketing, num lugar só. Skill e prompt portátil que se adaptam à identidade da sua marca.`
+- **Description:** Seu marketing, num lugar só. Skill e prompt portátil que se adaptam à identidade da sua marca.
 - **Topics:** `marketing`, `agent-skills`, `prompt-engineering`, `branding`, `social-media`, `ai`, `content-creation`, `pt-br`.
-- **Social preview:** use `assets/social-preview-1280x640.png` (arte original fornecida no kit do GitHub).
-- **Website:** opcionalmente publique o conteúdo de `docs/` via GitHub Pages, ajustando links quando souber a URL real do repositório.
-- **Issues/Discussions:** habilite conforme capacidade de manutenção da equipe.
+- **Social preview:** Settings → General → Social preview; faça upload de `assets/social-preview-1280x640.png` (arquivo original, 1280 × 640).
+- **Site GitHub Pages (opcional):** Settings → Pages → Deploy from a branch → `main` → `/docs`. Após ativado, o endereço esperado é https://paulopizzatto-del.github.io/marketing-hub/. Verifique a publicação antes de divulgá-lo.
+- **Issues e segurança:** habilite relato privado de vulnerabilidades quando disponível, e mantenha o CI em pull requests.
+- **Branch protection:** quando disponível, exija o CI verde e revisão das alterações antes de mesclar.
 
-## Releases
+## Download e distribuição
 
-```bash
-python scripts/build_release.py
-```
+A versão beta fica em [Releases](https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0-beta.1), com `skill.zip`, `marketing-hub-plugin.zip`, `marketing-hub-repository.zip` e `SHA256SUMS.txt`. Verifique as somas de arquivos depois do download.
 
-Isso gera `dist/skill.zip`, `dist/marketing-hub-plugin.zip` e `dist/marketing-hub-repository.zip`. Use as versões em GitHub Releases, em vez de pedir aos usuários para baixar um arquivo de código sem instrução.
-
-A workflow de release pode criar os ZIPs em tags `v*`, mas o dono deve revisar permissões, secrets e configuração do repositório antes da primeira execução.
-
-## O que o GitHub não faz
-
-Abrir um repositório no GitHub **não** publica automaticamente o plugin no diretório do ChatGPT, instala em modelos de IA, registra uma marca ou disponibiliza uma API. São processos separados.
+Não confundir GitHub público com aprovação na loja de plugins, integração de APIs ou compatibilidade de recursos nativos de todas as IAs.
