@@ -71,6 +71,23 @@ class MarketingHubTests(unittest.TestCase):
         self.assertNotIn('[AJUSTAR', readme)
         self.assertNotIn('URL_DO_REPOSITORIO', readme)
 
+    def test_official_release_documentation(self):
+        paths = (
+            'README.md', 'README.en.md', 'CHANGELOG.md',
+            'skills/marketinghub/CHANGELOG.md',
+            'docs/index.html', 'docs/lancamento-publico.md',
+            'docs/publicacao-no-github.md', 'docs/plano-de-testes.md',
+            'docs/testes-reais-com-modelos.md', 'docs/qa-20-marcas.md',
+        )
+        for relpath in paths:
+            with self.subTest(path=relpath):
+                content = (ROOT / relpath).read_text(encoding='utf-8').lower()
+                self.assertNotIn('beta', content)
+                self.assertNotIn('v2.3.0-beta.1', content)
+        readme = (ROOT / 'README.md').read_text(encoding='utf-8')
+        self.assertIn('/releases/tag/v2.3.0', readme)
+        self.assertTrue((ROOT / 'docs/demonstracao.md').is_file())
+
     def test_product_description_not_automatic_publisher(self):
         text = (ROOT / 'README.md').read_text(encoding='utf-8').lower()
         self.assertTrue('n\u00e3o' in text or 'nao' in text)
