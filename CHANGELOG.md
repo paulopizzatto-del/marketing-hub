@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.3.0-beta.1] - 2026-11-10 - preparação para prévia pública
+
+- README bilíngue atualizado com caminho de download e limitações do beta.
+- Documentação de FAQ, suporte, evolução e notas do lançamento; uso explícito de assets originais.
+- GitHub Actions modernizado, Dependabot configurado e templates de comunidade ampliados.
+- Compatibilidade e testes com modelos reais continuam sem alegações não comprovadas.
+- Versão de distribuição atualizada para 2.3.0; núcleo editorial e os 17 métodos preservados.
+
 ## [Unreleased] - auditoria pré-lançamento
 
 - Criada matriz com 20 marcas inteiramente fictícias e três tarefas editoriais por marca, com 60 amostras e perfis JSON isolados.

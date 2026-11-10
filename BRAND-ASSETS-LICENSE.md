@@ -6,4 +6,4 @@ Os arquivos visuais deste repositório são **cópias exatas de materiais enviad
 
 Os ativos são disponibilizados para identificar e apresentar este projeto. Não há autorização geral para reutilizar seus símbolos e logotipos como identidade de outro produto, vender pacotes derivados ou distribuir versões alteradas.
 
-**Antes de tornar o repositório público:** confirmar titularidade dos direitos, permissão de distribuição pública das artes e a licença apropriada para código e documentação. A preparação técnica não substitui essa validação.
+As artes fazem parte da apresentação deste projeto. A disponibilização dos arquivos permite visualizar e identificar o Marketing Hub, **mas não concede licença de uso da marca em outros produtos**, nem transfere titularidade. Solicite autorização do responsável antes de reutilizar, adaptar ou comercializar os ativos.

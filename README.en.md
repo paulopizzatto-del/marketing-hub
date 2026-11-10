@@ -6,7 +6,9 @@
   <strong>Your marketing, in one place.</strong><br>
   Brand-aware content creation and planning, without a generic voice.
 </p>
-<p align="center"><a href="README.md">Português</a> · <a href="docs/instalacao.md">Installation (PT-BR)</a> · <a href="docs/compatibilidade.md">Compatibility (PT-BR)</a></p>
+<p align="center"><a href="README.md">Português</a> · <a href="docs/instalacao.md">Installation (PT-BR)</a> · <a href="docs/compatibilidade.md">Compatibility (PT-BR)</a> · <a href="https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0-beta.1">Public beta release</a></p>
+
+**Version 2.3.0 · public beta.** Open, brand-adaptive editorial toolkit. The 20-brand/60-example tests are offline fixtures, not 60 real model executions.
 
 ## What is Marketing Hub?
 
@@ -15,6 +17,9 @@
 It integrates principles from 17 social-media methods into one workflow. It does **not** guarantee persistent brand memory, publishing, account access, verified research, or results such as virality. Available capabilities depend on the assistant and authorized tools.
 
 ## Getting started
+
+**[Download the beta packages](https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.0-beta.1)**, or copy the portable prompt below to start without installing anything.
+
 
 **No installation:** open [`prompts/marketinghub-universal.md`](prompts/marketinghub-universal.md), copy its contents into an AI assistant that accepts text instructions, and tell it about your brand, audience, voice and goal.
 
@@ -54,4 +59,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md). The [samp
 
 The banner, icon, logo variants and social preview are original **user-supplied** project assets, not AI-generated for this release. The original source bytes are preserved. See [asset provenance](assets/ASSET-PROVENANCE.md) and [brand asset terms](BRAND-ASSETS-LICENSE.md).
 
-Code and documentation include an MIT license, subject to the owner's confirmation for public release. Brand graphics are excluded from that software license. Credits for Charlie Hills' original MIT-licensed social-media methods are in [NOTICE.md](NOTICE.md).
+Code and documentation are distributed under MIT. Brand graphics are excluded from that software license. Credits for Charlie Hills' original MIT-licensed social-media methods are in [NOTICE.md](NOTICE.md).
+
+## Support and beta limitations
+
+See [FAQ (PT-BR)](docs/faq.md), [public beta notes](docs/lancamento-publico.md), [roadmap](docs/roadmap.md), and [support](SUPPORT.md). Installation paths and source integrity are tested; behavioral quality in each AI provider is still subject to model-specific evaluation.

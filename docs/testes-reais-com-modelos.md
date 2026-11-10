@@ -12,7 +12,7 @@ O repositório contém 20 marcas inteiramente fictícias e 60 amostras editoriai
 
 Um arquivo com qualquer uma das 60 saídas ausente ou sem revisão **falhará** por padrão; o teste não inventará um resultado.
 
-## Gate de publicação
+## Gate de estabilidade (saída do beta)
 
 - Todos os 20 perfis têm schema válido e os 60 casos offline passam nos verificadores objetivos.
 - Todas as versões de modelos anunciadas como 'testadas' devem ter 60 respostas reais e avaliadas, sem casos em aberto.
@@ -20,4 +20,4 @@ Um arquivo com qualquer uma das 60 saídas ausente ou sem revisão **falhará** 
 - Checar licença de software, atribuição do material de terceiros e autorização de divulgação das artes originais da marca.
 - Para criar o repositório remoto, a ferramenta conectada precisa suportar a criação de repositórios, ou o proprietário deve criá-lo manualmente antes de permitir commits por API.
 
-Até esse gate ser cumprido, o projeto é **candidato privado para avaliação**, não produto comprovado para lançamento público.
+Enquanto esse gate não for cumprido, disponibilize o projeto apenas como **prévia pública (beta)**. Não anuncie certificação multimodelo, memória persistente nem confiabilidade de 100%. Relate o provedor, a versão e a data de qualquer teste real executado.
