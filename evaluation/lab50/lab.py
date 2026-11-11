@@ -558,7 +558,7 @@ def analyze(args):
     if args.out.exists():
         raise FileExistsError("Análise já existe; preserve a versão original dos votos")
     write_json(args.out, out)
-    print(f"Analise descritiva escrita em {args.out}; não é certificação de superioridade.")
+    print(f"Análise descritiva escrita em {args.out}; não é certificação de superioridade.")
 
 
 def template(args):

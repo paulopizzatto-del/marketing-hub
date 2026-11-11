@@ -2,7 +2,7 @@
 
 **Solicitação comum:** “Crie uma publicação para o Instagram apresentando nossa marca. Quero um texto humano, interessante e que desperte vontade de conhecer nosso trabalho.”
 
-Os três exemplos abaixo são **fictícios e autorados para demonstração**. Não representam empresas existentes nem  resultados obtidos por execução automatizada da skill em serviços externos.
+Os três exemplos abaixo são **fictícios e escritos para demonstração**. Não representam empresas existentes nem resultados obtidos por execução automatizada da skill em serviços externos.
 
 ## 1. Pão & Prosa — Padaria de bairro
 

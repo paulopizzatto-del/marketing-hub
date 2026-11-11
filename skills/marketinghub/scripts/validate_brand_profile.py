@@ -27,20 +27,20 @@ def _human_errors(doc):
         return ["o perfil deve ser um objeto JSON"]
     for key in REQUIRED:
         if key not in doc:
-            errors.append(f"campo obrigatorio ausente: {key}")
+            errors.append(f"campo obrigatório ausente: {key}")
     if doc.get("schema_version") != "2.0":
         errors.append("schema_version deve ser '2.0'")
     identifier = doc.get("brand_id", "")
     if not isinstance(identifier, str) or not SLUG.fullmatch(identifier) or not 2 <= len(identifier) <= 64:
-        errors.append("brand_id deve ser slug minusculo (2-64 caracteres)")
+        errors.append("brand_id deve ser slug minúsculo (2-64 caracteres)")
     for key, size in (("display_name", 2), ("description", 8), ("primary_audience", 4)):
         value = doc.get(key)
         if not isinstance(value, str) or len(value.strip()) < size:
             errors.append(f"{key} precisa ter pelo menos {size} caracteres")
     if not isinstance(doc.get("brand_type"), str) or doc.get("brand_type") not in {"company", "personal", "nonprofit", "product", "other"}:
-        errors.append("brand_type nao reconhecido")
+        errors.append("brand_type não reconhecido")
     if not isinstance(doc.get("profile_status"), str) or doc.get("profile_status") not in {"draft", "calibrated", "operational"}:
-        errors.append("profile_status nao reconhecido")
+        errors.append("profile_status não reconhecido")
     lang = doc.get("default_language")
     if not isinstance(lang, str) or not LANG.fullmatch(lang):
         errors.append("default_language deve ser BCP47 simplificado, ex.: pt-BR")
@@ -57,7 +57,7 @@ def _human_errors(doc):
             if type(val) is not int or not 0 <= val <= 5:
                 errors.append(f"voice.{name} precisa ser inteiro de 0 a 5")
         if not isinstance(voice.get("pronouns"), str) or voice.get("pronouns") not in {"first_person_singular", "first_person_plural", "brand_name", "neutral", "unspecified"}:
-            errors.append("voice.pronouns invalido")
+            errors.append("voice.pronouns inválido")
         for key in ("preferred_terms", "avoid_terms"):
             if not isinstance(voice.get(key), list):
                 errors.append(f"voice.{key} precisa ser uma lista")
@@ -68,7 +68,7 @@ def validate_profile(path, require_full=False):
     try:
         document = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError) as error:
-        return None, [f"erro lendo JSON: {error}"], []
+        return None, [f"erro ao ler JSON: {error}"], []
     errors = _human_errors(document)
     warnings = []
     try:
@@ -77,15 +77,15 @@ def validate_profile(path, require_full=False):
         validator = jsonschema.Draft202012Validator(schema, format_checker=jsonschema.FormatChecker())
         for err in sorted(validator.iter_errors(document), key=lambda e: list(map(str, e.absolute_path))):
             where = ".".join(str(p) for p in err.absolute_path) or "raiz"
-            message = f"{where}: schema rule {err.validator} failed"
+            message = f"{where}: regra do schema {err.validator} não atendida"
             if message not in errors:
                 errors.append(message)
     except ImportError:
-        warnings.append("jsonschema nao instalado: apenas verificacao essencial executada")
+        warnings.append("jsonschema não instalado: apenas verificação essencial executada")
         if require_full:
-            errors.append("validacao completa requerida: instale jsonschema")
+            errors.append("validação completa requerida: instale jsonschema")
     if SECRET.search(json.dumps(document, ensure_ascii=False)):
-        errors.append("possivel credencial detectada: remover do perfil")
+        errors.append("possível credencial detectada: remover do perfil")
     if isinstance(document, dict) and document.get("profile_status") == "operational":
         if not document.get("channels") or not document.get("goals"):
             warnings.append("perfil operacional sem canais ou objetivos definidos")
@@ -109,17 +109,17 @@ def main(argv):
         if isinstance(doc, dict):
             key = doc.get("brand_id")
             if isinstance(key, str) and key and key in seen:
-                errors.append(f"brand_id repetido; ja usado em {seen[key]}")
+                errors.append(f"brand_id repetido; já usado em {seen[key]}")
             if isinstance(key, str) and key:
                 seen[key] = path
         print(f"\n[{path}]")
         if errors:
             exit_code = 1
-            print("INVALIDO")
+            print("INVÁLIDO")
             for error in errors:
                 print("  ERRO:", error)
         else:
-            print("VALIDO (schema completo)" if require_full else "VALIDO")
+            print("VÁLIDO (schema completo)" if require_full else "VÁLIDO")
         for warn in warnings:
             print("  AVISO:", warn)
     return exit_code

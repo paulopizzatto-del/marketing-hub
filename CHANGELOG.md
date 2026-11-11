@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.4.1] - 2026-11-11 - revisão ortográfica e consistência editorial
+
+- Corrigidos acentuação, ortografia e pequenos problemas de concordância em páginas de documentação e no Studio.
+- Revisadas mensagens exibidas por validadores e autodiagnósticos da skill, sem alterar regras de validação.
+- Corrigidos exemplos e cenários de aceitação fictícios para português brasileiro, preservando os dados estruturados e os critérios dos testes.
+- Mantidos os 17 métodos, as atribuições originais, o contrato de perfil de marca `schema_version: 2.0` e os limites de evidência do produto.
+- Documentação comunitária corrigida na `main` após a release original 2.4.0 passa a integrar este pacote de manutenção.
+
 ## [2.4.0] - 2026-11-11 - Studio, estratégia e laboratório de pesquisa
 
 - Pipeline editorial com estratégia de posicionamento, proposta de valor, jornada, voz baseada em amostras, fatos e compreensão humana; fluxo rápido para tarefas simples.

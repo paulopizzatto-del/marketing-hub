@@ -14,7 +14,7 @@
   <a href="README.en.md">English</a>
 </p>
 
-> **Versão 2.4.0:** código aberto com Studio de briefing, guias editoriais e protocolo experimental. A publicação não implica superioridade editorial comprovada por testes reais.
+> **Versão 2.4.1:** código aberto com Studio de briefing, guias editoriais, protocolo experimental e revisão ortográfica. A publicação não implica superioridade editorial comprovada por testes reais.
 
 ## O que é o Marketing Hub?
 
