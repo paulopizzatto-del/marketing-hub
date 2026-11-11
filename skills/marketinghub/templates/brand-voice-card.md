@@ -55,3 +55,15 @@ Evitar rótulos vagos como “humano” ou “bem-humorado” sem transformá-lo
 [Texto curto a revisar com o responsável.]
 
 Guarde cartão e amostras em local privado. Em outra conversa, reapresente-os quando necessário; o arquivo não instala memória permanente.
+
+## Diagnóstico ampliado (quando a campanha justificar)
+
+- **Posicionamento e proposta de valor confirmados:**
+- **Públicos principais e situações de leitura:**
+- **Jornada e objetivo da peça:**
+- **Confiança por regra:** alta / média / baixa (não é escore científico)
+- **Exceções e contraexemplos aprovados:**
+- **Riscos de alegação e necessidade de aprovação:**
+- **Estado do cartão:** provisório / revisado / marca em reposicionamento
+
+Cartão de voz não substitui evidência nem estratégia; amostras por si só não comprovam posicionamento ou desempenho comercial.

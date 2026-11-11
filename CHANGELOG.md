@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.4.0] - 2026-11-11 - Studio, estratégia e laboratório de pesquisa
+
+- Pipeline editorial com estratégia de posicionamento, proposta de valor, jornada, voz baseada em amostras, fatos e compreensão humana; fluxo rápido para tarefas simples.
+- Novos guias de adequação estratégica, registro de alegações, contexto humano, UX writing e redação por formato; templates de contexto e aprovação.
+- Prompt portátil atualizado para o mesmo método, sem prometer integração ou memória permanentes.
+- `docs/studio.html`: preparação local de briefing com exportação JSON e prompt, sem API, conta, analytics ou armazenamento automático; testado em navegador desktop/mobile.
+- `evaluation/lab50/`: preparação para 50 marcas/3.600 saídas, cegamento, sharding de revisores, estudo H0–H4, 10 tarefas e 4 estresses. Sem dados reais de marcas, modelos ou humanos. Este é projeto de investigação e não evidência de superioridade.
+- Não inclui PDFs-fonte de terceiros, não altera bytes de artes existentes nem sublicencia elementos visuais.
+
 ## [2.3.2] - 2026-11-11 - piloto, avaliador e portabilidade
 
 - Piloto revisado para poucos clusters, empates e controle de comprimento; sem limiar pontual redundante de 60%.

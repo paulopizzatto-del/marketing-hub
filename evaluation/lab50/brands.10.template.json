@@ -1,0 +1,405 @@
+{
+  "status": "REQUIRES_HUMAN_APPROVED_INPUTS",
+  "brands": [
+    {
+      "brand_id": "brand-001",
+      "sector": "finanças/seguros",
+      "market": "",
+      "company_size": "",
+      "risk_band": "",
+      "locale": "",
+      "consent_reference": "",
+      "brand_brief": "",
+      "approved_samples": [
+        "",
+        "",
+        ""
+      ],
+      "held_out_references": [
+        "",
+        "",
+        ""
+      ],
+      "voice_card": "",
+      "human_approved_by": "",
+      "human_approved_at": "",
+      "permission_to_use": false,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "newsletter": "",
+        "landing": "",
+        "cta": "",
+        "email": "",
+        "ad": "",
+        "support": "",
+        "crisis": "",
+        "ux_microcopy": "",
+        "ambiguous_brief": "",
+        "conflicting_facts": "",
+        "channel_shift": "",
+        "high_risk_claim": ""
+      }
+    },
+    {
+      "brand_id": "brand-002",
+      "sector": "saúde/bem-estar",
+      "market": "",
+      "company_size": "",
+      "risk_band": "",
+      "locale": "",
+      "consent_reference": "",
+      "brand_brief": "",
+      "approved_samples": [
+        "",
+        "",
+        ""
+      ],
+      "held_out_references": [
+        "",
+        "",
+        ""
+      ],
+      "voice_card": "",
+      "human_approved_by": "",
+      "human_approved_at": "",
+      "permission_to_use": false,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "newsletter": "",
+        "landing": "",
+        "cta": "",
+        "email": "",
+        "ad": "",
+        "support": "",
+        "crisis": "",
+        "ux_microcopy": "",
+        "ambiguous_brief": "",
+        "conflicting_facts": "",
+        "channel_shift": "",
+        "high_risk_claim": ""
+      }
+    },
+    {
+      "brand_id": "brand-003",
+      "sector": "alimentos/hospitalidade",
+      "market": "",
+      "company_size": "",
+      "risk_band": "",
+      "locale": "",
+      "consent_reference": "",
+      "brand_brief": "",
+      "approved_samples": [
+        "",
+        "",
+        ""
+      ],
+      "held_out_references": [
+        "",
+        "",
+        ""
+      ],
+      "voice_card": "",
+      "human_approved_by": "",
+      "human_approved_at": "",
+      "permission_to_use": false,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "newsletter": "",
+        "landing": "",
+        "cta": "",
+        "email": "",
+        "ad": "",
+        "support": "",
+        "crisis": "",
+        "ux_microcopy": "",
+        "ambiguous_brief": "",
+        "conflicting_facts": "",
+        "channel_shift": "",
+        "high_risk_claim": ""
+      }
+    },
+    {
+      "brand_id": "brand-004",
+      "sector": "varejo/e-commerce",
+      "market": "",
+      "company_size": "",
+      "risk_band": "",
+      "locale": "",
+      "consent_reference": "",
+      "brand_brief": "",
+      "approved_samples": [
+        "",
+        "",
+        ""
+      ],
+      "held_out_references": [
+        "",
+        "",
+        ""
+      ],
+      "voice_card": "",
+      "human_approved_by": "",
+      "human_approved_at": "",
+      "permission_to_use": false,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "newsletter": "",
+        "landing": "",
+        "cta": "",
+        "email": "",
+        "ad": "",
+        "support": "",
+        "crisis": "",
+        "ux_microcopy": "",
+        "ambiguous_brief": "",
+        "conflicting_facts": "",
+        "channel_shift": "",
+        "high_risk_claim": ""
+      }
+    },
+    {
+      "brand_id": "brand-005",
+      "sector": "tecnologia B2B",
+      "market": "",
+      "company_size": "",
+      "risk_band": "",
+      "locale": "",
+      "consent_reference": "",
+      "brand_brief": "",
+      "approved_samples": [
+        "",
+        "",
+        ""
+      ],
+      "held_out_references": [
+        "",
+        "",
+        ""
+      ],
+      "voice_card": "",
+      "human_approved_by": "",
+      "human_approved_at": "",
+      "permission_to_use": false,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "newsletter": "",
+        "landing": "",
+        "cta": "",
+        "email": "",
+        "ad": "",
+        "support": "",
+        "crisis": "",
+        "ux_microcopy": "",
+        "ambiguous_brief": "",
+        "conflicting_facts": "",
+        "channel_shift": "",
+        "high_risk_claim": ""
+      }
+    },
+    {
+      "brand_id": "brand-006",
+      "sector": "educação/serviços profissionais",
+      "market": "",
+      "company_size": "",
+      "risk_band": "",
+      "locale": "",
+      "consent_reference": "",
+      "brand_brief": "",
+      "approved_samples": [
+        "",
+        "",
+        ""
+      ],
+      "held_out_references": [
+        "",
+        "",
+        ""
+      ],
+      "voice_card": "",
+      "human_approved_by": "",
+      "human_approved_at": "",
+      "permission_to_use": false,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "newsletter": "",
+        "landing": "",
+        "cta": "",
+        "email": "",
+        "ad": "",
+        "support": "",
+        "crisis": "",
+        "ux_microcopy": "",
+        "ambiguous_brief": "",
+        "conflicting_facts": "",
+        "channel_shift": "",
+        "high_risk_claim": ""
+      }
+    },
+    {
+      "brand_id": "brand-007",
+      "sector": "turismo/cultura",
+      "market": "",
+      "company_size": "",
+      "risk_band": "",
+      "locale": "",
+      "consent_reference": "",
+      "brand_brief": "",
+      "approved_samples": [
+        "",
+        "",
+        ""
+      ],
+      "held_out_references": [
+        "",
+        "",
+        ""
+      ],
+      "voice_card": "",
+      "human_approved_by": "",
+      "human_approved_at": "",
+      "permission_to_use": false,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "newsletter": "",
+        "landing": "",
+        "cta": "",
+        "email": "",
+        "ad": "",
+        "support": "",
+        "crisis": "",
+        "ux_microcopy": "",
+        "ambiguous_brief": "",
+        "conflicting_facts": "",
+        "channel_shift": "",
+        "high_risk_claim": ""
+      }
+    },
+    {
+      "brand_id": "brand-008",
+      "sector": "organizações sociais",
+      "market": "",
+      "company_size": "",
+      "risk_band": "",
+      "locale": "",
+      "consent_reference": "",
+      "brand_brief": "",
+      "approved_samples": [
+        "",
+        "",
+        ""
+      ],
+      "held_out_references": [
+        "",
+        "",
+        ""
+      ],
+      "voice_card": "",
+      "human_approved_by": "",
+      "human_approved_at": "",
+      "permission_to_use": false,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "newsletter": "",
+        "landing": "",
+        "cta": "",
+        "email": "",
+        "ad": "",
+        "support": "",
+        "crisis": "",
+        "ux_microcopy": "",
+        "ambiguous_brief": "",
+        "conflicting_facts": "",
+        "channel_shift": "",
+        "high_risk_claim": ""
+      }
+    },
+    {
+      "brand_id": "brand-009",
+      "sector": "serviços locais",
+      "market": "",
+      "company_size": "",
+      "risk_band": "",
+      "locale": "",
+      "consent_reference": "",
+      "brand_brief": "",
+      "approved_samples": [
+        "",
+        "",
+        ""
+      ],
+      "held_out_references": [
+        "",
+        "",
+        ""
+      ],
+      "voice_card": "",
+      "human_approved_by": "",
+      "human_approved_at": "",
+      "permission_to_use": false,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "newsletter": "",
+        "landing": "",
+        "cta": "",
+        "email": "",
+        "ad": "",
+        "support": "",
+        "crisis": "",
+        "ux_microcopy": "",
+        "ambiguous_brief": "",
+        "conflicting_facts": "",
+        "channel_shift": "",
+        "high_risk_claim": ""
+      }
+    },
+    {
+      "brand_id": "brand-010",
+      "sector": "lifestyle/moda/beleza",
+      "market": "",
+      "company_size": "",
+      "risk_band": "",
+      "locale": "",
+      "consent_reference": "",
+      "brand_brief": "",
+      "approved_samples": [
+        "",
+        "",
+        ""
+      ],
+      "held_out_references": [
+        "",
+        "",
+        ""
+      ],
+      "voice_card": "",
+      "human_approved_by": "",
+      "human_approved_at": "",
+      "permission_to_use": false,
+      "tasks": {
+        "instagram": "",
+        "linkedin": "",
+        "newsletter": "",
+        "landing": "",
+        "cta": "",
+        "email": "",
+        "ad": "",
+        "support": "",
+        "crisis": "",
+        "ux_microcopy": "",
+        "ambiguous_brief": "",
+        "conflicting_facts": "",
+        "channel_shift": "",
+        "high_risk_claim": ""
+      }
+    }
+  ]
+}
