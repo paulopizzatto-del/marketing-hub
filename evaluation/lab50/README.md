@@ -1,6 +1,6 @@
 # Marketing Hub 50 — laboratório de investigação real
 
-**Status: pronto para cadastro e execução, sem dados humanos/modelos coletados.** Produto candidato: Marketing Hub v2.4.0. Código de pesquisa tem limitações; não há superioridade demonstrada nem "50 marcas já testadas".
+**Status: pronto para cadastro e execução, sem dados humanos/modelos coletados.** Versão do produto: Marketing Hub v2.4.0 (publicada em 11/11/2026). Código de pesquisa tem limitações; não há superioridade demonstrada nem "50 marcas já testadas".
 
 ## 50 marcas: o desenho, não o resultado
 

@@ -11,6 +11,6 @@ O banner contraditório foi retirado da vitrine, preservando os arquivos histór
 Consulte [correções e pendências](revisao-2.3.2.md), [compatibilidade](compatibilidade.md), [instalação](instalacao.md) e [licenças](../NOTICE.md).
 
 
-## Nota sobre o candidato 2.4.0
+## Nota sobre a versão 2.4.0 publicada
 
 A versão 2.4.0 adiciona Studio de briefing, estratégia de marca e estudo MH-50. Não declare que as 50 marcas foram avaliadas ou que o Hub supera a IA sem Hub. Mensagem pública defensável: "Um kit aberto para trabalhar contexto estratégico, voz da marca, evidências e revisão editorial usando seu assistente de IA." O Studio não envia dados nem cria conteúdo final automaticamente.

@@ -1,5 +1,5 @@
 name: Relatar um problema
-description: Informe erros com passos reproduziveis e sem dados pessoais
+description: Informe erros com passos reproduzíveis e sem dados pessoais
 labels: [bug]
 body:
   - type: markdown
@@ -10,14 +10,14 @@ body:
     attributes:
       label: IA e ambiente
       description: Exemplo - Claude Code, Gemini CLI, prompt em chat
-      placeholder: Plataforma, versao se disponivel
+      placeholder: Plataforma e versão, se disponíveis
     validations:
       required: true
   - type: textarea
     id: reproduce
     attributes:
       label: Passos para reproduzir
-      description: Use exemplos ficticios e sem dados de clientes.
+      description: Use exemplos fictícios e sem dados de clientes.
     validations:
       required: true
   - type: textarea

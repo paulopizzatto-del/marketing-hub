@@ -4,15 +4,15 @@ O que mudou e qual problema resolve?
 
 ## Tipo
 
-- [ ] Documentacao ou tom de voz
-- [ ] Skill e referencias
-- [ ] Instalador, CI ou distribuicao
-- [ ] Correcao de bug
+- [ ] Documentação ou tom de voz
+- [ ] Skill e referências
+- [ ] Instalador, CI ou distribuição
+- [ ] Correção de bug
 
-## Evidencia
+## Evidências
 
 - [ ] `python scripts/check_repo.py` passou
 - [ ] `python -m unittest discover -s tests -v` passou
 - [ ] Sem tokens, perfis reais ou dados confidenciais
-- [ ] Alteracoes nos assets de marca autorizadas, se houver
-- [ ] Compatibilidade real demonstrada ou limitacoes descritas
+- [ ] Alterações nos assets de marca autorizadas, se houver
+- [ ] Compatibilidade real demonstrada ou limitações descritas

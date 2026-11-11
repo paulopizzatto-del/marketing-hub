@@ -1,4 +1,4 @@
-# Autoavaliação técnica — Marketing Hub 2.4.0 (candidato)
+# Autoavaliação técnica — Marketing Hub 2.4.0 (registro pré-publicação)
 
 **O que existe e foi exercitado**
 
@@ -23,4 +23,4 @@
 - Revisão factual automática não deve substituir especialista nem normalizar claims não sustentados.
 - O Studio é uma ferramenta de montagem de prompt, **não analisa amostras por algoritmo de IA nem gera textos finais**.
 - Não liberar alegação 'somos superiores' antes de dados reais, estudos cegos e inferência apropriada.
-- Versão 2.4.0 está no pacote candidato; nenhuma publicação remota foi feita nesta entrega.
+- No momento desta autoavaliação, a versão 2.4.0 ainda era candidata. A [release oficial v2.4.0](https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.4.0) foi publicada posteriormente, em 11/11/2026.
