@@ -24,6 +24,6 @@ We have not measured whether Marketing Hub improves writing compared with a comp
 
 ## Contributions and assets
 
-Read [CONTRIBUTING](CONTRIBUTING.md), [SECURITY](SECURITY.md) and [the correction map](docs/revisao-2.3.1.md). Software and documentation are MIT; original-method credits are retained in [NOTICE](NOTICE.md).
+Read [CONTRIBUTING](CONTRIBUTING.md), [SECURITY](SECURITY.md) and [the correction map](docs/revisao-2.3.2.md). Software and documentation are MIT; original-method credits are retained in [NOTICE](NOTICE.md).
 
 Project graphics were supplied by the owner, created with AI assistance under the owner's direction, and preserved byte-for-byte during packaging. Earlier promotional graphics have been retired, not redrawn. Brand assets have [separate terms](BRAND-ASSETS-LICENSE.md).

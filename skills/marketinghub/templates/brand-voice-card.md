@@ -1,22 +1,42 @@
 # Cartão de voz: [nome da marca]
 
-**Estado:** provisório / revisado pelo responsável
-**Atualizado em:** [data]
-**Emissor:** [quem publica]
-**Público e oferta:** [contexto]
+**Estado:** provisório / revisado pelo responsável  
+**Atualizado em:** [data]  
+**Emissor:** [quem publica]  
+**Público e oferta:** [contexto]  
 **Idioma/variedade:** [pt-BR, en-US ou escolha da marca]
+
+> **Como usar:** o cartão complementa as amostras; quando possível, envie junto 3 posts aprovados e característicos. O cartão organiza a rubrica, mas não substitui o sinal textual das amostras.
+
+## Resumo portátil
+
+[Até ~300 caracteres com as decisões mais importantes para colar em campos curtos de “tom de voz”.]
 
 ## Evidência da voz
 
-Cole três amostras aprovadas ou registre suas referências privadas. Para cada escolha abaixo, diga qual amostra a sustenta.
-
-| Escolha de escrita | Como aplicar | Amostra de apoio |
+| Regra observável | Como aplicar | Amostra de apoio |
 |---|---|---|
-| Pronomes e tratamento | | |
-| Ritmo e extensão | | |
-| Vocabulário e detalhes | | |
-| Humor/energia | | |
-| Fechamento/CTA | | |
+| Pronomes e tratamento | “a gente”, “nós”, “você” etc. | |
+| Ritmo | faixa típica de frase/post; parágrafos | |
+| Abertura | pergunta, cena, afirmação direta etc. | |
+| Vocabulário | palavras recorrentes e nível técnico | |
+| Emojis/listas | frequência e função | |
+| Fechamento/CTA | como costuma encerrar | |
+
+Evitar rótulos vagos como “humano” ou “bem-humorado” sem transformá-los em comportamento observável.
+
+## Termos
+
+| Status | Termo | Substituto/observação |
+|---|---|---|
+| Aprovado | | |
+| Não usar | | |
+| Usar com cuidado | | |
+| Pendente | | |
+
+## Não soa como nós
+
+[2–5 padrões ou trechos de rascunhos rejeitados, com motivo concreto. Não criar uma lista genérica infinita de proibições.]
 
 ## Fatos que podemos usar
 
@@ -28,10 +48,10 @@ Cole três amostras aprovadas ou registre suas referências privadas. Para cada 
 
 ## Preferências de formato
 
-[Parágrafos, emojis, hashtags, restrições específicas e acessibilidade.]
+[Parágrafos, emojis, hashtags, acessibilidade e limites específicos do briefing.]
 
 ## Prova de voz
 
 [Texto curto a revisar com o responsável.]
 
-Guarde este cartão em local privado. Em outra conversa, reapresente-o quando necessário; o arquivo não instala memória permanente.
+Guarde cartão e amostras em local privado. Em outra conversa, reapresente-os quando necessário; o arquivo não instala memória permanente.

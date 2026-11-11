@@ -1,3 +1,5 @@
-# Nenhum resultado real registrado
+# Resultados reais não ficam neste repositório por padrão
 
-Este diretório não contém saídas de modelos, aprovações humanas nem gráficos de desempenho. Guardar dados identificáveis em ambiente privado; publicar apenas material autorizado e devidamente descrito após o ensaio.
+Esta pasta é pública apenas para documentar o protocolo. Saídas reais, textos de clientes, avaliações humanas identificáveis e arquivos brutos devem ficar em armazenamento privado ou registro embargado até haver autorização para publicação e anonimização.
+
+O empacotador exclui qualquer arquivo adicionado aqui, exceto este `README.md`. Isso é uma barreira de distribuição, não substitui governança de dados nem revisão humana.

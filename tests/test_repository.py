@@ -20,9 +20,14 @@ class MarketingHubTests(unittest.TestCase):
         self.assertEqual(subprocess.run(command, capture_output=True).returncode, 1)
 
     def test_install_project_targets_and_existing_guard(self):
-        with tempfile.TemporaryDirectory() as t:
-            path = Path(t)
-            for platform in install.LOCATIONS:
+        # Platform aliases intentionally converge to two canonical directories.
+        self.assertEqual(install.LOCATIONS['codex'], install.LOCATIONS['gemini'])
+        self.assertEqual(install.LOCATIONS['codex'], install.LOCATIONS['copilot'])
+        self.assertEqual(install.LOCATIONS['codex'], install.LOCATIONS['cursor'])
+        self.assertNotEqual(install.LOCATIONS['codex'], install.LOCATIONS['claude'])
+        for platform in ('codex', 'claude'):
+            with tempfile.TemporaryDirectory() as t:
+                path = Path(t)
                 target = install.install(platform, 'project', path)
                 self.assertTrue((target / 'SKILL.md').is_file())
                 with self.assertRaises(FileExistsError):

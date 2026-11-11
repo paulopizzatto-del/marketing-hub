@@ -14,11 +14,12 @@ from zipfile import ZipFile
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from editorial_checks import assess_output, format_warnings, unresolved_review_flags
-from evaluate_model_outputs import evaluate
+from evaluate_model_outputs import evaluate, load_cases
 from distribution import runtime_payload
 from project_version import read_version
 import install
 import build_release
+from analyze_pilot import exact_sign_p_value, summarize as summarize_pilot
 
 class EditorialRegression(unittest.TestCase):
     def setUp(self):
@@ -74,6 +75,46 @@ class EditorialRegression(unittest.TestCase):
     def test_real_evaluator_does_not_import_tests(self):
         text=(ROOT/'scripts/evaluate_model_outputs.py').read_text()
         self.assertNotIn('from test_',text);self.assertNotIn("ROOT/'tests'",text)
+
+    def test_public_personal_data_and_allowlist(self):
+        r=assess_output(self.brand,'Escreva para ana@example.com ou ligue (49) 99999-1234.')
+        self.assertIn('possible_personal_data',[f['code'] for f in r['safety_errors']])
+        allowed=dict(self.brand,allowed_public_identifiers=['contato@marca.com'])
+        self.assertNotIn('possible_personal_data',[f['code'] for f in assess_output(allowed,'contato@marca.com')['safety_errors']])
+
+    def test_brand_terms_normalize_accents_and_status(self):
+        record=dict(self.brand,terms={
+            'dont_use':[{'term':'promoção','replacement':'condição especial'}],
+            'use_carefully':['garantia estendida'],
+            'pending':['novo plano'],
+        })
+        r=assess_output(record,'PROMOCAO de hoje com garantia estendida e novo plano.')
+        self.assertIn('brand_term_dont_use',[f['code'] for f in r['safety_errors']])
+        self.assertIn('brand_term_careful',[f['code'] for f in r['review_flags']])
+        self.assertIn('brand_term_pending',[f['code'] for f in r['review_flags']])
+
+    def test_commercial_claim_signals_are_review_not_legal_verdict(self):
+        r=assess_output(self.brand,'Somos o melhor: 3x mais resultado por R$ 99. Grátis hoje.')
+        codes={f['code'] for f in r['review_flags']}
+        self.assertTrue({'objective_superlative','unverified_multiplier','price_or_offer','free_claim'} <= codes)
+        self.assertFalse(r['safety_errors'])
+
+    def test_placeholder_and_refusal_are_not_publishable(self):
+        self.assertIn('unresolved_placeholder',[f['code'] for f in assess_output(self.brand,'Por R$ XX você recebe [nome do cliente].')['safety_errors']])
+        self.assertIn('assistant_refusal',[f['code'] for f in assess_output(self.brand,'Não posso ajudar com isso.')['safety_errors']])
+
+    def test_nested_profile_avoid_terms_are_enforced(self):
+        record=dict(self.brand,voice={'avoid_terms':['imperdível']})
+        r=assess_output(record,'Oferta IMPERDIVEL para hoje.')
+        self.assertIn('forbidden_term',[f['code'] for f in r['safety_errors']])
+
+    def test_evaluator_requires_explicit_cases_file(self):
+        text=(ROOT/'scripts/evaluate_model_outputs.py').read_text()
+        self.assertIn("'--cases'",text)
+        self.assertNotIn("20-brands-3-rounds.json').read_text",text)
+        cases=load_cases(ROOT/'tests/fixtures/20-brands-3-rounds.json')
+        self.assertEqual(20,len(cases))
+
     def test_malformed_results_fail_cleanly(self):
         cases=[self.brand]
         for rows in ([None], [{'case_id':[]}], 'not a list'):
@@ -137,16 +178,35 @@ class DistributionRegression(unittest.TestCase):
             (root/'private/card.json').write_text('private');(root/'scripts/user.secret.json').write_text('private')
             (root/'.env').write_text('test');(root/'scripts/legitimate.py').write_text('pass')
             self.assertEqual(['scripts/legitimate.py'],[p.relative_to(root).as_posix() for p in build_release.repository_files(root)])
+
+    def test_real_pilot_results_are_excluded_from_repository_zip(self):
+        results=ROOT/'evaluation/pilot-144/results'
+        secret=results/'real-client-output.jsonl'
+        secret.write_text('{"private": true}')
+        try:
+            rels=[p.relative_to(ROOT).as_posix() for p in build_release.repository_files()]
+            self.assertNotIn('evaluation/pilot-144/results/real-client-output.jsonl',rels)
+            self.assertIn('evaluation/pilot-144/results/README.md',rels)
+        finally:
+            secret.unlink(missing_ok=True)
+
     def test_plugin_has_asset_license_without_retired_graphics(self):
         with ZipFile(ROOT/'dist/marketing-hub-plugin.zip') as z:
             self.assertIn('BRAND-ASSETS-LICENSE.md',z.namelist())
             self.assertEqual(['assets/marketinghub-icon.png'],[n for n in z.namelist() if n.endswith(('.png','.svg'))])
     def test_version_is_not_hardcoded_in_checker(self):
         text=(ROOT/'scripts/check_repo.py').read_text()
-        self.assertIn('read_version',text);self.assertNotIn("'2.3.0'",text);self.assertNotIn("'2.3.1'",text)
+        self.assertIn('read_version',text);self.assertNotIn("'2.3.0'",text);self.assertNotIn("'2.3.1'",text);self.assertNotIn("'2.3.2'",text)
     def test_front_page_not_promotional_contract_score(self):
         text=(ROOT/'README.md').read_text().split('## Contribuir e verificar')[0]
         self.assertNotIn('60',text);self.assertNotIn('20 perfis',text);self.assertNotIn('17 m',text)
+    def test_skill_description_stays_portable_and_compact(self):
+        text=(ROOT/'skills/marketinghub/SKILL.md').read_text()
+        front=text.split('---',2)[1]
+        description=[line for line in front.splitlines() if line.startswith('description:')][0].split(':',1)[1].strip()
+        self.assertLessEqual(len(description),200)
+        self.assertIn('voz de marca',description)
+
     def test_language_and_injection_rules_are_present(self):
         text=(ROOT/'skills/marketinghub/SKILL.md').read_text()
         self.assertIn('idioma de sua \u00faltima mensagem',text)

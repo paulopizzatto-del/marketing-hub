@@ -34,5 +34,15 @@
   },
   "editorial_limits": [],
   "source_notes": [],
-  "updated_at": null
+  "updated_at": null,
+  "sector": "",
+  "allowed_public_identifiers": [],
+  "sponsorship_disclosure_required": false,
+  "terms": {
+    "approved": [],
+    "dont_use": [],
+    "use_carefully": [],
+    "pending": []
+  },
+  "confirmed_claims": []
 }

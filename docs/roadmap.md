@@ -2,7 +2,7 @@
 
 ## Correção atual
 
-Ajustar posicionamento, procedência, pacote instalado, avaliador, idioma e exemplos. Registrar aceitação por teste em [revisao-2.3.1.md](revisao-2.3.1.md), sem transformar o aceite de código em evidência de ganho editorial.
+Ajustar posicionamento, procedência, pacote instalado, avaliador, idioma e exemplos. Registrar aceitação por teste em [revisao-2.3.2.md](revisao-2.3.2.md), sem transformar o aceite de código em evidência de ganho editorial.
 
 ## Próxima validação
 

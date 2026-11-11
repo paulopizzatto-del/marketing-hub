@@ -5,7 +5,8 @@ O Marketing Hub é uma skill e um prompt textual de conteúdo/social media. Comp
 | Caminho | O que entregamos | Evidência disponível |
 |---|---|---|
 | Prompt em chat de texto | Instrução autocontida em pt-BR | Arquivo disponível; depende de contexto e capacidade do modelo |
-| Codex / Claude Code / Gemini CLI / Copilot compatível | Instalador para os destinos descritos no guia | Cópia e estrutura testadas; descoberta e execução de ponta a ponta pendentes |
+| Codex / Gemini CLI / Copilot / Cursor | Instalador convergente em `.agents/skills` | Cópia e estrutura testadas; descoberta e execução de ponta a ponta pendentes |
+| Claude Code | Instalador em `.claude/skills` | Cópia e estrutura testadas; descoberta e execução de ponta a ponta pendentes |
 | Plugin importável | Manifestos e skill compacta | Pacote validado localmente; não representa aprovação em diretório |
 | Outros agentes | Arquivos para avaliação de integração | Sem certificação de suporte |
 

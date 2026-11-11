@@ -1,31 +1,55 @@
 # Piloto editorial: protocolo preparado, ainda não executado
 
-## Base do desenho
+## Objetivo
 
-Este protocolo preserva o desenho de 144 saídas proposto no parecer independente do Claude de 10/11/2026: **8 marcas × 3 tarefas × 3 condições × 2 repetições**, em um modelo e em pt-BR. O script cria uma agenda, não chama um modelo e não preenche resultados.
+Este piloto estima se o Marketing Hub melhora fidelidade à voz em relação a uma instrução competente com o **mesmo briefing e as mesmas amostras**. Ele não foi executado e não contém resultados reais.
+
+O desenho inicial permanece em **8 marcas × 3 tarefas × 3 condições × 2 repetições = 144 saídas**, em um modelo e em pt-BR. O número de pares não deve ser confundido com unidades independentes: para a comparação principal há 48 pares B×A, agrupados em apenas oito marcas.
 
 - **A:** assistente competente + briefing + três amostras.
-- **B:** Marketing Hub + o mesmo briefing + as mesmas amostras.
-- **C:** Marketing Hub + o mesmo briefing, sem as amostras.
+- **B:** Marketing Hub + o mesmo briefing + as mesmas três amostras.
+- **C:** Marketing Hub + briefing, sem amostras.
 
-A comparação primária é B × A. B × C investiga o efeito de fornecer as amostras dentro do Hub. **Esse desenho não isola o efeito do cartão de voz.** Como alternativa sugerida na discussão posterior, poderia ser registrado um protocolo A=base, B=base+cartão, C=base+cartão+Hub; mudar o desenho exige decisão e pré-registro antes da geração, sem misturar resultados entre protocolos.
+A comparação primária é B × A. B × C investiga o efeito das amostras dentro do Hub. Uma ablação alternativa A=base, B=base+cartão, C=base+cartão+Hub pode ser registrada em outro protocolo; não misturar resultados de desenhos diferentes.
 
-## Pré-requisitos humanos
+## Pré-registro antes da geração
 
-Cada marca precisa de cinco textos de referência escritos/revisados por uma pessoa: três como entrada e dois reservados para a avaliação. Preencher o template e obter aprovação antes de executar. As fixtures curtas do repositório não substituem essas amostras.
+Registrar: provedor; modelo/versão; data; parâmetros; prompts e hashes; seed; marcas e amostras; orçamento de caracteres/palavras por tarefa; política de emoji, hashtag e quebras; tratamento de empates; análise primária e de sensibilidade.
 
-## Execução
+Cada marca precisa de cinco textos reais aprovados por uma pessoa: três entram como amostra e dois ficam reservados. As amostras devem ser características e, de preferência, variar tema/formato. Os textos reservados nunca entram na geração.
 
-Registrar provedor, modelo/versão, data, parâmetros, instruções exatas e hash da skill. Manter fatos e tarefas equivalentes; mudar apenas os componentes definidos para cada condição. Abrir contexto novo por saída, sortear ordem com seed registrada e usar duas repetições. Registrar tokens, custo informado pelo provedor e latência quando mensuráveis; nenhum deles é inferido.
+## Controle de comprimento, posição e empates
 
-`python scripts/prepare_pilot.py --out dist/pilot-plan.json` prepara a agenda marcada `not_run`. `--check-inputs arquivo.json` verifica a presença das amostras antes da execução; não comprova revisão humana.
+Definir uma faixa de comprimento por tarefa **antes** de gerar. Se uma saída escapar da tolerância por erro de execução, regenerar usando a mesma regra para todas as condições e registrar a regeneração. Não favorecer a condição que escreve mais.
 
-## Avaliação
+Aleatorizar A/B por par e contrabalancear posição por avaliador, marca e tarefa. Permitir três respostas: **A**, **B** ou **sem diferença**; manter também **ambos ruins** como motivo editorial, sem convertê-lo silenciosamente em vitória.
 
-Dois avaliadores independentes dos autores dos prompts recebem as duas referências reservadas e pares de candidatos com condições ocultas e ordem sorteada. Métrica primária: qual candidato parece mais com a marca. Secundárias: clareza (1–5), alegações inventadas (sim/não e contagem) e publicação com poucos ajustes (sim/não). Tempo de edição é uma sugestão adicional, a registrar antes do ensaio.
+Análise primária de preferência: excluir empates do denominador e reportar a taxa de empate. Sensibilidade: empate vale meia vitória. Nunca descartar empates sem mostrar quantos ocorreram.
 
-O parecer propõe preferência por B de pelo menos 60%, com limite inferior de IC95% acima de 50%. Calcular intervalos por reamostragem agrupada por marca, descrever as limitações de apenas oito grupos e a concordância dos revisores. São 48 pares por comparação, agrupados em oito marcas, não 144 observações independentes. Resultado inconclusivo não prova equivalência.
+## Avaliadores
+
+Preferir pessoas que conheçam a marca ou editores capazes de reconhecer seus textos. Usar pelo menos dois avaliadores independentes dos autores dos prompts e calibrá-los com pares fora da amostra. Reportar resultados por avaliador e concordância percentual; kappa/AC1 podem ser calculados em análise posterior quando houver dados suficientes.
+
+Um juiz LLM, se usado, é apenas análise secundária: modelo de família diferente do gerador, pares nas duas ordens e conflitos tratados como empate. Ele não desempata humanos e não entra no critério primário.
+
+## Critério e inferência
+
+**Não usar “estimativa B ≥ 60%” como requisito adicional.** Esse limiar pontual pode reprovar aproximadamente metade dos estudos mesmo quando o efeito verdadeiro estiver exatamente em 60%.
+
+Tratar esta rodada como **piloto de estimação**. O efeito principal é a preferência B×A, com incerteza agrupada por marca. Com apenas oito marcas, intervalos assintóticos e bootstrap por pares de clusters podem ser mal calibrados.
+
+Pré-registrar:
+
+1. **Análise principal:** estimativa agrupada por marca e método adequado a poucos clusters (por exemplo, modelo logístico misto com inferência robusta/wild-cluster quando a ferramenta estatística escolhida for validada).
+2. **Robustez simples e reproduzível:** teste de sinais exato sobre a direção do efeito por marca. O script `scripts/analyze_pilot.py` fornece esta análise descritiva/exata sem dependências externas.
+3. **Sensibilidade:** diferença de comprimento entre condições e tratamento de empates como meia vitória.
+
+O piloto não “certifica” o produto. Ele estima efeito, heterogeneidade entre marcas, empates e concordância para dimensionar um estudo confirmatório. Se houver recursos, aumentar primeiro para **12–16 marcas**, antes de multiplicar repetições por marca.
+
+## Dados e privacidade
+
+Não colocar saídas reais, textos de clientes, dados pessoais ou avaliações humanas identificáveis no repositório público. `evaluation/pilot-144/results/` contém apenas instruções públicas; dados reais devem ficar em armazenamento privado ou registro embargado. Publicar depois apenas o conjunto autorizado e anonimizado, com proveniência clara.
 
 ## Resultados e gráficos
 
-Nenhuma saída real foi incluída nesta correção. Os arquivos de resultado permanecem vazios. Gráficos só devem ser gerados depois de dados reais revisados: preferência com intervalo, variação por marca, alegações e custo/latência. Informar unidades, amostra, condições, versão e data; nunca apresentar fixture como resultado. Publicar conclusão favorável, negativa ou inconclusiva com a mesma regra.
+Só gerar gráficos depois de respostas reais e revisão humana. Mostrar: preferência com incerteza, pontos por marca, taxa de empate, alegações sinalizadas, comprimento/tokens e custo/latência quando disponíveis. Eixo, unidade, amostra, versão do modelo e data devem aparecer. Resultado favorável, nulo ou desfavorável deve ser publicado pelo mesmo critério.

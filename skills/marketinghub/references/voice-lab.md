@@ -6,7 +6,7 @@ Pedir três textos que a pessoa realmente aprova quando a tarefa for calibrar vo
 
 ## Cartão de voz
 
-Registrar: marca e público; idioma e variedade; autoria; 3–5 escolhas de escrita com evidência; preferências de formato; fatos confirmados; inferências a validar. Usar o modelo Markdown. A linguagem dos exemplos abaixo é fictícia e serve para ensinar o processo, não como caso de sucesso.
+Registrar: marca e público; idioma e variedade; autoria; regras observáveis de ritmo, abertura, pronomes, vocabulário, emojis e fechamento; termos aprovados/não usar/cuidado/pendentes; fatos confirmados; inferências a validar. Usar o modelo Markdown. Evitar substituir exemplos reais por adjetivos genéricos. Quando a tarefa for escrever, manter as três amostras aprovadas junto do cartão sempre que o ambiente permitir. A linguagem dos exemplos abaixo é fictícia e serve para ensinar o processo, não como caso de sucesso.
 
 ## Caso 1: cafeteria de bairro
 
@@ -71,3 +71,10 @@ Registrar: marca e público; idioma e variedade; autoria; 3–5 escolhas de escr
 ## Calibração com o usuário
 
 Apresentar o cartão e uma pequena prova de voz. Perguntar qual escolha soa deslocada quando o usuário estiver configurando a marca. Registrar feedback como preferência, sem anunciar aprendizado permanente. Um cartão aprovado pela pessoa é uma referência operacional; continua distinto de evidência de superioridade do Hub.
+
+
+## Ciclo curto de autocrítica
+
+Depois do primeiro rascunho, comparar silenciosamente com as amostras em sinais concretos: comprimento, tipo de abertura, conectivos, pronomes, frequência de emojis, vocabulário e fechamento. Identificar apenas diferenças relevantes e reescrever uma vez. O objetivo é corrigir deriva de estilo, não aumentar complexidade nem produzir um relatório de raciocínio.
+
+Quando um rascunho for rejeitado pelo responsável, registrar no cartão um exemplo curto em **“Não soa como nós”** com motivo observável. Esse histórico vale mais do que acumular proibições genéricas.

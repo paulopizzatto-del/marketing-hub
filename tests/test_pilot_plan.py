@@ -5,6 +5,7 @@ import unittest
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from prepare_pilot import schedule,input_errors
+from analyze_pilot import exact_sign_p_value, summarize
 class PilotPlanTests(unittest.TestCase):
     def test_exact_144_unique_trials_and_no_results(self):
         data=schedule();self.assertEqual(144,len(data['trials']));self.assertEqual(144,len({x['case_id'] for x in data['trials']}))

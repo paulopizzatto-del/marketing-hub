@@ -21,6 +21,8 @@ def repository_files(root=ROOT):
         rel=p.relative_to(root)
         if rel.parts[0] not in DIRS and rel.as_posix() not in FILES: continue
         if any(part in SKIP for part in rel.parts): continue
+        if rel.parts[:3] == ('evaluation','pilot-144','results') and rel.name != 'README.md': continue
+        if rel.parts[:3] == ('evaluation','pilot-144','private'): continue
         if rel.parts[:3]==('.github','skills','marketinghub'): continue
         if p.is_symlink(): raise ValueError('Refusing linked source: '+str(rel))
         if not p.is_file(): continue

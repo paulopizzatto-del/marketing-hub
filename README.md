@@ -1,64 +1,95 @@
-<p align="center"><img src="assets/brand/marketinghub-horizontal.png" width="380" alt="Marketing Hub"></p>
+<p align="center">
+  <img src="assets/brand/marketinghub-horizontal-fundo-rosa.png" width="750" alt="Marketing Hub — Seu marketing, num lugar só">
+</p>
 
-# Conteúdo e social media com a voz da sua marca
+<p align="center">
+  <strong>Conteúdo e social media com a voz da sua marca.</strong><br>
+  Um cartão de voz portátil, em pt-BR, para orientar escrita, revisão e consistência sem prender sua marca a uma única plataforma.
+</p>
 
-Cole textos que sua marca aprova, organize um cartão de voz e use-o para escrever ou revisar posts, legendas, roteiros e respostas. O **Marketing Hub** orienta o assistente de IA que você já utiliza.
+<p align="center">
+  <a href="prompts/marketinghub-universal.md"><strong>Abrir o prompt</strong></a> ·
+  <a href="#comece-em-2-minutos">Começar</a> ·
+  <a href="https://github.com/paulopizzatto-del/marketing-hub/releases/latest">Release oficial</a> ·
+  <a href="#ajude-no-desenvolvimento">Contribuir</a> ·
+  <a href="README.en.md">English</a>
+</p>
 
-**[Abrir o prompt para copiar](prompts/marketinghub-universal.md)** · [Como usar](#comece-sem-instalar) · [Versão oficial](https://github.com/paulopizzatto-del/marketing-hub/releases/latest) · [Ajude no desenvolvimento](#ajude-no-desenvolvimento) · [English](README.en.md)
+---
 
-## Comece sem instalar
+## A ideia em uma frase
 
-1. Abra o [prompt portátil](prompts/marketinghub-universal.md), copie todo o texto e cole no seu assistente.
-2. Descreva o negócio, o público e a tarefa. Para calibrar a voz, cole três textos que você aprova.
-3. Peça seu cartão de voz ou sua primeira peça. Guarde o cartão para os próximos pedidos.
+Cole textos que sua marca aprova, organize um **cartão de voz em Markdown** e use esse contexto para escrever ou revisar posts, legendas, roteiros e respostas com mais consistência.
 
-> “Tenho uma oficina de bicicletas. Vou colar três posts aprovados. Identifique nosso jeito de escrever e revise a legenda que envio depois, sem acrescentar serviços ou promessas.”
+> **Rascunho genérico:** “Soluções completas para transformar sua experiência.”  
+> **Revisão orientada pelo briefing:** “Vai receber gente em casa? Você pode encomendar os pães e retirar na padaria. Chame no WhatsApp para combinar o pedido.”
 
-Para uma legenda pontual, você pode começar direto pelo briefing, sem cadastro.
+Esse exemplo é fictício e mostra a abordagem — **não é benchmark de superioridade entre modelos**.
 
-## Veja a abordagem
+## Comece em 2 minutos
 
-**Exemplo fictício de revisão, não comparação medida entre modelos.**
+1. Abra o [prompt portátil](prompts/marketinghub-universal.md) e cole no assistente que você já usa.
+2. Conte o básico da marca, do público e da tarefa.
+3. Para calibrar a voz, cole **três textos aprovados** e peça o cartão de voz.
+4. Peça a peça nova ou cole um rascunho para revisão.
 
-Fatos fornecidos: padaria aceita encomendas para retirada; pedidos pelo WhatsApp. Voz: próxima e direta.
+```text
+Tenho uma oficina de bicicletas. Vou colar três posts aprovados.
+Identifique nosso jeito de escrever e revise a legenda que envio depois,
+sem acrescentar serviços ou promessas.
+```
 
-**Rascunho genérico:** “Soluções completas para transformar sua experiência.”
+Para uma peça pontual, você pode começar direto pelo briefing — sem cadastro e sem criar perfil antes.
 
-**Revisão orientada pelo briefing:** “Vai receber gente em casa? Você pode encomendar os pães e retirar na padaria. Chame no WhatsApp para combinar o pedido.”
+## O que o Hub organiza
 
-O exemplo mostra a troca de uma abstração por produto e ação concretos. Veja [amostras → cartão → texto](skills/marketinghub/references/voice-lab.md).
+| | Capacidade | Entrega |
+|---|---|---|
+| ✦ | **Voz de marca** | Cartão em Markdown extraído de amostras e regras observáveis |
+| ✎ | **Escrita e revisão** | Posts e legendas com fatos, preferências e autocrítica curta de voz |
+| ◫ | **Pautas** | Temas, reaproveitamento e organização editorial |
+| ▶ | **Vídeos curtos** | Roteiros, cenas, ganchos e legendas |
+| ◇ | **Briefing visual** | Hierarquia, sequência e orientação de produção |
+| ☵ | **Comunidade e perfil** | Respostas, bio e clareza de apresentação |
+| ∿ | **Métricas** | Leitura dos dados fornecidos com denominadores definidos |
 
-## O que você pode fazer
+## Feito para levar a voz com você
 
-| Capacidade | Entrega |
-|---|---|
-| Voz de marca | Cartão em Markdown extraído de amostras |
-| Escrita e revisão | Posts e legendas com fatos e preferências do briefing |
-| Pautas | Temas e reaproveitamento por objetivo |
-| Vídeos curtos | Roteiros, cenas e legendas |
-| Briefing visual | Hierarquia, sequência e orientação de produção |
-| Comunidade e perfil | Respostas, bio e clareza de apresentação |
-| Métricas | Leitura dos dados fornecidos, com denominadores definidos |
+O diferencial pretendido do Marketing Hub é simples: **o cartão de voz é seu**. Ele fica em um arquivo Markdown legível, editável e reutilizável.
 
-## Para equipes e clientes de agentes
-
-A skill é única e seleciona os guias necessários. O pacote instalado contém apenas instruções, modelos, metadados e validador, sem imagens promocionais ou testes internos.
+Quando o ambiente aceita skills, o instalador usa caminhos compatíveis com agentes atuais; quando não aceita, o prompt portátil continua disponível.
 
 ```bash
 python scripts/install.py --platform codex --scope user
 ```
 
-O instalador aceita destinos de clientes compatíveis; leia [instalação](docs/instalacao.md) e [compatibilidade](docs/compatibilidade.md). A cópia de arquivos foi testada; a descoberta e a qualidade em cada cliente ainda precisam de verificação. Perfis reais ficam no seu ambiente privado.
+Leia [instalação](docs/instalacao.md) e [compatibilidade](docs/compatibilidade.md). A cópia e o empacotamento foram testados; descoberta e qualidade em cada cliente continuam dependentes do ambiente e precisam de validação própria.
+
+<p align="center">
+  <img src="assets/brand/previa-marca.png" width="720" alt="Prévia da identidade visual do Marketing Hub">
+</p>
+
+## Segurança editorial antes de publicar
+
+O avaliador não “certifica” um texto. Ele separa:
+
+- **erros bloqueantes**, como sinais de credenciais, mistura de marcas e placeholders;
+- **revisão humana obrigatória**, como percentuais sem evidência, preços/ofertas, superlativos objetivos, depoimentos e alguns dados pessoais aparentes;
+- **avisos de formato**, que não transformam preferência editorial em erro de segurança.
+
+As regras de marca vêm do cartão/perfil, em vez de depender das fixtures sintéticas usadas nos testes internos.
 
 ## Escopo e evidência
 
-A documentação editorial é prioritariamente pt-BR. A instrução de idioma segue o pedido, mas isso não equivale a validação linguística em outros idiomas. Este é um kit de conteúdo/social media, não uma plataforma completa de marketing.
+A biblioteca editorial é prioritariamente **pt-BR**. O conteúdo pode seguir o idioma solicitado, mas isso não equivale a validação linguística nativa em todos os mercados.
 
-**Ainda não medimos se o Hub escreve melhor do que uma IA competente com o mesmo briefing.** [O piloto planejado](evaluation/pilot-144/PLAN.md) separa essa pergunta dos testes de software. Não há publicação automática, memória permanente garantida nem integração nativa universal. Pesquisa e ações externas dependem das ferramentas e permissões do assistente.
+Este é um kit de **conteúdo e social media**, não uma plataforma completa de marketing. Não há publicação automática, memória permanente garantida nem integração nativa universal.
 
-## Contribuir e verificar
+**Ainda não demonstramos que o Hub escreve melhor do que uma IA competente recebendo o mesmo briefing e as mesmas amostras.** O [piloto controlado](evaluation/pilot-144/PLAN.md) existe justamente para responder isso sem transformar testes de software em prova editorial.
 
-Os testes de contrato usam **20 perfis fictícios e 60 textos autorados** para checar dados e sinais mecânicos, não voz de marca ou superioridade de modelos. Ficam em `tests/`; veja [o contrato e suas limitações](tests/contracts/README.md).
+## Engenharia verificável
+
+Os testes de contrato usam fixtures sintéticas autoradas somente para checar dados, isolamento e sinais mecânicos. Eles não medem voz de marca nem superioridade de modelos.
 
 ```bash
 python scripts/check_repo.py
@@ -66,16 +97,22 @@ python -m unittest discover -s tests -v
 python scripts/build_release.py
 ```
 
-Veja [CONTRIBUTING](CONTRIBUTING.md), [SECURITY](SECURITY.md), [SUPPORT](SUPPORT.md) e [o mapa de correções da revisão](docs/revisao-2.3.1.md).
+Consulte [o contrato de testes](tests/contracts/README.md), [a revisão 2.3.2](docs/revisao-2.3.2.md), [SECURITY](SECURITY.md) e [SUPPORT](SUPPORT.md).
 
 ## Ajude no desenvolvimento
 
-Quer contribuir com código, documentação, testes ou sugestões para o Marketing Hub? Entre em contato com **Paulo Pizzatto** pelo e-mail **[paulo.pizzatto@sdssolucoes.com.br](mailto:paulo.pizzatto@sdssolucoes.com.br)**.
+Quer contribuir com código, documentação, testes ou sugestões? Fale com **Paulo Pizzatto** em **[paulo.pizzatto@sdssolucoes.com.br](mailto:paulo.pizzatto@sdssolucoes.com.br)**.
 
-Para começar, consulte o [guia de contribuição](CONTRIBUTING.md). Bugs e melhorias também podem ser registrados nas [issues do projeto](https://github.com/paulopizzatto-del/marketing-hub/issues/new/choose), sem credenciais ou dados confidenciais de clientes.
+Veja o [guia de contribuição](CONTRIBUTING.md) ou abra uma [issue](https://github.com/paulopizzatto-del/marketing-hub/issues/new/choose), sem credenciais ou dados confidenciais de clientes.
 
 ## Identidade e licenças
 
-Artes fornecidas pelo responsável, criadas com apoio de IA sob sua direção e preservadas sem alteração de bytes. A vitrine usa a logo aprovada; o banner anterior foi [retirado de divulgação](assets/archive/v2.3.0/README.md). Consulte [procedência](assets/ASSET-PROVENANCE.md) e [termos da marca](BRAND-ASSETS-LICENSE.md).
+<p>
+  <img src="assets/brand/marketinghub-horizontal.png" width="430" alt="Logo Marketing Hub">
+  <br>
+  <img src="assets/brand/marketinghub-horizontal-fundo-escuro.png" width="520" alt="Marketing Hub em fundo escuro">
+</p>
+
+Artes fornecidas pelo responsável, criadas com apoio de IA sob sua direção e preservadas sem alteração de bytes. O banner antigo foi [retirado de divulgação](assets/archive/v2.3.0/README.md). Consulte [procedência](assets/ASSET-PROVENANCE.md), [identidade visual](docs/identidade-visual.md) e [termos da marca](BRAND-ASSETS-LICENSE.md).
 
 Código e documentação: [MIT](LICENSE). Atribuição dos métodos de origem: [NOTICE](NOTICE.md). A licença de software não cobre as artes.

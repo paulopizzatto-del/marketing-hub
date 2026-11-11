@@ -1,7 +1,6 @@
 ---
 name: marketinghub
-description: >-
-  Conteúdo e social media adaptados à voz de cada marca. Usar para extrair um cartão de voz de amostras, criar ou revisar legendas, posts, pautas, roteiros, briefings visuais, perfis, respostas e análises de métricas fornecidas. Brand-voice and social-content assistant: use for voice cards, captions, rewriting, content plans, short-video scripts, visual briefs, community replies and supplied-metrics analysis. Tratar fatos, amostras e autoria separadamente; selecionar apenas o guia pertinente ao pedido.
+description: Conteúdo e social media com voz de marca. Use para extrair cartão de voz de amostras, criar/revisar posts, legendas, roteiros, pautas, respostas, briefings visuais e analisar métricas fornecidas.
 ---
 
 # Marketing Hub
@@ -17,10 +16,11 @@ Distinguir **quem publica**, quem é citado e quem lê. Usar a marca indicada no
 ## Fluxo
 
 1. **Entender:** identificar emissor, público, canal, objetivo e fatos disponíveis. Aproveitar o contexto já fornecido. Entregar pedidos pontuais sem exigir cadastro ou JSON.
-2. **Calibrar:** para configurar a voz, trabalhar com três textos aprovados quando disponíveis. Extrair padrões, indicar inferências e entregar um cartão de voz em Markdown. Com poucas amostras, tratar o cartão como provisório.
+2. **Calibrar:** para configurar a voz, trabalhar com três textos aprovados e característicos quando disponíveis. Extrair padrões observáveis, indicar inferências e entregar um cartão de voz em Markdown. O cartão complementa as amostras: quando elas estiverem disponíveis na tarefa de escrita, mantê-las no contexto em vez de substituí-las pelo resumo. Com poucas amostras, tratar o cartão como provisório.
 3. **Selecionar:** escolher uma ideia central e carregar o guia relevante no roteador. Usar um segundo guia somente para uma necessidade concreta.
-4. **Produzir:** usar detalhes confirmados, ritmo e vocabulário da marca. Gerar uma versão principal. Ao revisar, preservar fatos e explicar as mudanças apenas quando solicitado.
-5. **Revisar e entregar:** conferir autoria, fatos, clareza e aderência ao pedido. Entregar a peça solicitada; separar lacunas que realmente impedem publicar. Ajustar CTA, emojis, hashtags e extensão ao briefing, em vez de cotas fixas.
+4. **Produzir:** usar detalhes confirmados, ritmo e vocabulário da marca. Gerar um rascunho principal. Ao revisar, preservar fatos e explicar as mudanças apenas quando solicitado.
+5. **Comparar e reescrever:** silenciosamente comparar o rascunho com as amostras/cartão em critérios concretos — extensão, abertura, pronomes, conectivos, vocabulário, emojis, fechamento e fatos. Corrigir diferenças que não vierem do briefing. Não expor raciocínio interno; entregar apenas a versão final ou um diagnóstico curto se o usuário pedir revisão.
+6. **Revisar e entregar:** conferir autoria, fatos, privacidade, alegações, clareza e aderência ao pedido. Entregar a peça solicitada; separar lacunas que realmente impedem publicar. Ajustar CTA, emojis, hashtags e extensão ao briefing, em vez de cotas fixas.
 
 ## Roteador de capacidades
 
