@@ -5,17 +5,17 @@ body:
   - type: textarea
     id: problem
     attributes:
-      label: Qual problema voce quer resolver?
-      description: Diga o caso de uso antes de sugerir a solucao.
+      label: Qual problema você quer resolver?
+      description: Diga o caso de uso antes de sugerir a solução.
     validations:
       required: true
   - type: textarea
     id: solution
     attributes:
-      label: Qual seria uma boa solucao?
+      label: Qual seria uma boa solução?
   - type: checkboxes
     id: safety
     attributes:
-      label: Revisao
+      label: Revisão
       options:
-        - label: A proposta nao depende de dados privados de clientes.
+        - label: A proposta não depende de dados privados de clientes.
