@@ -4,7 +4,7 @@
 
 | Achado | Correção | Verificação / limite |
 |---|---|---|
-| Fixtures usadas como prova | Retiradas da vitrine; documentadas em `tests/contracts/` | Tests mecânicos; resultados reais permanecem pendentes |
+| Fixtures usadas como prova | Retiradas da vitrine; documentadas em `tests/contracts/` | Testes mecânicos; resultados reais permanecem pendentes |
 | Banner promete compatibilidade | Retirado do README/site/plugin; preservado em arquivo | Testes impedem uso das peças retiradas; nova arte depende do responsável |
 | Procedência ambígua | Apoio de IA sob direção do responsável declarado | Hash verifica bytes, não autoria ou direitos |
 | Avaliador rejeita textos adequados | Segurança, sinais de revisão e formato separados | Regressões para LinkedIn de 1.200 caracteres, inglês sem palavras obrigatórias e percentuais |

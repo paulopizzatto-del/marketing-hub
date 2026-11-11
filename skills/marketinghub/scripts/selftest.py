@@ -24,10 +24,10 @@ def check():
     if not text.startswith("---\n") or not re.search(r"\nname:\s+marketinghub\n", text):
         errors.append("Frontmatter da skill ausente ou nome divergente")
     if "description:" not in text.split("---", 2)[1]:
-        errors.append("Metadata sem description")
+        errors.append("Metadados sem description")
     discovered = list(ROOT.rglob("SKILL.md"))
     if len(discovered) != 1:
-        errors.append(f"Apenas uma SKILL.md e permitida no pacote, obtidas {len(discovered)}")
+        errors.append(f"Apenas um arquivo SKILL.md é permitido no pacote, obtidas {len(discovered)}")
     if len(text.splitlines()) > 250:
         errors.append("SKILL.md excedeu 250 linhas; mover detalhes para references")
 
@@ -35,44 +35,44 @@ def check():
     content = "\n".join(p.read_text(encoding="utf-8") for p in included)
     for item in LEAK_MARKERS:
         if item.lower() in content.lower():
-            errors.append(f"Nucleo contem marcadores potencialmente sensiveis: {item}")
+            errors.append(f"Núcleo contém marcadores potencialmente sensíveis: {item}")
     for match in re.findall(r"`((?:references|templates|scripts)/[^`]+?)`", content):
         if " " in match or "|" in match:
             continue
         path = ROOT / match
         if not path.exists():
-            errors.append(f"Referencia sem arquivo: {match}")
+            errors.append(f"Referência sem arquivo: {match}")
     table = (ROOT / "references" / "methods-catalog.md").read_text(encoding="utf-8")
     for method in METHODS:
         if f"`{method}`" not in table:
-            errors.append(f"Metodo original sem mapeamento: {method}")
+            errors.append(f"Método original sem mapeamento: {method}")
     numbered = re.findall(r"^\|\s*([0-9]+)\s*\|", table, flags=re.MULTILINE)
     if numbered != [str(i) for i in range(1, 18)]:
-        errors.append("Mapa de metodos nao lista exatamente 1..17")
+        errors.append("Mapa de métodos não lista exatamente 1..17")
 
     for name in ("brand-profile.template.json", "brand-profile.schema.json"):
         json.loads((ROOT / "templates" / name).read_text(encoding="utf-8"))
     cases = json.loads((ROOT / "tests" / "test_cases.json").read_text(encoding="utf-8"))["cases"]
     if len(cases) < 12:
-        errors.append("Suite qualitativa inferior a 12 cenarios")
+        errors.append("Suíte qualitativa inferior a 12 cenários")
     validator = ROOT / "scripts" / "validate_brand_profile.py"
     positive = subprocess.run([sys.executable, str(validator), str(ROOT / "tests" / "brand-profile.valid.json")], capture_output=True, text=True)
     negative = subprocess.run([sys.executable, str(validator), str(ROOT / "tests" / "brand-profile.invalid.json")], capture_output=True, text=True)
     if positive.returncode != 0:
-        errors.append(f"Perfil de teste valido rejeitado: {positive.stdout[-250:]}")
+        errors.append(f"Perfil de teste válido rejeitado: {positive.stdout[-250:]}")
     if negative.returncode != 1:
-        errors.append("Perfil de teste invalido nao rejeitado")
+        errors.append("Perfil de teste inválido não rejeitado")
 
     print("Marketing Hub - selftest")
-    print("Metodos mapeados:", len(METHODS))
-    print("Cenarios qualitativos:", len(cases))
+    print("Métodos mapeados:", len(METHODS))
+    print("Cenários qualitativos:", len(cases))
     print("Perfis de teste: positivo e negativo verificados")
     if errors:
         print("FALHOU:")
         for e in errors:
             print(" -", e)
         return 1
-    print("PASSOU: estrutura, links, marca neutra, 17 metodos e validacao de perfis")
+    print("PASSOU: estrutura, links, marca neutra, 17 métodos e validação de perfis")
     return 0
 
 

@@ -32,3 +32,5 @@ Project graphics were supplied by the owner, created with AI assistance under th
 ## What changed in 2.4.0
 
 The Portuguese-first v2.4 release introduces strategy-first editorial workflows, evidence/claims review, UX writing, an offline briefing studio (`docs/studio.html`) and a separate 50-brand research laboratory (`evaluation/lab50/`). No real 50-brand benchmark outcomes have been collected, and no editorial superiority claim is supported yet. The release includes a study design, not completed study outcomes.
+
+**Maintenance update 2.4.1:** Portuguese copy, examples and validator messages were proofread; no experimental results were added.
