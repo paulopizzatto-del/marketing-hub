@@ -2,6 +2,14 @@
 
 Obrigado por contribuir com o Marketing Hub!
 
+## Contato para colaboração
+
+Quer ajudar no desenvolvimento, propor melhorias ou colaborar com código, documentação e testes? Fale com **Paulo Pizzatto** pelo e-mail **[paulo.pizzatto@sdssolucoes.com.br](mailto:paulo.pizzatto@sdssolucoes.com.br)**.
+
+Para relatar um problema reproduzível, as [issues do projeto](https://github.com/paulopizzatto-del/marketing-hub/issues/new/choose) continuam disponíveis. Não inclua credenciais ou dados confidenciais de clientes.
+
+## Orientações para contribuir
+
 1. Para bugs, abra uma issue com passos de reproducao. Diga qual modelo/cliente foi usado e qual comportamento esperava, sem dados pessoais ou credenciais.
 2. Para mudancas editoriais, edite a skill canônica em `skills/marketinghub/` e os seus guias relevantes. Evite cópias independentes da mesma regra.
 3. Nunca adicioné uma marca real ao conjunto padrão, nem afirmacoes comerciais não comprovadas.
