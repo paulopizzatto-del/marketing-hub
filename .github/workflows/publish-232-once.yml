@@ -1,0 +1,51 @@
+name: Publish Marketing Hub 2.3.2 (temporary)
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-232-once.yml']
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: 751932e10eaabfa1aa2d41f280adf1abd4463bb5
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.11'
+      - name: Validate exact release source
+        run: |
+          set -euo pipefail
+          python -m pip install -r requirements-dev.txt
+          python scripts/sync_version.py --check
+          python scripts/check_repo.py
+          python skills/marketinghub/scripts/validate_brand_profile.py --require-full examples/brand-profile-ficticio.json
+          python -m unittest discover -s tests -v
+          python scripts/build_release.py
+      - name: Publish v2.3.2
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release create v2.3.2 \
+            dist/skill.zip \
+            dist/marketing-hub-plugin.zip \
+            dist/marketing-hub-repository.zip \
+            dist/SHA256SUMS.txt \
+            --target 751932e10eaabfa1aa2d41f280adf1abd4463bb5 \
+            --title 'Marketing Hub 2.3.2 — voz, avaliação e segurança editorial' \
+            --notes-file docs/lancamento-publico.md \
+            --latest
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: marketing-hub-2.3.2-verified
+          path: |
+            dist/skill.zip
+            dist/marketing-hub-plugin.zip
+            dist/marketing-hub-repository.zip
+            dist/SHA256SUMS.txt
+          retention-days: 3
