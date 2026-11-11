@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.3.2] - 2026-11-11 - piloto, avaliador e portabilidade
+
+- Piloto revisado para poucos clusters, empates e controle de comprimento; sem limiar pontual redundante de 60%.
+- Avaliador desacoplado das fixtures: regras explícitas por marca, sinais de privacidade/segredo e alegações comerciais revisáveis.
+- Cartão de voz com regras observáveis, termos e ciclo curto de autocrítica mantendo amostras brutas no contexto.
+- Instalação convergente em `.agents/skills` e `.claude/skills`, evitando cópias duplicadas entre clientes.
+- Dados reais do piloto excluídos do pacote público e versão avançada para preservar reprodutibilidade por release.
+- Nenhuma alegação nova de superioridade editorial, compatibilidade ponta a ponta ou conformidade jurídica automática.
+
 ## [2.3.1] - 2026-11-10 - correções da revisão independente
 
 - Escopo de conteúdo/social media, primeiro uso por amostras e cartão de voz.

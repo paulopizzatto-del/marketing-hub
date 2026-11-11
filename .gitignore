@@ -18,3 +18,7 @@ profiles/private/
 .claude/skills/marketinghub/
 .gemini/skills/marketinghub/
 .github/skills/marketinghub/
+# Real pilot data must stay private; only the public README is versioned.
+evaluation/pilot-144/results/*
+!evaluation/pilot-144/results/README.md
+evaluation/pilot-144/private/

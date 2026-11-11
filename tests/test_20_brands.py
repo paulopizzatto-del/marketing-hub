@@ -26,7 +26,7 @@ def errors_for_output(record, candidate, brands):
     names={'brand_leakage':'Contamina\u00e7\u00e3o: marca diferente',
            'forbidden_term':'Termo proibido da marca',
            'absolute_claim':'Promessa absoluta sem comprova\u00e7\u00e3o'}
-    return [names.get(x['code'],x['detail']) for x in result['safety_errors']+result['review_flags']]
+    return [names.get(x['code'],x['detail']) for x in result['safety_errors']+[f for f in result['review_flags'] if f['code'] in {'absolute_claim'}]]
 
 class TwentyBrandMatrix(unittest.TestCase):
     @classmethod
@@ -93,7 +93,7 @@ class TwentyBrandMatrix(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             path=Path(tmp)/'partial.jsonl'
             path.write_text(json.dumps({'case_id':self.cases[0]['brand_id']+'/instagram', 'output':'Short generic sample', 'human_approved':False}),encoding='utf-8')
-            command=[sys.executable,str(ROOT/'scripts/evaluate_model_outputs.py'), '--results',str(path),'--provider','Offline fixture', '--model-version','not-real']
+            command=[sys.executable,str(ROOT/'scripts/evaluate_model_outputs.py'), '--results',str(path),'--cases',str(ROOT/'tests/fixtures/20-brands-3-rounds.json'),'--provider','Offline fixture', '--model-version','not-real']
             completed=subprocess.run(command,text=True,capture_output=True)
             self.assertEqual(1,completed.returncode)
             self.assertIn('Missing 59',completed.stdout)

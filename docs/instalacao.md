@@ -19,7 +19,7 @@ Obtenha o repositório do GitHub e use Python 3 (biblioteca padrão):
 python scripts/install.py --platform codex --scope user
 ```
 
-Troque `codex` por `claude`, `gemini` ou `copilot`. Para instalar somente no projeto corrente:
+Troque `codex` por `claude`, `gemini`, `copilot` ou `cursor`. Codex, Gemini, Copilot e Cursor convergem para o caminho interoperável `.agents/skills`; Claude Code usa `.claude/skills`. Para instalar somente no projeto corrente:
 
 ```bash
 python scripts/install.py --platform gemini --scope project --project .
@@ -29,14 +29,12 @@ O instalador copia somente os arquivos de runtime e metadados. `--force` prepara
 
 ### Caminhos usados
 
-| Plataforma | Projeto | Usuário |
+| Plataforma/alias | Projeto | Usuário |
 |---|---|---|
-| Codex | `.agents/skills/marketinghub` | `~/.agents/skills/marketinghub` |
+| Codex / Gemini CLI / GitHub Copilot / Cursor | `.agents/skills/marketinghub` | `~/.agents/skills/marketinghub` |
 | Claude Code | `.claude/skills/marketinghub` | `~/.claude/skills/marketinghub` |
-| Gemini CLI | `.gemini/skills/marketinghub` | `~/.gemini/skills/marketinghub` |
-| GitHub Copilot (VS Code/CLI compatível) | `.github/skills/marketinghub` | `~/.copilot/skills/marketinghub` |
 
-**Cursor e outros editores:** os recursos variam por versão. Existe um exemplo opcional de regra em `.cursor/rules/marketinghub.mdc` e o prompt universal funciona como fallback. Não garantimos autoativação nesses ambientes.
+**Cursor e outros editores:** o instalador usa `.agents/skills` para Cursor local compatível. Cloud Agents e outras superfícies podem ter regras próprias; o prompt universal continua como fallback. Não garantimos autoativação sem teste de ponta a ponta.
 
 ## 3. Plugin ChatGPT/Codex
 

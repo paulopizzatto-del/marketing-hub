@@ -1,30 +1,28 @@
 {
-  "version": "2.3.1",
-  "date": "2026-11-10",
-  "environment": {
-    "python": "3.13.5",
-    "os": "Linux"
-  },
-  "source_reviewed_commit": "f5f82a84ab62a06bb2eb996d4d68201832c56281",
-  "local_tests": {
-    "total": 48,
-    "failures": 0,
-    "errors": 0,
-    "skipped": 0
-  },
-  "skill_zip_bytes": 26026,
-  "plugin_zip_bytes": 41671,
-  "original_skill_zip_bytes_reported_and_release_verified": 410942,
+  "version": "2.3.2",
+  "date": "2026-11-11",
+  "environment": {"python": "3.13.5", "os": "Linux"},
+  "local_tests": {"total": 56, "failures": 0, "errors": 0},
+  "skill_zip_bytes": 27518,
+  "plugin_zip_bytes": 43162,
   "runtime_files": 23,
-  "runtime_images": 0,
-  "full_schema_validation": "passed with jsonschema 4.26.0",
-  "skill_creator_validation": "passed",
+  "full_schema_validation": "passed",
+  "pilot_status": "planned_not_run",
   "editorial_live_model_runs": 0,
   "human_preference_assessments": 0,
-  "pilot_status": "planned_not_run",
+  "implemented_review_items": [
+    "small-cluster pilot protocol and exact brand-level sign-test summary",
+    "explicit brand/case file for evaluator instead of implicit fixtures",
+    "privacy, secret, brand-term and commercial-claim publication signals",
+    "two canonical installation paths to reduce duplicate discovery",
+    "raw samples plus observable voice card and one-pass style self-review",
+    "public package exclusion for real pilot result data",
+    "release version advanced to 2.3.2"
+  ],
   "limitations": [
     "No measurement of writing improvement.",
-    "No native-client end-to-end test.",
-    "New promotional artwork and any old GitHub social-preview setting need owner action."
+    "No legal-compliance certification; checks are heuristic review signals.",
+    "No native-client end-to-end discovery test in this run.",
+    "No real pilot data or human blind judgments."
   ]
 }

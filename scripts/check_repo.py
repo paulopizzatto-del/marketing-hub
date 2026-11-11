@@ -14,7 +14,7 @@ REQUIRED=('VERSION','README.md','README.en.md','LICENSE','NOTICE.md','BRAND-ASSE
  'prompts/marketinghub-universal.md','scripts/editorial_checks.py',
  'scripts/install.py','scripts/build_release.py','scripts/evaluate_model_outputs.py',
  '.github/workflows/ci.yml','.github/workflows/release.yml',
- 'docs/instalacao.md','docs/compatibilidade.md','docs/revisao-2.3.1.md',
+ 'docs/instalacao.md','docs/compatibilidade.md','docs/revisao-2.3.1.md','docs/revisao-2.3.2.md',
  'assets/ASSET-PROVENANCE.json','evaluation/pilot-144/PLAN.md')
 
 def check():

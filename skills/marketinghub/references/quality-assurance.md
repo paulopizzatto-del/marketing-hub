@@ -9,6 +9,7 @@ Conferir antes de entregar: emissor correto; fatos apoiados; pedido cumprido; le
 - A abertura entrega o que promete? O CTA tem destino ou objetivo conhecido?
 - Há preço, resultado, condição ou experiência sem fonte?
 - O texto respeita idioma, variedade e formato do pedido?
+- Comparado às amostras, o rascunho mudou comprimento, abertura, pronomes, conectivos, emojis ou fechamento sem motivo no briefing?
 
 ## Exemplo de portão factual
 
@@ -19,3 +20,8 @@ Conferir antes de entregar: emissor correto; fatos apoiados; pedido cumprido; le
 Verificadores automáticos detectam sinais e conferem registros. Tamanho é aviso orientado ao briefing; vocabulário temático não identifica idioma. Voz, pertinência, verdade factual e estilo precisam de revisão humana. Um teste de software verde não significa texto superior ao de outro assistente.
 
 Sinalizar somente lacunas que afetam a publicação; evitar transformar cada entrega em uma lista de ressalvas.
+
+
+## Sinais automáticos de publicação
+
+O verificador pode bloquear padrões mecânicos de segredo, placeholder, dados pessoais aparentes, termos explicitamente proibidos e vazamento entre marcas. Percentuais, multiplicadores, preço/promoção, superlativo objetivo, “grátis”, depoimentos e publicidade patrocinada sem marcador geram **revisão obrigatória**, não veredito jurídico. O responsável precisa confirmar fonte, validade, consentimento e contexto.

@@ -8,4 +8,4 @@ O banner contraditório foi retirado da vitrine, preservando os arquivos histór
 
 **Não há resultado comparativo de qualidade nesta release.** O piloto com respostas reais e revisores independentes permanece pendente. “Oficial” identifica a distribuição, não uma certificação multimodelo.
 
-Consulte [correções e pendências](revisao-2.3.1.md), [compatibilidade](compatibilidade.md), [instalação](instalacao.md) e [licenças](../NOTICE.md).
+Consulte [correções e pendências](revisao-2.3.2.md), [compatibilidade](compatibilidade.md), [instalação](instalacao.md) e [licenças](../NOTICE.md).
