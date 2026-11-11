@@ -71,7 +71,9 @@ class MarketingHubTests(unittest.TestCase):
 
     def test_readme_visual_assets_and_no_placeholders(self):
         readme = (ROOT / 'README.md').read_text(encoding='utf-8')
-        self.assertIn('src="assets/brand/marketinghub-horizontal.png"', readme)
+        self.assertEqual(1, readme.count('<img '), 'README should show one main brand signature, not a logo gallery')
+        self.assertIn('src="assets/brand/marketinghub-horizontal-fundo-rosa.png"', readme)
+        self.assertNotIn('src="assets/brand/previa-marca.png"', readme)
         self.assertNotIn('src="assets/banner.png"', readme)
         self.assertNotIn('[AJUSTAR', readme)
         self.assertNotIn('URL_DO_REPOSITORIO', readme)
