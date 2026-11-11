@@ -1,3 +1,4 @@
 2.4.0
 sha256=2b6b66784eb3ea4422f6c43a7ceeb02d37d6503181e4b6ef4caf0b23c27e72af
 files=44
+retry=2; markdown-whitespace-normalization
