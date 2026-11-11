@@ -1,29 +1,56 @@
-<p align="center"><img src="assets/brand/marketinghub-horizontal.png" width="380" alt="Marketing Hub"></p>
+<p align="center">
+  <img src="assets/brand/marketinghub-horizontal-fundo-rosa.png" alt="Marketing Hub — official identity on a solid pink background" width="620">
+</p>
 
-# Brand-voice guidance for social content
+<h1 align="center">Write in your brand's voice, not just any AI's voice.</h1>
 
-Marketing Hub helps organize a voice card from writing samples and use that context for social posts, revisions, short-video scripts and replies.
+<p align="center"><strong>An open-source editorial toolkit for brand-aware social content, reusable voice guidance, and human review.</strong></p>
 
-**[Português](README.md) · [Portable prompt](prompts/marketinghub-universal.md) · [Official release](https://github.com/paulopizzatto-del/marketing-hub/releases/latest)**
+<p align="center">
+  <a href="README.md">Português</a> ·
+  <a href="prompts/marketinghub-universal.md">Try the portable prompt</a> ·
+  <a href="https://github.com/paulopizzatto-del/marketing-hub/releases/latest">Official release</a>
+</p>
 
-## Language status
+## What is Marketing Hub?
 
-This is an English introduction to a **primarily Brazilian-Portuguese instruction set**. The assistant is instructed to use the language of your message and the requested content language. This is not evidence of native English support or evaluated quality in other languages. No Mandarin pack is being released in this correction.
+Marketing Hub is a **skill plus a portable prompt**. Give your existing AI assistant a real brief, verified facts, and examples of writing that your brand has approved. The toolkit helps turn those samples into an **editable Markdown voice card** to guide subsequent writing and revision.
 
-## Start with the prompt
+It is a set of editorial instructions and checks, **not a proprietary language model** or an automatic publishing platform.
 
-Copy the portable prompt into a text assistant. Describe the brand, audience and task. To calibrate a voice, provide three approved writing samples and request a reusable Markdown voice card. A single caption does not require a profile or JSON.
+## Quick start (no installation)
 
-## What it covers
+1. Open the [portable prompt](prompts/marketinghub-universal.md) and paste it into your text assistant.
+2. Explain the brand, audience, goal, and facts that are safe to state. Add three approved samples when you want to calibrate voice.
+3. Ask for a voice card, then a draft or revision.
 
-Voice cards; writing and revision; content planning; short videos; visual briefs; community/profile content; supplied-metrics analysis. Compatible agent clients can use the lean skill package; see [installation](docs/instalacao.md) and [compatibility](docs/compatibilidade.md).
+```text
+I run a local bicycle repair shop.
+Audience: everyday cyclists.
+Goal: announce a change in opening hours.
+I will paste three approved posts. Learn the writing style.
+Do not invent services, prices, or hours.
+```
 
-## Evidence and limits
+## Capabilities and boundaries
 
-We have not measured whether Marketing Hub improves writing compared with a competent model given the same brief and samples. [The planned pilot](evaluation/pilot-144/PLAN.md) is separate from software tests. Authored fixtures are internal contract tests, not model-generated benchmark results. The toolkit does not automatically publish, access accounts or persist brand context between chats.
+| Can help with | Does not guarantee |
+| :--- | :--- |
+| Voice cards, captions, posts, replies, short-video scripts | A particular writing quality across all AI models |
+| Planning, visual briefs, and supplied-metric interpretation | Automatic publishing or direct social-media access |
+| Flags for possible sensitive information and unverifiable claims | Legal clearance or error-free content |
+| Reusable files that you can inspect and edit | Persistent memory between unrelated chats |
 
-## Contributions and assets
+The toolkit is **primarily authored and documented in Brazilian Portuguese**. Other languages may be requested, but linguistic quality has not been independently validated across all models.
 
-Read [CONTRIBUTING](CONTRIBUTING.md), [SECURITY](SECURITY.md) and [the correction map](docs/revisao-2.3.2.md). Software and documentation are MIT; original-method credits are retained in [NOTICE](NOTICE.md).
+## Evidence and verification
 
-Project graphics were supplied by the owner, created with AI assistance under the owner's direction, and preserved byte-for-byte during packaging. Earlier promotional graphics have been retired, not redrawn. Brand assets have [separate terms](BRAND-ASSETS-LICENSE.md).
+The public release is [v2.3.2](https://github.com/paulopizzatto-del/marketing-hub/releases/tag/v2.3.2). Automated repository checks verify software behavior and packaging, not writing superiority. **We have not established that Marketing Hub outperforms a competent model given the same brief and writing samples.** See the [planned evaluation protocol](evaluation/pilot-144/PLAN.md).
+
+Read the [installation instructions](docs/instalacao.md), [compatibility notes](docs/compatibilidade.md), and [contribution guide](CONTRIBUTING.md).
+
+## Contribute, credits, and brand assets
+
+Open an [issue](https://github.com/paulopizzatto-del/marketing-hub/issues) or reach the maintainer at [paulo.pizzatto@sdssolucoes.com.br](mailto:paulo.pizzatto@sdssolucoes.com.br).
+
+Software/documentation are under [MIT](LICENSE); original-method attributions are in [NOTICE](NOTICE.md). The logo and brand graphics have [separate terms](BRAND-ASSETS-LICENSE.md) and [documented provenance](assets/ASSET-PROVENANCE.md). Project graphics were provided by the owner and created with AI assistance under their direction. They have not been redrawn or modified for this presentation.
