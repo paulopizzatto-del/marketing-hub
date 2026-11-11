@@ -4,7 +4,7 @@
 
 Cole textos que sua marca aprova, organize um cartão de voz e use-o para escrever ou revisar posts, legendas, roteiros e respostas. O **Marketing Hub** orienta o assistente de IA que você já utiliza.
 
-**[Abrir o prompt para copiar](prompts/marketinghub-universal.md)** · [Como usar](#comece-sem-instalar) · [Versão oficial](https://github.com/paulopizzatto-del/marketing-hub/releases/latest) · [English](README.en.md)
+**[Abrir o prompt para copiar](prompts/marketinghub-universal.md)** · [Como usar](#comece-sem-instalar) · [Versão oficial](https://github.com/paulopizzatto-del/marketing-hub/releases/latest) · [Ajude no desenvolvimento](#ajude-no-desenvolvimento) · [English](README.en.md)
 
 ## Comece sem instalar
 
@@ -67,6 +67,12 @@ python scripts/build_release.py
 ```
 
 Veja [CONTRIBUTING](CONTRIBUTING.md), [SECURITY](SECURITY.md), [SUPPORT](SUPPORT.md) e [o mapa de correções da revisão](docs/revisao-2.3.1.md).
+
+## Ajude no desenvolvimento
+
+Quer contribuir com código, documentação, testes ou sugestões para o Marketing Hub? Entre em contato com **Paulo Pizzatto** pelo e-mail **[paulo.pizzatto@sdssolucoes.com.br](mailto:paulo.pizzatto@sdssolucoes.com.br)**.
+
+Para começar, consulte o [guia de contribuição](CONTRIBUTING.md). Bugs e melhorias também podem ser registrados nas [issues do projeto](https://github.com/paulopizzatto-del/marketing-hub/issues/new/choose), sem credenciais ou dados confidenciais de clientes.
 
 ## Identidade e licenças
 
