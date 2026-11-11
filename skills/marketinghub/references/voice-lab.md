@@ -78,3 +78,9 @@ Apresentar o cartão e uma pequena prova de voz. Perguntar qual escolha soa desl
 Depois do primeiro rascunho, comparar silenciosamente com as amostras em sinais concretos: comprimento, tipo de abertura, conectivos, pronomes, frequência de emojis, vocabulário e fechamento. Identificar apenas diferenças relevantes e reescrever uma vez. O objetivo é corrigir deriva de estilo, não aumentar complexidade nem produzir um relatório de raciocínio.
 
 Quando um rascunho for rejeitado pelo responsável, registrar no cartão um exemplo curto em **“Não soa como nós”** com motivo observável. Esse histórico vale mais do que acumular proibições genéricas.
+
+## Camada v2.4: voz sustentada e contraprovada
+
+Para cada regra extraída, registrar **trecho de evidência, confiança e exceção**. Confiança alta significa repetição em amostras pertinentes e variadas; não é probabilidade estatística. Confiança baixa exige ser tratada como hipótese. Examinar ao menos uma tentativa de texto que *não* combina com a marca e justificar pela estrutura ou pelo sentido, não somente por palavra proibida.
+
+Se a voz extraída conflitar com a intenção estratégica, não tentar "corrigir" a marca silenciosamente. Apresentar duas opções: preservar o padrão existente ou sugerir mudança consciente, explicando a consequência. Em marcas em reposicionamento, usar amostras válidas **da fase atual** e separar as históricas.

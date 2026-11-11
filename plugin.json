@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "marketinghub",
-  "version": "2.3.2",
+  "version": "2.4.0",
   "description": "Conteúdo e social media com a voz da sua marca: amostras, cartão de voz e revisão.",
   "author": {
     "name": "MarketingHub"

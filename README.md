@@ -14,7 +14,7 @@
   <a href="README.en.md">English</a>
 </p>
 
-> **Estado:** esta pasta descreve a **2.4.0 candidata**. A release pública continua sendo a versão apontada em [Releases](https://github.com/paulopizzatto-del/marketing-hub/releases/latest). Este material não afirma superioridade editorial comprovada.
+> **Versão 2.4.0:** código aberto com Studio de briefing, guias editoriais e protocolo experimental. A publicação não implica superioridade editorial comprovada por testes reais.
 
 ## O que é o Marketing Hub?
 
