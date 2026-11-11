@@ -7,5 +7,6 @@ O Marketing Hub é um kit editorial, não um serviço de publicação nem um mod
 - **Compatibilidade com modelos:** informe cliente, versão, data e se usou skill nativa ou prompt portátil.
 - **Segurança:** siga [SECURITY.md](SECURITY.md); não publique credenciais nem dados reais de clientes em issues.
 - **Sugestões de recurso:** descreva o problema primeiro. Veja [CONTRIBUTING.md](CONTRIBUTING.md).
+- **Ajuda no desenvolvimento:** para colaborar com código, documentação, testes ou melhorias, entre em contato com **Paulo Pizzatto**: **[paulo.pizzatto@sdssolucoes.com.br](mailto:paulo.pizzatto@sdssolucoes.com.br)**.
 
 O projeto não oferece SLA de suporte nem garante resultados comerciais. As respostas e a disponibilidade de ferramentas dependem do ambiente.
