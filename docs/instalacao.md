@@ -2,6 +2,17 @@
 
 O projeto tem dois modos. Escolha o que seu ambiente realmente suporta.
 
+## Studio de briefing no navegador
+
+O Studio é uma página HTML independente. Ele funciona **localmente, sem cadastro ou instalação de pacotes**. O GitHub exibe arquivos `.html` como código-fonte, e não como uma demonstração executável. Para usá-lo:
+
+1. Abra [`docs/studio.html`](studio.html) no repositório.
+2. No GitHub, clique em **Download raw file** (ícone de download) para salvar `studio.html` no computador. Não copie o código exibido no navegador.
+3. Abra o arquivo baixado com o navegador (Chrome, Firefox, Edge ou Safari).
+4. Preencha o briefing, clique em **Gerar prompt**, copie o resultado e cole no assistente de IA. Se quiser guardar o contexto, use **Baixar briefing .json**.
+
+O arquivo prepara textos e JSON localmente; ele não conecta uma IA nem publica conteúdos. Evite inserir dados confidenciais de clientes em perfis ou exemplos que serão compartilhados. Se o projeto ativar o GitHub Pages, um endereço online poderá ser oferecido **após sua verificação**.
+
 ## 1. Sem instalação (qualquer chat com entrada de texto)
 
 1. Abra `prompts/marketinghub-universal.md`.

@@ -7,14 +7,14 @@
 <p align="center"><strong>Um kit editorial open-source para transformar estratégia, fatos e voz de marca em conteúdo revisável.</strong></p>
 
 <p align="center">
-  <a href="docs/studio.html"><strong>Preparar um briefing no Studio</strong></a> ·
+  <a href="docs/instalacao.md#studio-de-briefing-no-navegador"><strong>Usar o Studio no navegador</strong></a> ·
   <a href="prompts/marketinghub-universal.md">Experimentar o prompt</a> ·
   <a href="#comece-sem-instalar">Como usar</a> ·
   <a href="https://github.com/paulopizzatto-del/marketing-hub/releases/latest">Versão pública</a> ·
   <a href="README.en.md">English</a>
 </p>
 
-> **Versão 2.4.1:** código aberto com Studio de briefing, guias editoriais, protocolo experimental e revisão ortográfica. A publicação não implica superioridade editorial comprovada por testes reais.
+> **Versão 2.4.2:** código aberto com Studio de briefing, guias editoriais, protocolo experimental e orientações de acesso para o público. A publicação não implica superioridade editorial comprovada por testes reais.
 
 ## O que é o Marketing Hub?
 
@@ -24,7 +24,7 @@ A proposta é tornar o briefing mais claro, a voz mais reconhecível e a aprova�
 
 ## Comece sem instalar
 
-**Studio de briefing:** [abra a ferramenta](docs/studio.html). É uma página estática que organiza oferta, público, posicionamento, fatos e três amostras para gerar um prompt e um JSON reutilizável, sem chamar IA ou enviar dados. Funciona localmente no navegador. Abra o arquivo ou, quando GitHub Pages estiver habilitado, use a página hospedada.
+**Studio de briefing:** [veja como baixar e abrir o Studio](docs/instalacao.md#studio-de-briefing-no-navegador). A página estática organiza oferta, público, posicionamento, fatos e três amostras, produzindo um prompt e um JSON reutilizável. **Atenção:** o link direto para `docs/studio.html` no GitHub mostra o código do arquivo; não abre o aplicativo em execução. O Studio funciona no navegador depois de baixado. O GitHub Pages ainda precisa ser habilitado pelo mantenedor para oferecer um link público de uso online.
 
 1. Abra o [prompt portátil](prompts/marketinghub-universal.md), copie todo o texto e cole no seu assistente.
 2. Descreva o negócio, o público e a tarefa. Para calibrar a voz, cole três textos que você aprova.

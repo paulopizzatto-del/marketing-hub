@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.2] - 2026-11-11 - preparação para divulgação pública
+
+- Corrigido o caminho de entrada do Studio: documentação explica como baixar e abrir o HTML localmente e não apresenta o arquivo exibido pelo GitHub como aplicativo em execução.
+- Registrado que o site GitHub Pages requer habilitação e teste manual antes de anunciar a versão online.
+- Atualizado o identificador apresentado pelo Studio e os metadados dos pacotes, sem alterar o schema de exportação nem os fluxos de produção.
+- Sem novos resultados de benchmark editorial ou certificação de compatibilidade entre modelos.
+
 ## [2.4.1] - 2026-11-11 - revisão ortográfica e consistência editorial
 
 - Corrigidos acentuação, ortografia e pequenos problemas de concordância em páginas de documentação e no Studio.

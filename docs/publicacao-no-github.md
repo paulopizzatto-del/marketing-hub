@@ -19,7 +19,7 @@ No repositório, abra **Settings → General → Danger Zone → Change reposito
 - **Description:** Kit editorial open-source para conteúdo e social media com voz de marca, cartão de voz portátil e revisão de textos com IA.
 - **Topics:** `branding`, `social-media`, `content-creation`, `agent-skills`, `prompt-engineering`, `marketing`, `pt-br`, `open-source`.
 - **Social preview:** Settings → General → Social preview; remova a arte antiga, se configurada. O arquivo em `assets/archive/` está retirado de uso; aguarde uma nova arte aprovada.
-- **Site GitHub Pages (opcional):** Settings → Pages → Deploy from a branch → `main` → `/docs`. Após ativado, o endereço esperado é https://paulopizzatto-del.github.io/marketing-hub/. Verifique a publicação antes de divulgá-lo.
+- **Site GitHub Pages (opcional, ainda não habilitado na revisão pré-lançamento):** Settings → Pages → Deploy from a branch → `main` → `/docs`. Após ativado, o endereço esperado é https://paulopizzatto-del.github.io/marketing-hub/. Teste a página inicial e `/studio.html` no celular e no desktop antes de divulgar. Até então, compartilhe a release ou o repositório, não a URL do Studio como ferramenta online.
 - **Issues e segurança:** habilite relato privado de vulnerabilidades quando disponível, e mantenha o CI em pull requests.
 - **Branch protection:** quando disponível, exija o CI verde e revisão das alterações antes de mesclar.
 
