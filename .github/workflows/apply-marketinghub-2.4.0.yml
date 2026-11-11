@@ -43,6 +43,7 @@ jobs:
           python scripts/check_repo.py
           python -m unittest discover -s tests -q
           python scripts/build_release.py
+          sed -i 's/[[:blank:]]*$//' docs/publicacao-no-github.md
           git diff --check
       - name: Commit source without temporary payload
         shell: bash
