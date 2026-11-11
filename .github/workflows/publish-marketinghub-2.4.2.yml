@@ -1,0 +1,42 @@
+name: Publish Marketing Hub v2.4.2 archives
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-marketinghub-2.4.2.yml']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: v2.4.2
+          fetch-depth: 0
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: '3.11'
+      - name: Validate immutable source and build artifacts
+        run: |
+          test "$(git rev-parse HEAD)" = "88cdb3ed650538e18e03076eef35030b32224ee5"
+          test "$(cat VERSION)" = "2.4.2"
+          python -m pip install -r requirements-dev.txt
+          python scripts/check_repo.py
+          python -m unittest discover -s tests -q
+          python scripts/build_release.py
+      - name: Publish release assets and SHA256SUMS
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          if gh release view v2.4.2 >/dev/null 2>&1; then
+            echo 'Release v2.4.2 already exists. Refusing overwrite.'
+            exit 1
+          fi
+          gh release create v2.4.2 --verify-tag --latest \
+            --title 'Marketing Hub 2.4.2 — preparação para divulgação' \
+            --notes 'Patch de apresentação: corrige o acesso ao Studio como HTML local, atualiza instruções de download e evita indicar GitHub Pages como site ativo. Mantém as funcionalidades da 2.4, com 61 testes de contrato aprovados. O programa de avaliação editorial real permanece pendente.' \
+            dist/skill.zip \
+            dist/marketing-hub-plugin.zip \
+            dist/marketing-hub-repository.zip \
+            dist/SHA256SUMS.txt
